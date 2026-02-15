@@ -15,7 +15,7 @@ npm install gizmovsky
 ## Usage Example
 
 ```js
-import { GizmoSDK } from 'gizmo-sdk';
+import { GizmoSDK } from 'gizmovsky';
 
 const config = {
     ip: '127.0.0.1',
