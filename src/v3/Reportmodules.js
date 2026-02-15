@@ -1,34 +1,38 @@
-import { GizmoClient } from '../GizmoClient.js';
+import { GizmoClient } from "../GizmoClient.js";
 
-/**
- * Class representing report modules.
- */
-export class Reportmodules {
-    /**
-     * Create a Reportmodules instance.
-     * @param {GizmoClient} client - The GizmoClient instance.
-     */
-    constructor(client) {
-        this.client = client;
-    }
+export class ReportModules {
+  constructor(client) {
+    this.client = client;
+  }
 
-    /**
-     * Export report module by report ID.
-     * @param {number|string} reportId - Report ID
-     * @param {Object} params - Query parameters
-     * @returns {Promise<any>} Exported report module
-     */
-    getReportmoduleExport(reportId, params = {}) {
-        return this.client.request('get', `/v3.0/reportmodules/${reportId}/export`, {}, params);
-    }
+  /**
+   * Exports report.
+   * @param {string} reportId - Report module unique id.
+   * @param {any} data.reportModel - Report model
+   * @param {any} data.reportModelAdditional - Optional additional report model.
+   * @param {object} data.metadata -
+   * @param {Object} params - additional query params
+   */
+  postReportModulesByReportIdExport(reportId, data = {}, params = {}) {
+    const url = `/api/v3.0/reportmodules/${reportId}/export`;
+    const body = data;
+    return this.client.request("post", url, body, params);
+  }
 
-    /**
-     * Get report module by report ID.
-     * @param {number|string} reportId - Report ID
-     * @param {Object} params - Query parameters
-     * @returns {Promise<any>} Report module details
-     */
-    getReportmoduleById(reportId, params = {}) {
-        return this.client.request('get', `/v3.0/reportmodules/${reportId}`, {}, params);
-    }
+  /**
+   * Generates report.
+   * @param {string} reportId - Report module unique id.
+   * @param {Object} options - options object with possible query parameters
+   * @param {object} options.reportFilter - Report module filters.
+   * @param {Object} params - additional query params
+   */
+  getReportModulesByReportId(reportId, options = {}, params = {}) {
+    const url = `/api/v3.0/reportmodules/${reportId}`;
+    const reportFilter = options.hasOwnProperty("reportFilter")
+      ? options["reportFilter"]
+      : undefined;
+    const query = Object.assign({}, params);
+    if (reportFilter !== undefined) query["reportFilter"] = reportFilter;
+    return this.client.request("get", url, {}, query);
+  }
 }

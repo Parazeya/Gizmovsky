@@ -1,100 +1,170 @@
-import { GizmoClient } from '../GizmoClient.js';
+import { GizmoClient } from "../GizmoClient.js";
 
-/**
- * Class for order operations.
- */
 export class Orders {
-    /**
-     * Create an Orders instance.
-     * @param {GizmoClient} client - The GizmoClient instance.
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Get all orders.
-     * @param {Object} params - Query parameters
-     * @returns {Promise<any>} List of orders
-     */
-    getAll(params = {}) {
-        return this.client.request('get', '/v2.0/orders', {}, params);
-    }
-    /**
-     * Get order by ID.
-     * @param {number|string} id - Order ID
-     * @returns {Promise<any>} Order details
-     */
-    getById(id) {
-        return this.client.request('get', `/v2.0/orders/${id}`);
-    }
-    /**
-     * Create a new order.
-     * @param {Object} data - Order data
-     * @returns {Promise<any>} Created order
-     */
-    create(data) {
-        return this.client.request('post', '/v2.0/orders', data);
-    }
-    /**
-     * Update an order.
-     * @param {Object} data - Order data
-     * @returns {Promise<any>} Updated order
-     */
-    update(data) {
-        return this.client.request('put', '/v2.0/orders', data);
-    }
-    /**
-     * Delete an order by ID.
-     * @param {number|string} id - Order ID
-     * @returns {Promise<any>} Delete result
-     */
-    delete(id) {
-        return this.client.request('delete', `/v2.0/orders/${id}`);
-    }
-    /**
-     * Create invoice for order.
-     * @param {number|string} id - Order ID
-     * @param {Object} data - Invoice data
-     * @returns {Promise<any>} Created invoice
-     */
-    createInvoice(id, data) {
-        return this.client.request('post', `/v2.0/orders/${id}/invoice`, data);
-    }
-    /**
-     * Complete order.
-     * @param {number|string} id - Order ID
-     * @param {Object} data - Completion data
-     * @returns {Promise<any>} Completion result
-     */
-    complete(id, data) {
-        return this.client.request('put', `/v2.0/orders/${id}/complete`, data);
-    }
-    /**
-     * Cancel order.
-     * @param {number|string} id - Order ID
-     * @param {Object} data - Cancel data
-     * @returns {Promise<any>} Cancel result
-     */
-    cancel(id, data) {
-        return this.client.request('put', `/v2.0/orders/${id}/cancel`, data);
-    }
-    /**
-     * Get delivered order.
-     * @param {number|string} id - Order ID
-     * @returns {Promise<any>} Delivered order
-     */
-    getDelivered(id) {
-        return this.client.request('get', `/v2.0/orders/${id}/delivered`);
-    }
-    setDelivered(id, data) {
-        return this.client.request('put', `/v2.0/orders/${id}/delivered`, data);
-    }
+  constructor(client) {
+    this.client = client;
+  }
 
-    // OrderLines Delivered
-    getOrderLineDelivered(id, orderLineId) {
-        return this.client.request('get', `/v2.0/orders/${id}/orderlines/${orderLineId}/delivered`);
-    }
-    setOrderLineDelivered(id, orderLineId, data) {
-        return this.client.request('put', `/v2.0/orders/${id}/orderlines/${orderLineId}/delivered`, data);
-    }
+  /**
+   * Get all orders.
+   * @param {Object} options - options object with possible query parameters
+   * @param {integer} options.paginationLimit - query
+   * @param {string} options.paginationSortBy - query
+   * @param {boolean} options.paginationIsAsc - query
+   * @param {boolean} options.paginationIsScroll - query
+   * @param {String} options.paginationCursor - query
+   * @param {string} options.dateFrom - query
+   * @param {string} options.dateTo - query
+   * @param {any} options.status - query
+   * @param {array} options.expand - query
+   * @param {Object} params - additional query params
+   */
+  getOrders(options = {}, params = {}) {
+    const url = `/api/v2.0/orders`;
+    const paginationLimit = options.hasOwnProperty("paginationLimit")
+      ? options["paginationLimit"]
+      : undefined;
+    const paginationSortBy = options.hasOwnProperty("paginationSortBy")
+      ? options["paginationSortBy"]
+      : undefined;
+    const paginationIsAsc = options.hasOwnProperty("paginationIsAsc")
+      ? options["paginationIsAsc"]
+      : undefined;
+    const paginationIsScroll = options.hasOwnProperty("paginationIsScroll")
+      ? options["paginationIsScroll"]
+      : undefined;
+    const paginationCursor = options.hasOwnProperty("paginationCursor")
+      ? options["paginationCursor"]
+      : undefined;
+    const dateFrom = options.hasOwnProperty("dateFrom")
+      ? options["dateFrom"]
+      : undefined;
+    const dateTo = options.hasOwnProperty("dateTo")
+      ? options["dateTo"]
+      : undefined;
+    const status = options.hasOwnProperty("status")
+      ? options["status"]
+      : undefined;
+    const expand = options.hasOwnProperty("expand")
+      ? options["expand"]
+      : undefined;
+    const query = Object.assign({}, params);
+    if (paginationLimit !== undefined)
+      query["Pagination.Limit"] = paginationLimit;
+    if (paginationSortBy !== undefined)
+      query["Pagination.SortBy"] = paginationSortBy;
+    if (paginationIsAsc !== undefined)
+      query["Pagination.IsAsc"] = paginationIsAsc;
+    if (paginationIsScroll !== undefined)
+      query["Pagination.IsScroll"] = paginationIsScroll;
+    if (paginationCursor !== undefined)
+      query["Pagination.Cursor"] = paginationCursor;
+    if (dateFrom !== undefined) query["DateFrom"] = dateFrom;
+    if (dateTo !== undefined) query["DateTo"] = dateTo;
+    if (status !== undefined) query["Status"] = status;
+    if (expand !== undefined) query["Expand"] = expand;
+    return this.client.request("get", url, {}, query);
+  }
+
+  /**
+   * Get an order by id.
+   * @param {integer} id - Order id.
+   * @param {Object} options - options object with possible query parameters
+   * @param {array} options.expand - query
+   * @param {Object} params - additional query params
+   */
+  getOrdersById(id, options = {}, params = {}) {
+    const url = `/api/v2.0/orders/${id}`;
+    const expand = options.hasOwnProperty("expand")
+      ? options["expand"]
+      : undefined;
+    const query = Object.assign({}, params);
+    if (expand !== undefined) query["Expand"] = expand;
+    return this.client.request("get", url, {}, query);
+  }
+
+  /**
+   * Invoice the specified order.
+   * @param {integer} id - Order id.
+   * @param {Object} params - additional query params
+   */
+  postOrdersByIdInvoice(id, params = {}) {
+    const url = `/api/v2.0/orders/${id}/invoice`;
+    return this.client.request("post", url, {}, params);
+  }
+
+  /**
+   * Complete the specified order.
+   * @param {integer} id - Order id.
+   * @param {Object} params - additional query params
+   */
+  putOrdersByIdComplete(id, params = {}) {
+    const url = `/api/v2.0/orders/${id}/complete`;
+    return this.client.request("put", url, {}, params);
+  }
+
+  /**
+   * Cancel the specified order.
+   * @param {integer} id - Order id.
+   * @param {Object} params - additional query params
+   */
+  putOrdersByIdCancel(id, params = {}) {
+    const url = `/api/v2.0/orders/${id}/cancel`;
+    return this.client.request("put", url, {}, params);
+  }
+
+  /**
+   * Get the delivered status of the specified order.
+   * @param {integer} id - Order id.
+   * @param {Object} params - additional query params
+   */
+  getOrdersByIdDelivered(id, options = {}, params = {}) {
+    const url = `/api/v2.0/orders/${id}/delivered`;
+    return this.client.request("get", url, {}, params);
+  }
+
+  /**
+   * Set the specified order as delivered.
+   * @param {integer} id - path
+   * @param {Object} params - additional query params
+   */
+  putOrdersByIdDelivered(id, params = {}) {
+    const url = `/api/v2.0/orders/${id}/delivered`;
+    return this.client.request("put", url, {}, params);
+  }
+
+  /**
+   *
+   * @param {integer} id - path
+   * @param {integer} orderLineId - path
+   * @param {Object} params - additional query params
+   */
+  getOrdersByIdOrderlinesByOrderLineIdDelivered(
+    id,
+    orderLineId,
+    options = {},
+    params = {}
+  ) {
+    const url = `/api/v2.0/orders/${id}/orderlines/${orderLineId}/delivered`;
+    return this.client.request("get", url, {}, params);
+  }
+
+  /**
+   *
+   * @param {integer} id - path
+   * @param {integer} orderLineId - path
+   * @param {number} data.deliveredQuantity -
+   * @param {boolean} data.isDelivered -
+   * @param {Object} params - additional query params
+   */
+  putOrdersByIdOrderlinesByOrderLineIdDelivered(
+    id,
+    orderLineId,
+    data = {},
+    params = {}
+  ) {
+    const url = `/api/v2.0/orders/${id}/orderlines/${orderLineId}/delivered`;
+    const body = data;
+    return this.client.request("put", url, body, params);
+  }
 }

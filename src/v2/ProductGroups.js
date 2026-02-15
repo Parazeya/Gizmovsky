@@ -1,81 +1,105 @@
-import { GizmoClient } from '../GizmoClient.js';
+import { GizmoClient } from "../GizmoClient.js";
 
-/**
- * Class for product group operations.
- */
 export class ProductGroups {
-    /**
-     * Create a ProductGroups instance.
-     * @param {GizmoClient} client - The GizmoClient instance.
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Get all product groups.
-     * @param {Object} params - Query parameters
-     * @returns {Promise<any>} List of product groups
-     */
-    getAll(params = {}) {
-        return this.client.request('get', '/v2.0/productgroups', {}, params);
-    }
-    /**
-     * Get product group by ID.
-     * @param {number|string} id - Product group ID
-     * @returns {Promise<any>} Product group details
-     */
-    getById(id) {
-        return this.client.request('get', `/v2.0/productgroups/${id}`);
-    }
-    /**
-     * Create a new product group.
-     * @param {Object} data - Product group data
-     * @returns {Promise<any>} Created product group
-     */
-    create(data) {
-        return this.client.request('post', '/v2.0/productgroups', data);
-    }
-    /**
-     * Update a product group.
-     * @param {Object} data - Product group data
-     * @returns {Promise<any>} Updated product group
-     */
-    update(data) {
-        return this.client.request('put', '/v2.0/productgroups', data);
-    }
-    /**
-     * Delete a product group by ID.
-     * @param {number|string} id - Product group ID
-     * @returns {Promise<any>} Delete result
-     */
-    delete(id) {
-        return this.client.request('delete', `/v2.0/productgroups/${id}`);
-    }
-    /**
-     * Get applications in product group.
-     * @param {number|string} id - Product group ID
-     * @param {Object} params - Query parameters
-     * @returns {Promise<any>} List of applications
-     */
-    getApplications(id, params = {}) {
-        return this.client.request('get', `/v2.0/productgroups/${id}/applications`, {}, params);
-    }
-    /**
-     * Add application to product group.
-     * @param {number|string} id - Product group ID
-     * @param {Object} data - Application data
-     * @returns {Promise<any>} Add result
-     */
-    addApplication(id, data) {
-        return this.client.request('post', `/v2.0/productgroups/${id}/applications`, data);
-    }
-    /**
-     * Delete application from product group.
-     * @param {number|string} id - Product group ID
-     * @param {number|string} applicationId - Application ID
-     * @returns {Promise<any>} Delete result
-     */
-    deleteApplication(id, applicationId) {
-        return this.client.request('delete', `/v2.0/productgroups/${id}/applications/${applicationId}`);
-    }
+  constructor(client) {
+    this.client = client;
+  }
+
+  /**
+   * Get all product groups.
+   * @param {Object} options - options object with possible query parameters
+   * @param {integer} options.paginationLimit - query
+   * @param {string} options.paginationSortBy - query
+   * @param {boolean} options.paginationIsAsc - query
+   * @param {boolean} options.paginationIsScroll - query
+   * @param {String} options.paginationCursor - query
+   * @param {string} options.groupName - query
+   * @param {array} options.expand - query
+   * @param {Object} params - additional query params
+   */
+  getProductGroups(options = {}, params = {}) {
+    const url = `/api/v2.0/productgroups`;
+    const paginationLimit = options.hasOwnProperty("paginationLimit")
+      ? options["paginationLimit"]
+      : undefined;
+    const paginationSortBy = options.hasOwnProperty("paginationSortBy")
+      ? options["paginationSortBy"]
+      : undefined;
+    const paginationIsAsc = options.hasOwnProperty("paginationIsAsc")
+      ? options["paginationIsAsc"]
+      : undefined;
+    const paginationIsScroll = options.hasOwnProperty("paginationIsScroll")
+      ? options["paginationIsScroll"]
+      : undefined;
+    const paginationCursor = options.hasOwnProperty("paginationCursor")
+      ? options["paginationCursor"]
+      : undefined;
+    const groupName = options.hasOwnProperty("groupName")
+      ? options["groupName"]
+      : undefined;
+    const expand = options.hasOwnProperty("expand")
+      ? options["expand"]
+      : undefined;
+    const query = Object.assign({}, params);
+    if (paginationLimit !== undefined)
+      query["Pagination.Limit"] = paginationLimit;
+    if (paginationSortBy !== undefined)
+      query["Pagination.SortBy"] = paginationSortBy;
+    if (paginationIsAsc !== undefined)
+      query["Pagination.IsAsc"] = paginationIsAsc;
+    if (paginationIsScroll !== undefined)
+      query["Pagination.IsScroll"] = paginationIsScroll;
+    if (paginationCursor !== undefined)
+      query["Pagination.Cursor"] = paginationCursor;
+    if (groupName !== undefined) query["GroupName"] = groupName;
+    if (expand !== undefined) query["Expand"] = expand;
+    return this.client.request("get", url, {}, query);
+  }
+
+  /**
+   * Create a product group.
+   * @param {string} data.name -
+   * @param {integer} data.displayOrder -
+   * @param {object} data.sortOption -
+   * @param {Object} params - additional query params
+   */
+  postProductGroups(data = {}, params = {}) {
+    const url = `/api/v2.0/productgroups`;
+    const body = data;
+    return this.client.request("post", url, body, params);
+  }
+
+  /**
+   * Update a product group.
+   * @param {integer} data.id -
+   * @param {string} data.name -
+   * @param {integer} data.displayOrder -
+   * @param {object} data.sortOption -
+   * @param {Object} params - additional query params
+   */
+  putProductGroups(data = {}, params = {}) {
+    const url = `/api/v2.0/productgroups`;
+    const body = data;
+    return this.client.request("put", url, body, params);
+  }
+
+  /**
+   * Get a product group by id.
+   * @param {integer} id - Product group id.
+   * @param {Object} params - additional query params
+   */
+  getProductGroupsById(id, options = {}, params = {}) {
+    const url = `/api/v2.0/productgroups/${id}`;
+    return this.client.request("get", url, {}, params);
+  }
+
+  /**
+   * Delete a product group.
+   * @param {integer} id - Product group id.
+   * @param {Object} params - additional query params
+   */
+  deleteProductGroupsById(id, params = {}) {
+    const url = `/api/v2.0/productgroups/${id}`;
+    return this.client.request("delete", url, {}, params);
+  }
 }

@@ -19,6 +19,7 @@ package-lock*
 package-lock.json
 docs.*
 *docs.*
+tools/
 
 # Keep only SDK sources and main files
 !src/

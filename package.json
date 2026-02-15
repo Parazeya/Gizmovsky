@@ -1,12 +1,10 @@
 {
   "name": "gizmovsky",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Unofficial SDK for Gizmo API",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "node test.js",
-    "lint": "eslint src --ext .js",
     "build": "echo 'No build step required'"
   },
   "repository": {
@@ -21,14 +19,15 @@
     "nodejs",
     "gizmovsky"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "keza3d",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/parazeya/gizmovsky/issues"
   },
   "homepage": "https://github.com/parazeya/gizmovsky#readme",
   "devDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.8"
   },
   "dependencies": {
     "axios": "^1.11.0"
