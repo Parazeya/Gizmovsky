@@ -1,15 +1,23 @@
 import axios from 'axios';
 
 export class GizmoClient {
-    constructor({ ip, port, ssl = false, username, password }) {
+    constructor({ ip, port, ssl = false, username, password, bearerToken } = {}) {
         this.baseURL = `${ssl ? 'https' : 'http'}://${ip}:${port}/api`;
-        this.auth = { username, password };
+        this.bearerToken = bearerToken;
+        this.auth = bearerToken ? undefined : { username, password };
+
+        const headers = {
+            'Content-Type': 'application/json',
+        };
+
+        if (bearerToken) {
+            headers['Authorization'] = `Bearer ${bearerToken}`;
+        }
+
         this.axios = axios.create({
             baseURL: this.baseURL,
             auth: this.auth,
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers,
         });
     }
 

@@ -1,30 +1,14 @@
-# Ignore test files and configs
-*.test.js
-test.js
-coverage/
-.eslintrc*
-.vscode/
-.git/
-.gitignore
-README.md
 node_modules/
+src/
+tools/
+test/
+__tests__/
+__mocks__/
+tmp-test-install/
+.vscode/
 .env
 *.log
-src/openapi/
-src/generator/
-__mocks__/
-__tests__/
-*package-lock.json
-package-lock*
-package-lock.json
-docs.*
-*docs.*
-tools/
+*.tgz
+coverage/
+.DS_Store
 
-# Keep only SDK sources and main files
-!src/
-!src/index.js
-!src/v1/
-!src/v2/
-!src/v3/
-!package.json

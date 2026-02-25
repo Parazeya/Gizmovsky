@@ -1,11 +1,25 @@
 {
   "name": "gizmovsky",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Unofficial SDK for Gizmo API",
-  "main": "src/index.js",
+  "main": "dist/gizmo-sdk.cjs.js",
+  "module": "dist/gizmo-sdk.esm.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/gizmo-sdk.esm.js",
+      "require": "./dist/gizmo-sdk.cjs.js",
+      "default": "./dist/gizmo-sdk.esm.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "build": "echo 'No build step required'"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,10 +40,17 @@
   },
   "homepage": "https://github.com/parazeya/gizmovsky#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "eslint": "^8.0.0",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "rollup": "^2.80.0",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
-    "axios": "^1.11.0"
+    "axios": "^1.11.0",
+    "event-source-plus": "^0.1.15",
+    "eventsource": "^4.1.0"
   }
 }
