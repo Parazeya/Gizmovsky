@@ -21,7 +21,7 @@ export class WaitingLines {
          * @param {Object} params - additional query params
          */
   getWaitingLines(options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines`;
+    const url = `/v3.0/waitinglines`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -61,7 +61,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   getWaitingLinesHostgroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/hostgroups/${id}`;
+    const url = `/v3.0/waitinglines/hostgroups/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -74,7 +74,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   postWaitingLinesHostgroupsById(id, data = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/hostgroups/${id}`;
+    const url = `/v3.0/waitinglines/hostgroups/${id}`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -84,7 +84,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   getWaitingLinesUsergroupsPriorities(options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/usergroups/priorities`;
+    const url = `/v3.0/waitinglines/usergroups/priorities`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -95,7 +95,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   postWaitingLinesUsergroupsPriorities(data = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/usergroups/priorities`;
+    const url = `/v3.0/waitinglines/usergroups/priorities`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -119,7 +119,7 @@ export class WaitingLines {
          * @param {Object} params - additional query params
          */
   getWaitingLinesEntries(options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/entries`;
+    const url = `/v3.0/waitinglines/entries`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -171,7 +171,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   getWaitingLinesEntriesByEntryId(entryId, options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/entries/${entryId}`;
+    const url = `/v3.0/waitinglines/entries/${entryId}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -192,7 +192,7 @@ export class WaitingLines {
          * @param {Object} params - additional query params
          */
   getWaitingLinesEntriesActive(options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/entries/active`;
+    const url = `/v3.0/waitinglines/entries/active`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -236,7 +236,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   getWaitingLinesEntriesByEntryIdActive(entryId, options = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/entries/${entryId}/active`;
+    const url = `/v3.0/waitinglines/entries/${entryId}/active`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -248,7 +248,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   postWaitingLinesEntriesByEntryIdMove(entryId, data = {}, params = {}) {
-    const url = `/api/v3.0/waitinglines/entries/${entryId}/move`;
+    const url = `/v3.0/waitinglines/entries/${entryId}/move`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -264,7 +264,7 @@ export class WaitingLines {
     hostGroupId,
     params = {},
   ) {
-    const url = `/api/v3.0/waitinglines/users/${userId}/hostgroups/${hostGroupId}`;
+    const url = `/v3.0/waitinglines/users/${userId}/hostgroups/${hostGroupId}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -279,7 +279,7 @@ export class WaitingLines {
     hostGroupId,
     params = {},
   ) {
-    const url = `/api/v3.0/waitinglines/users/${userId}/hostgroups/${hostGroupId}`;
+    const url = `/v3.0/waitinglines/users/${userId}/hostgroups/${hostGroupId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -289,7 +289,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   postWaitingLinesUsersByUserId(userId, params = {}) {
-    const url = `/api/v3.0/waitinglines/users/${userId}`;
+    const url = `/v3.0/waitinglines/users/${userId}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -299,7 +299,7 @@ export class WaitingLines {
    * @param {Object} params - additional query params
    */
   deleteWaitingLinesUsersByUserId(userId, params = {}) {
-    const url = `/api/v3.0/waitinglines/users/${userId}`;
+    const url = `/v3.0/waitinglines/users/${userId}`;
     return this.client.request("delete", url, {}, params);
   }
 }

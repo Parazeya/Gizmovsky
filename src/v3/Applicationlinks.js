@@ -22,7 +22,7 @@ export class ApplicationLinks {
          * @param {Object} params - additional query params
          */
   getApplicationLinks(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlinks`;
+    const url = `/v3.0/applicationlinks`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -70,7 +70,7 @@ export class ApplicationLinks {
    * @param {Object} params - additional query params
    */
   postApplicationLinks(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationlinks`;
+    const url = `/v3.0/applicationlinks`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -86,7 +86,7 @@ export class ApplicationLinks {
    * @param {Object} params - additional query params
    */
   putApplicationLinks(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationlinks`;
+    const url = `/v3.0/applicationlinks`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -97,7 +97,7 @@ export class ApplicationLinks {
    * @param {Object} params - additional query params
    */
   getApplicationLinksById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlinks/${id}`;
+    const url = `/v3.0/applicationlinks/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -107,7 +107,7 @@ export class ApplicationLinks {
    * @param {Object} params - additional query params
    */
   deleteApplicationLinksById(id, params = {}) {
-    const url = `/api/v3.0/applicationlinks/${id}`;
+    const url = `/v3.0/applicationlinks/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

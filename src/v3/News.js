@@ -23,7 +23,7 @@ export class News {
          * @param {Object} params - additional query params
          */
   getNews(options = {}, params = {}) {
-    const url = `/api/v3.0/news`;
+    const url = `/v3.0/news`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -78,7 +78,7 @@ export class News {
    * @param {Object} params - additional query params
    */
   postNews(data = {}, params = {}) {
-    const url = `/api/v3.0/news`;
+    const url = `/v3.0/news`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -97,7 +97,7 @@ export class News {
    * @param {Object} params - additional query params
    */
   putNews(data = {}, params = {}) {
-    const url = `/api/v3.0/news`;
+    const url = `/v3.0/news`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -108,7 +108,7 @@ export class News {
    * @param {Object} params - additional query params
    */
   getNewsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/news/${id}`;
+    const url = `/v3.0/news/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -118,7 +118,7 @@ export class News {
    * @param {Object} params - additional query params
    */
   deleteNewsById(id, params = {}) {
-    const url = `/api/v3.0/news/${id}`;
+    const url = `/v3.0/news/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -128,7 +128,7 @@ export class News {
    * @param {Object} params - additional query params
    */
   getNewsByIdBranches(id, options = {}, params = {}) {
-    const url = `/api/v3.0/news/${id}/branches`;
+    const url = `/v3.0/news/${id}/branches`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -140,7 +140,7 @@ export class News {
    * @param {Object} params - additional query params
    */
   postNewsByIdBranches(id, data = {}, params = {}) {
-    const url = `/api/v3.0/news/${id}/branches`;
+    const url = `/v3.0/news/${id}/branches`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

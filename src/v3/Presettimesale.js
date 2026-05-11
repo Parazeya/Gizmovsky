@@ -21,7 +21,7 @@ export class PresetTimeSale {
          * @param {Object} params - additional query params
          */
   getPresetTimeSale(options = {}, params = {}) {
-    const url = `/api/v3.0/presettimesale`;
+    const url = `/v3.0/presettimesale`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -62,7 +62,7 @@ export class PresetTimeSale {
    * @param {Object} params - additional query params
    */
   postPresetTimeSale(data = {}, params = {}) {
-    const url = `/api/v3.0/presettimesale`;
+    const url = `/v3.0/presettimesale`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -73,7 +73,7 @@ export class PresetTimeSale {
    * @param {Object} params - additional query params
    */
   getPresetTimeSaleById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/presettimesale/${id}`;
+    const url = `/v3.0/presettimesale/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -83,7 +83,7 @@ export class PresetTimeSale {
    * @param {Object} params - additional query params
    */
   deletePresetTimeSaleById(id, params = {}) {
-    const url = `/api/v3.0/presettimesale/${id}`;
+    const url = `/v3.0/presettimesale/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

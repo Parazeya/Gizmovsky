@@ -10,7 +10,7 @@ export class PaymentProviders {
    * @param {Object} params - additional query params
    */
   getPaymentProviders(options = {}, params = {}) {
-    const url = `/api/v3.0/paymentproviders`;
+    const url = `/v3.0/paymentproviders`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -20,7 +20,7 @@ export class PaymentProviders {
    * @param {Object} params - additional query params
    */
   getPaymentProvidersByProviderGuid(providerGuid, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentproviders/${providerGuid}`;
+    const url = `/v3.0/paymentproviders/${providerGuid}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -34,14 +34,14 @@ export class PaymentProviders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/paymentproviders/${providerGuid}/options`;
+    const url = `/v3.0/paymentproviders/${providerGuid}/options`;
     return this.client.request("get", url, {}, params);
   }
 
   /**
    *
    * @param {string} providerGuid - path
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/paymentproviders/{providerGuid}/options"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/paymentproviders/{providerGuid}/options"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putPaymentProvidersByProviderGuidOptions(
@@ -49,7 +49,7 @@ export class PaymentProviders {
     data = {},
     params = {},
   ) {
-    const url = `/api/v3.0/paymentproviders/${providerGuid}/options`;
+    const url = `/v3.0/paymentproviders/${providerGuid}/options`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

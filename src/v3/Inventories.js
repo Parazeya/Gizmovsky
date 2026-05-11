@@ -27,7 +27,7 @@ export class Inventories {
          * @param {Object} params - additional query params
          */
   getInventories(options = {}, params = {}) {
-    const url = `/api/v3.0/inventories`;
+    const url = `/v3.0/inventories`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -89,7 +89,7 @@ export class Inventories {
    * @param {Object} params - additional query params
    */
   getInventoriesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/inventories/${id}`;
+    const url = `/v3.0/inventories/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -110,7 +110,7 @@ export class Inventories {
          * @param {Object} params - additional query params
          */
   getInventoriesByIdEntries(id, options = {}, params = {}) {
-    const url = `/api/v3.0/inventories/${id}/entries`;
+    const url = `/v3.0/inventories/${id}/entries`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -154,7 +154,7 @@ export class Inventories {
    * @param {Object} params - additional query params
    */
   postInventoriesInbound(data = {}, params = {}) {
-    const url = `/api/v3.0/inventories/inbound`;
+    const url = `/v3.0/inventories/inbound`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -169,7 +169,7 @@ export class Inventories {
    * @param {Object} params - additional query params
    */
   postInventoriesAdjustment(data = {}, params = {}) {
-    const url = `/api/v3.0/inventories/adjustment`;
+    const url = `/v3.0/inventories/adjustment`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -185,7 +185,7 @@ export class Inventories {
    * @param {Object} params - additional query params
    */
   postInventoriesTransfer(data = {}, params = {}) {
-    const url = `/api/v3.0/inventories/transfer`;
+    const url = `/v3.0/inventories/transfer`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -197,7 +197,7 @@ export class Inventories {
    * @param {Object} params - additional query params
    */
   postInventoriesTransferByIdInbound(id, data = {}, params = {}) {
-    const url = `/api/v3.0/inventories/transfer/${id}/inbound`;
+    const url = `/v3.0/inventories/transfer/${id}/inbound`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

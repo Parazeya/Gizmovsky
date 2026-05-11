@@ -28,7 +28,7 @@ export class StockCount {
          * @param {Object} params - additional query params
          */
   getStockCount(options = {}, params = {}) {
-    const url = `/api/v3.0/stockcount`;
+    const url = `/v3.0/stockcount`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -97,7 +97,7 @@ export class StockCount {
    * @param {Object} params - additional query params
    */
   postStockCount(data = {}, params = {}) {
-    const url = `/api/v3.0/stockcount`;
+    const url = `/v3.0/stockcount`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -108,7 +108,7 @@ export class StockCount {
    * @param {Object} params - additional query params
    */
   getStockCountById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/stockcount/${id}`;
+    const url = `/v3.0/stockcount/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -129,7 +129,7 @@ export class StockCount {
          * @param {Object} params - additional query params
          */
   getStockCountByIdEntries(id, options = {}, params = {}) {
-    const url = `/api/v3.0/stockcount/${id}/entries`;
+    const url = `/v3.0/stockcount/${id}/entries`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;

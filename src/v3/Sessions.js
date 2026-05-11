@@ -22,7 +22,7 @@ export class Sessions {
          * @param {Object} params - additional query params
          */
   getSessions(options = {}, params = {}) {
-    const url = `/api/v3.0/sessions`;
+    const url = `/v3.0/sessions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;

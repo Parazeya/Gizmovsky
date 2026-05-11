@@ -22,7 +22,7 @@ export class BillingProfiles {
          * @param {Object} params - additional query params
          */
   getBillingProfiles(options = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles`;
+    const url = `/v3.0/billingprofiles`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -68,7 +68,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   postBillingProfiles(data = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles`;
+    const url = `/v3.0/billingprofiles`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -81,7 +81,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   putBillingProfiles(data = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles`;
+    const url = `/v3.0/billingprofiles`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -94,7 +94,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   getBillingProfilesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles/${id}`;
+    const url = `/v3.0/billingprofiles/${id}`;
     const expand = options.hasOwnProperty("expand")
       ? options["expand"]
       : undefined;
@@ -109,7 +109,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   deleteBillingProfilesById(id, params = {}) {
-    const url = `/api/v3.0/billingprofiles/${id}`;
+    const url = `/v3.0/billingprofiles/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -119,7 +119,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   getBillingProfilesByIdRates(id, options = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles/${id}/rates`;
+    const url = `/v3.0/billingprofiles/${id}/rates`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -137,7 +137,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   postBillingProfilesByIdRates(id, data = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles/${id}/rates`;
+    const url = `/v3.0/billingprofiles/${id}/rates`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -156,7 +156,7 @@ export class BillingProfiles {
    * @param {Object} params - additional query params
    */
   putBillingProfilesRates(data = {}, params = {}) {
-    const url = `/api/v3.0/billingprofiles/rates`;
+    const url = `/v3.0/billingprofiles/rates`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -172,7 +172,7 @@ export class BillingProfiles {
     billingProfileRateId,
     params = {},
   ) {
-    const url = `/api/v3.0/billingprofiles/${id}/rates/${billingProfileRateId}`;
+    const url = `/v3.0/billingprofiles/${id}/rates/${billingProfileRateId}`;
     return this.client.request("delete", url, {}, params);
   }
 }

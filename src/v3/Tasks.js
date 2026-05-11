@@ -23,7 +23,7 @@ export class Tasks {
          * @param {Object} params - additional query params
          */
   getTasks(options = {}, params = {}) {
-    const url = `/api/v3.0/tasks`;
+    const url = `/v3.0/tasks`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -69,7 +69,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   getTasksById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/tasks/${id}`;
+    const url = `/v3.0/tasks/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -79,7 +79,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   deleteTasksById(id, params = {}) {
-    const url = `/api/v3.0/tasks/${id}`;
+    const url = `/v3.0/tasks/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -89,7 +89,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   getTasksNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/tasks/name/${name}/exist`;
+    const url = `/v3.0/tasks/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -100,7 +100,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   putTasksByIdByNameName(id, name, params = {}) {
-    const url = `/api/v3.0/tasks/${id}/${name}/name`;
+    const url = `/v3.0/tasks/${id}/${name}/name`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -115,7 +115,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   postTasksProcess(data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/process`;
+    const url = `/v3.0/tasks/process`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -132,7 +132,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   putTasksByIdProcess(id, data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/${id}/process`;
+    const url = `/v3.0/tasks/${id}/process`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -147,7 +147,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   postTasksScript(data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/script`;
+    const url = `/v3.0/tasks/script`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -163,7 +163,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   putTasksByIdScript(id, data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/${id}/script`;
+    const url = `/v3.0/tasks/${id}/script`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -177,7 +177,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   postTasksJunction(data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/junction`;
+    const url = `/v3.0/tasks/junction`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -192,7 +192,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   putTasksByIdJunction(id, data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/${id}/junction`;
+    const url = `/v3.0/tasks/${id}/junction`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -206,7 +206,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   postTasksNotification(data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/notification`;
+    const url = `/v3.0/tasks/notification`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -221,7 +221,7 @@ export class Tasks {
    * @param {Object} params - additional query params
    */
   putTasksByIdNotification(id, data = {}, params = {}) {
-    const url = `/api/v3.0/tasks/${id}/notification`;
+    const url = `/v3.0/tasks/${id}/notification`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -244,7 +244,7 @@ export class Tasks {
          * @param {Object} params - additional query params
          */
   getTasksCounters(options = {}, params = {}) {
-    const url = `/api/v3.0/tasks/counters`;
+    const url = `/v3.0/tasks/counters`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;

@@ -11,7 +11,7 @@ export class Files {
    * @param {Object} params - additional query params
    */
   deleteFilesById(id, params = {}) {
-    const url = `/api/v3.0/files/${id}`;
+    const url = `/v3.0/files/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -21,7 +21,7 @@ export class Files {
    * @param {Object} params - additional query params
    */
   deleteFilesByIdHard(id, params = {}) {
-    const url = `/api/v3.0/files/${id}/hard`;
+    const url = `/v3.0/files/${id}/hard`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -30,7 +30,7 @@ export class Files {
    * @param {Object} params - additional query params
    */
   getFilesDeletedSize(options = {}, params = {}) {
-    const url = `/api/v3.0/files/deleted/size`;
+    const url = `/v3.0/files/deleted/size`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -39,7 +39,7 @@ export class Files {
    * @param {Object} params - additional query params
    */
   getFilesDeletedCount(options = {}, params = {}) {
-    const url = `/api/v3.0/files/deleted/count`;
+    const url = `/v3.0/files/deleted/count`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -48,7 +48,7 @@ export class Files {
    * @param {Object} params - additional query params
    */
   deleteFiles(params = {}) {
-    const url = `/api/v3.0/files`;
+    const url = `/v3.0/files`;
     return this.client.request("delete", url, {}, params);
   }
 }

@@ -21,7 +21,7 @@ export class Promotions {
          * @param {Object} params - additional query params
          */
   getPromotions(options = {}, params = {}) {
-    const url = `/api/v3.0/promotions`;
+    const url = `/v3.0/promotions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -73,7 +73,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   postPromotions(data = {}, params = {}) {
-    const url = `/api/v3.0/promotions`;
+    const url = `/v3.0/promotions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -84,7 +84,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   getPromotionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/promotions/${id}`;
+    const url = `/v3.0/promotions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -98,7 +98,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   putPromotionsById(id, data = {}, params = {}) {
-    const url = `/api/v3.0/promotions/${id}`;
+    const url = `/v3.0/promotions/${id}`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -109,7 +109,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   deletePromotionsById(id, params = {}) {
-    const url = `/api/v3.0/promotions/${id}`;
+    const url = `/v3.0/promotions/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -119,7 +119,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   getPromotionsByIdCodes(id, options = {}, params = {}) {
-    const url = `/api/v3.0/promotions/${id}/codes`;
+    const url = `/v3.0/promotions/${id}/codes`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -129,7 +129,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   getPromotionsCodesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/promotions/codes/${id}`;
+    const url = `/v3.0/promotions/codes/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -139,7 +139,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   putPromotionsByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/promotions/${id}/undelete`;
+    const url = `/v3.0/promotions/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -149,7 +149,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   putPromotionsByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/promotions/${id}/enable`;
+    const url = `/v3.0/promotions/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -159,7 +159,7 @@ export class Promotions {
    * @param {Object} params - additional query params
    */
   putPromotionsByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/promotions/${id}/disable`;
+    const url = `/v3.0/promotions/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 }

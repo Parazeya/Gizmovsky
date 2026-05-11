@@ -22,7 +22,7 @@ export class AssistanceRequestTypes {
          * @param {Object} params - additional query params
          */
   getAssistanceRequestTypes(options = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequesttypes`;
+    const url = `/v3.0/assistancerequesttypes`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -67,7 +67,7 @@ export class AssistanceRequestTypes {
    * @param {Object} params - additional query params
    */
   postAssistanceRequestTypes(data = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequesttypes`;
+    const url = `/v3.0/assistancerequesttypes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -81,7 +81,7 @@ export class AssistanceRequestTypes {
    * @param {Object} params - additional query params
    */
   putAssistanceRequestTypes(data = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequesttypes`;
+    const url = `/v3.0/assistancerequesttypes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -92,7 +92,7 @@ export class AssistanceRequestTypes {
    * @param {Object} params - additional query params
    */
   getAssistanceRequestTypesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequesttypes/${id}`;
+    const url = `/v3.0/assistancerequesttypes/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -102,7 +102,7 @@ export class AssistanceRequestTypes {
    * @param {Object} params - additional query params
    */
   deleteAssistanceRequestTypesById(id, params = {}) {
-    const url = `/api/v3.0/assistancerequesttypes/${id}`;
+    const url = `/v3.0/assistancerequesttypes/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -112,7 +112,7 @@ export class AssistanceRequestTypes {
    * @param {Object} params - additional query params
    */
   postAssistanceRequestTypesByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/assistancerequesttypes/${id}/undelete`;
+    const url = `/v3.0/assistancerequesttypes/${id}/undelete`;
     return this.client.request("post", url, {}, params);
   }
 }

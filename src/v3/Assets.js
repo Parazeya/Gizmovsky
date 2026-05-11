@@ -24,7 +24,7 @@ export class Assets {
          * @param {Object} params - additional query params
          */
   getAssets(options = {}, params = {}) {
-    const url = `/api/v3.0/assets`;
+    const url = `/v3.0/assets`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -81,7 +81,7 @@ export class Assets {
    * @param {Object} params - additional query params
    */
   postAssets(data = {}, params = {}) {
-    const url = `/api/v3.0/assets`;
+    const url = `/v3.0/assets`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -100,7 +100,7 @@ export class Assets {
    * @param {Object} params - additional query params
    */
   putAssets(data = {}, params = {}) {
-    const url = `/api/v3.0/assets`;
+    const url = `/v3.0/assets`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -111,7 +111,7 @@ export class Assets {
    * @param {Object} params - additional query params
    */
   getAssetsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/assets/${id}`;
+    const url = `/v3.0/assets/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -121,7 +121,7 @@ export class Assets {
    * @param {Object} params - additional query params
    */
   deleteAssetsById(id, params = {}) {
-    const url = `/api/v3.0/assets/${id}`;
+    const url = `/v3.0/assets/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -131,7 +131,7 @@ export class Assets {
    * @param {Object} params - additional query params
    */
   getAssetsRfidByRfidExist(rfid, options = {}, params = {}) {
-    const url = `/api/v3.0/assets/rfid/${rfid}/exist`;
+    const url = `/v3.0/assets/rfid/${rfid}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

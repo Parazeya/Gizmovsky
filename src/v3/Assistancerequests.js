@@ -56,7 +56,7 @@ export class AssistanceRequests {
          * @param {Object} params - additional query params
          */
   getAssistanceRequests(options = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequests`;
+    const url = `/v3.0/assistancerequests`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -107,7 +107,7 @@ export class AssistanceRequests {
    * @param {Object} params - additional query params
    */
   postAssistanceRequests(data = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequests`;
+    const url = `/v3.0/assistancerequests`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -118,7 +118,7 @@ export class AssistanceRequests {
    * @param {Object} params - additional query params
    */
   getAssistanceRequestsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/assistancerequests/${id}`;
+    const url = `/v3.0/assistancerequests/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -128,7 +128,7 @@ export class AssistanceRequests {
    * @param {Object} params - additional query params
    */
   putAssistanceRequestsByIdReject(id, params = {}) {
-    const url = `/api/v3.0/assistancerequests/${id}/reject`;
+    const url = `/v3.0/assistancerequests/${id}/reject`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -138,7 +138,7 @@ export class AssistanceRequests {
    * @param {Object} params - additional query params
    */
   putAssistanceRequestsByIdAccept(id, params = {}) {
-    const url = `/api/v3.0/assistancerequests/${id}/accept`;
+    const url = `/v3.0/assistancerequests/${id}/accept`;
     return this.client.request("put", url, {}, params);
   }
 }

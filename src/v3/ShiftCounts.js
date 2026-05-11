@@ -22,7 +22,7 @@ export class ShiftCounts {
          * @param {Object} params - additional query params
          */
   getShiftCounts(options = {}, params = {}) {
-    const url = `/api/v3.0/shiftcounts`;
+    const url = `/v3.0/shiftcounts`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -66,7 +66,7 @@ export class ShiftCounts {
    * @param {Object} params - additional query params
    */
   getShiftCountsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/shiftcounts/${id}`;
+    const url = `/v3.0/shiftcounts/${id}`;
     return this.client.request("get", url, {}, params);
   }
 }

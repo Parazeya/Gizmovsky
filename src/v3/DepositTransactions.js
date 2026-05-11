@@ -28,7 +28,7 @@ export class DepositTransactions {
          * @param {Object} params - additional query params
          */
   getDepositTransactions(options = {}, params = {}) {
-    const url = `/api/v3.0/deposittransactions`;
+    const url = `/v3.0/deposittransactions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -99,7 +99,7 @@ export class DepositTransactions {
    * @param {Object} params - additional query params
    */
   postDepositTransactions(data = {}, params = {}) {
-    const url = `/api/v3.0/deposittransactions`;
+    const url = `/v3.0/deposittransactions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -110,7 +110,7 @@ export class DepositTransactions {
    * @param {Object} params - additional query params
    */
   getDepositTransactionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/deposittransactions/${id}`;
+    const url = `/v3.0/deposittransactions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -123,7 +123,7 @@ export class DepositTransactions {
    * @param {Object} params - additional query params
    */
   putDepositTransactionsByIdVoid(id, data = {}, params = {}) {
-    const url = `/api/v3.0/deposittransactions/${id}/void`;
+    const url = `/v3.0/deposittransactions/${id}/void`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

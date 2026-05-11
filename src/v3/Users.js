@@ -29,7 +29,7 @@ export class Users {
          * @param {Object} params - additional query params
          */
   getUsers(options = {}, params = {}) {
-    const url = `/api/v3.0/users`;
+    const url = `/v3.0/users`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -122,7 +122,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsers(data = {}, params = {}) {
-    const url = `/api/v3.0/users`;
+    const url = `/v3.0/users`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -155,7 +155,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsers(data = {}, params = {}) {
-    const url = `/api/v3.0/users`;
+    const url = `/v3.0/users`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -166,7 +166,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}`;
+    const url = `/v3.0/users/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -176,7 +176,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   deleteUsersById(id, params = {}) {
-    const url = `/api/v3.0/users/${id}`;
+    const url = `/v3.0/users/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -198,7 +198,7 @@ export class Users {
          * @param {Object} params - additional query params
          */
   getUsersSearch(options = {}, params = {}) {
-    const url = `/api/v3.0/users/search`;
+    const url = `/v3.0/users/search`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -242,7 +242,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/users/${id}/undelete`;
+    const url = `/v3.0/users/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -252,7 +252,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   deleteUsersByIdHard(id, params = {}) {
-    const url = `/api/v3.0/users/${id}/hard`;
+    const url = `/v3.0/users/${id}/hard`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -262,7 +262,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   deleteUsersHard(data = {}, params = {}) {
-    const url = `/api/v3.0/users/hard`;
+    const url = `/v3.0/users/hard`;
     const body = data;
     return this.client.request("delete", url, body, params);
   }
@@ -274,7 +274,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdRename(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/rename`;
+    const url = `/v3.0/users/${id}/rename`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -285,7 +285,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdAttributes(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/attributes`;
+    const url = `/v3.0/users/${id}/attributes`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -297,7 +297,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsersByIdAttributes(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/attributes`;
+    const url = `/v3.0/users/${id}/attributes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -311,7 +311,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersAttributes(data = {}, params = {}) {
-    const url = `/api/v3.0/users/attributes`;
+    const url = `/v3.0/users/attributes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -323,7 +323,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   deleteUsersByIdAttributesByUserAttributeId(id, userAttributeId, params = {}) {
-    const url = `/api/v3.0/users/${id}/attributes/${userAttributeId}`;
+    const url = `/v3.0/users/${id}/attributes/${userAttributeId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -333,7 +333,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdNotesCount(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/notes/count`;
+    const url = `/v3.0/users/${id}/notes/count`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -354,7 +354,7 @@ export class Users {
          * @param {Object} params - additional query params
          */
   getUsersByIdNotes(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/notes`;
+    const url = `/v3.0/users/${id}/notes`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -396,7 +396,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsersByIdNotes(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/notes`;
+    const url = `/v3.0/users/${id}/notes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -408,7 +408,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdNotesByUserNoteId(id, userNoteId, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/notes/${userNoteId}`;
+    const url = `/v3.0/users/${id}/notes/${userNoteId}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -419,7 +419,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   deleteUsersByIdNotesByUserNoteId(id, userNoteId, params = {}) {
-    const url = `/api/v3.0/users/${id}/notes/${userNoteId}`;
+    const url = `/v3.0/users/${id}/notes/${userNoteId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -431,7 +431,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersNotes(data = {}, params = {}) {
-    const url = `/api/v3.0/users/notes`;
+    const url = `/v3.0/users/notes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -442,7 +442,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdPicture(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/picture`;
+    const url = `/v3.0/users/${id}/picture`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -453,7 +453,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdPicture(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/picture`;
+    const url = `/v3.0/users/${id}/picture`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -464,7 +464,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdUseragreements(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/useragreements`;
+    const url = `/v3.0/users/${id}/useragreements`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -479,7 +479,7 @@ export class Users {
     userAgreementId,
     params = {},
   ) {
-    const url = `/api/v3.0/users/${id}/useragreements/${userAgreementId}/accept`;
+    const url = `/v3.0/users/${id}/useragreements/${userAgreementId}/accept`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -494,7 +494,7 @@ export class Users {
     userAgreementId,
     params = {},
   ) {
-    const url = `/api/v3.0/users/${id}/useragreements/${userAgreementId}/reject`;
+    const url = `/v3.0/users/${id}/useragreements/${userAgreementId}/reject`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -516,7 +516,7 @@ export class Users {
          * @param {Object} params - additional query params
          */
   getUsersByIdUseragreementsPending(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/useragreements/pending`;
+    const url = `/v3.0/users/${id}/useragreements/pending`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -560,7 +560,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByUsernameRecoverymethods(username, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${username}/recoverymethods`;
+    const url = `/v3.0/users/${username}/recoverymethods`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -573,7 +573,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdUserusagetime(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/userusagetime`;
+    const url = `/v3.0/users/${id}/userusagetime`;
     const hostGroupId = options.hasOwnProperty("hostGroupId")
       ? options["hostGroupId"]
       : undefined;
@@ -592,7 +592,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdUsageCurrent(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/usage/current`;
+    const url = `/v3.0/users/${id}/usage/current`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -612,7 +612,7 @@ export class Users {
          * @param {Object} params - additional query params
          */
   getUsersUsageCurrent(options = {}, params = {}) {
-    const url = `/api/v3.0/users/usage/current`;
+    const url = `/v3.0/users/usage/current`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -651,7 +651,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersBalance(options = {}, params = {}) {
-    const url = `/api/v3.0/users/balance`;
+    const url = `/v3.0/users/balance`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -663,7 +663,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdBalance(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/balance`;
+    const url = `/v3.0/users/${id}/balance`;
     const preferCache = options.hasOwnProperty("preferCache")
       ? options["preferCache"]
       : undefined;
@@ -686,7 +686,7 @@ export class Users {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/users/${id}/hostgroup/${hostGroupId}/balance`;
+    const url = `/v3.0/users/${id}/hostgroup/${hostGroupId}/balance`;
     const preferCache = options.hasOwnProperty("preferCache")
       ? options["preferCache"]
       : undefined;
@@ -702,7 +702,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsersByUserIdLoginByHostId(userId, hostId, params = {}) {
-    const url = `/api/v3.0/users/${userId}/login/${hostId}`;
+    const url = `/v3.0/users/${userId}/login/${hostId}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -714,7 +714,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsersByUserIdLoginByHostIdSlotBySlot(userId, hostId, slot, params = {}) {
-    const url = `/api/v3.0/users/${userId}/login/${hostId}/slot/${slot}`;
+    const url = `/v3.0/users/${userId}/login/${hostId}/slot/${slot}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -726,7 +726,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsersByUserIdMove(userId, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${userId}/move`;
+    const url = `/v3.0/users/${userId}/move`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -737,7 +737,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   postUsersByUserIdLogout(userId, params = {}) {
-    const url = `/api/v3.0/users/${userId}/logout`;
+    const url = `/v3.0/users/${userId}/logout`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -746,7 +746,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersCounters(options = {}, params = {}) {
-    const url = `/api/v3.0/users/counters`;
+    const url = `/v3.0/users/counters`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -756,7 +756,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdCounters(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/counters`;
+    const url = `/v3.0/users/${id}/counters`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -768,7 +768,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdBan(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/ban`;
+    const url = `/v3.0/users/${id}/ban`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -783,7 +783,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdAddress(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/address`;
+    const url = `/v3.0/users/${id}/address`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -800,7 +800,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdPersonalinformation(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/personalinformation`;
+    const url = `/v3.0/users/${id}/personalinformation`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -814,7 +814,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdContactinformation(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/contactinformation`;
+    const url = `/v3.0/users/${id}/contactinformation`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -825,7 +825,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdRequestpersonalinfo(id, params = {}) {
-    const url = `/api/v3.0/users/${id}/requestpersonalinfo`;
+    const url = `/v3.0/users/${id}/requestpersonalinfo`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -835,7 +835,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdResetpassword(id, params = {}) {
-    const url = `/api/v3.0/users/${id}/resetpassword`;
+    const url = `/v3.0/users/${id}/resetpassword`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -846,7 +846,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdUsergroup(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/usergroup`;
+    const url = `/v3.0/users/${id}/usergroup`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -858,7 +858,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByUserIdAssetByAssetIdCheckout(userId, assetId, params = {}) {
-    const url = `/api/v3.0/users/${userId}/asset/${assetId}/checkout`;
+    const url = `/v3.0/users/${userId}/asset/${assetId}/checkout`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -868,7 +868,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersAssetByAssetIdCheckin(assetId, params = {}) {
-    const url = `/api/v3.0/users/asset/${assetId}/checkin`;
+    const url = `/v3.0/users/asset/${assetId}/checkin`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -878,7 +878,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdStats(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/stats`;
+    const url = `/v3.0/users/${id}/stats`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -888,7 +888,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   getUsersByIdCommunicationchannels(id, options = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/communicationchannels`;
+    const url = `/v3.0/users/${id}/communicationchannels`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -899,7 +899,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdSmartcard(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/smartcard`;
+    const url = `/v3.0/users/${id}/smartcard`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -914,7 +914,7 @@ export class Users {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/users/smartcard/${smartCardUid}/exist`;
+    const url = `/v3.0/users/smartcard/${smartCardUid}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -925,7 +925,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdNegativebalance(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/negativebalance`;
+    const url = `/v3.0/users/${id}/negativebalance`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -937,7 +937,7 @@ export class Users {
    * @param {Object} params - additional query params
    */
   putUsersByIdBillingoptions(id, data = {}, params = {}) {
-    const url = `/api/v3.0/users/${id}/billingoptions`;
+    const url = `/v3.0/users/${id}/billingoptions`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

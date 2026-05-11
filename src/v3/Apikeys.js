@@ -23,7 +23,7 @@ export class ApiKeys {
          * @param {Object} params - additional query params
          */
   getApiKeys(options = {}, params = {}) {
-    const url = `/api/v3.0/apikeys`;
+    const url = `/v3.0/apikeys`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -73,7 +73,7 @@ export class ApiKeys {
    * @param {Object} params - additional query params
    */
   postApiKeys(data = {}, params = {}) {
-    const url = `/api/v3.0/apikeys`;
+    const url = `/v3.0/apikeys`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -84,7 +84,7 @@ export class ApiKeys {
    * @param {Object} params - additional query params
    */
   getApiKeysById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/apikeys/${id}`;
+    const url = `/v3.0/apikeys/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -94,7 +94,7 @@ export class ApiKeys {
    * @param {Object} params - additional query params
    */
   deleteApiKeysById(id, params = {}) {
-    const url = `/api/v3.0/apikeys/${id}`;
+    const url = `/v3.0/apikeys/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -104,7 +104,7 @@ export class ApiKeys {
    * @param {Object} params - additional query params
    */
   putApiKeysByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/apikeys/${id}/undelete`;
+    const url = `/v3.0/apikeys/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -114,7 +114,7 @@ export class ApiKeys {
    * @param {Object} params - additional query params
    */
   putApiKeysByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/apikeys/${id}/enable`;
+    const url = `/v3.0/apikeys/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -124,7 +124,7 @@ export class ApiKeys {
    * @param {Object} params - additional query params
    */
   putApiKeysByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/apikeys/${id}/disable`;
+    const url = `/v3.0/apikeys/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 }

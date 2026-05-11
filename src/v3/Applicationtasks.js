@@ -22,7 +22,7 @@ export class ApplicationTasks {
          * @param {Object} params - additional query params
          */
   getApplicationTasks(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationtasks`;
+    const url = `/v3.0/applicationtasks`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -71,7 +71,7 @@ export class ApplicationTasks {
    * @param {Object} params - additional query params
    */
   postApplicationTasks(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationtasks`;
+    const url = `/v3.0/applicationtasks`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -87,7 +87,7 @@ export class ApplicationTasks {
    * @param {Object} params - additional query params
    */
   putApplicationTasks(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationtasks`;
+    const url = `/v3.0/applicationtasks`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -98,7 +98,7 @@ export class ApplicationTasks {
    * @param {Object} params - additional query params
    */
   getApplicationTasksById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationtasks/${id}`;
+    const url = `/v3.0/applicationtasks/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -108,7 +108,7 @@ export class ApplicationTasks {
    * @param {Object} params - additional query params
    */
   deleteApplicationTasksById(id, params = {}) {
-    const url = `/api/v3.0/applicationtasks/${id}`;
+    const url = `/v3.0/applicationtasks/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -118,7 +118,7 @@ export class ApplicationTasks {
    * @param {Object} params - additional query params
    */
   getApplicationTasksByIdUsages(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationtasks/${id}/usages`;
+    const url = `/v3.0/applicationtasks/${id}/usages`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -128,7 +128,7 @@ export class ApplicationTasks {
    * @param {Object} params - additional query params
    */
   putApplicationTasksByIdUnassign(id, params = {}) {
-    const url = `/api/v3.0/applicationtasks/${id}/unassign`;
+    const url = `/v3.0/applicationtasks/${id}/unassign`;
     return this.client.request("put", url, {}, params);
   }
 }

@@ -25,7 +25,7 @@ export class Discounts {
          * @param {Object} params - additional query params
          */
   getDiscounts(options = {}, params = {}) {
-    const url = `/api/v3.0/discounts`;
+    const url = `/v3.0/discounts`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -94,7 +94,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   postDiscounts(data = {}, params = {}) {
-    const url = `/api/v3.0/discounts`;
+    const url = `/v3.0/discounts`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -119,7 +119,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   putDiscounts(data = {}, params = {}) {
-    const url = `/api/v3.0/discounts`;
+    const url = `/v3.0/discounts`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -130,7 +130,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   getDiscountsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/discounts/${id}`;
+    const url = `/v3.0/discounts/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -140,18 +140,18 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   deleteDiscountsById(id, params = {}) {
-    const url = `/api/v3.0/discounts/${id}`;
+    const url = `/v3.0/discounts/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
   /**
    * Sets entry name.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/discounts/{id}/name"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/discounts/{id}/name"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putDiscountsByIdName(id, data = {}, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/name`;
+    const url = `/v3.0/discounts/${id}/name`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -162,18 +162,18 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   getDiscountsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/discounts/name/${name}/exist`;
+    const url = `/v3.0/discounts/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
   /**
    * Sets entry description.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/discounts/{id}/description"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/discounts/{id}/description"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putDiscountsByIdDescription(id, data = {}, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/description`;
+    const url = `/v3.0/discounts/${id}/description`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -184,7 +184,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   getDiscountsByIdBranches(id, options = {}, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/branches`;
+    const url = `/v3.0/discounts/${id}/branches`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -196,7 +196,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   postDiscountsByIdBranches(id, data = {}, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/branches`;
+    const url = `/v3.0/discounts/${id}/branches`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -207,7 +207,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   putDiscountsByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/undelete`;
+    const url = `/v3.0/discounts/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -217,7 +217,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   putDiscountsByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/enable`;
+    const url = `/v3.0/discounts/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -227,7 +227,7 @@ export class Discounts {
    * @param {Object} params - additional query params
    */
   putDiscountsByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/discounts/${id}/disable`;
+    const url = `/v3.0/discounts/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 }

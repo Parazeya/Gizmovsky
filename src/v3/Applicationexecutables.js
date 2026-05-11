@@ -23,7 +23,7 @@ export class ApplicationExecutables {
          * @param {Object} params - additional query params
          */
   getApplicationExecutables(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables`;
+    const url = `/v3.0/applicationexecutables`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -84,7 +84,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutables(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables`;
+    const url = `/v3.0/applicationexecutables`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -108,7 +108,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutables(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables`;
+    const url = `/v3.0/applicationexecutables`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -129,7 +129,7 @@ export class ApplicationExecutables {
          * @param {Object} params - additional query params
          */
   getApplicationExecutablesAgerating(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/agerating`;
+    const url = `/v3.0/applicationexecutables/agerating`;
     const paginationPageNumber = options.hasOwnProperty("paginationPageNumber")
       ? options["paginationPageNumber"]
       : undefined;
@@ -164,7 +164,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}`;
+    const url = `/v3.0/applicationexecutables/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -174,7 +174,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   deleteApplicationExecutablesById(id, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}`;
+    const url = `/v3.0/applicationexecutables/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -184,7 +184,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdPersonalfiles(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/personalfiles`;
+    const url = `/v3.0/applicationexecutables/${id}/personalfiles`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -196,7 +196,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdPersonalfiles(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/personalfiles`;
+    const url = `/v3.0/applicationexecutables/${id}/personalfiles`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -209,7 +209,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutablesPersonalfiles(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/personalfiles`;
+    const url = `/v3.0/applicationexecutables/personalfiles`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -225,7 +225,7 @@ export class ApplicationExecutables {
     personalFileId,
     params = {},
   ) {
-    const url = `/api/v3.0/applicationexecutables/${id}/personalfiles/${personalFileId}`;
+    const url = `/v3.0/applicationexecutables/${id}/personalfiles/${personalFileId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -235,7 +235,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdDeployments(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/deployments`;
+    const url = `/v3.0/applicationexecutables/${id}/deployments`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -247,7 +247,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdDeployments(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/deployments`;
+    const url = `/v3.0/applicationexecutables/${id}/deployments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -260,7 +260,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutablesDeployments(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/deployments`;
+    const url = `/v3.0/applicationexecutables/deployments`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -276,7 +276,7 @@ export class ApplicationExecutables {
     deploymentId,
     params = {},
   ) {
-    const url = `/api/v3.0/applicationexecutables/${id}/deployments/${deploymentId}`;
+    const url = `/v3.0/applicationexecutables/${id}/deployments/${deploymentId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -286,7 +286,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdTasks(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/tasks`;
+    const url = `/v3.0/applicationexecutables/${id}/tasks`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -300,7 +300,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdTasks(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/tasks`;
+    const url = `/v3.0/applicationexecutables/${id}/tasks`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -315,7 +315,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutablesTasks(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/tasks`;
+    const url = `/v3.0/applicationexecutables/tasks`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -327,7 +327,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   deleteApplicationExecutablesByIdTasksByTaskId(id, taskId, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/tasks/${taskId}`;
+    const url = `/v3.0/applicationexecutables/${id}/tasks/${taskId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -337,7 +337,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdLicenses(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/licenses`;
+    const url = `/v3.0/applicationexecutables/${id}/licenses`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -349,7 +349,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdLicenses(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/licenses`;
+    const url = `/v3.0/applicationexecutables/${id}/licenses`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -362,7 +362,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutablesLicenses(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/licenses`;
+    const url = `/v3.0/applicationexecutables/licenses`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -378,7 +378,7 @@ export class ApplicationExecutables {
     licenseId,
     params = {},
   ) {
-    const url = `/api/v3.0/applicationexecutables/${id}/licenses/${licenseId}`;
+    const url = `/v3.0/applicationexecutables/${id}/licenses/${licenseId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -388,7 +388,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdCdimages(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/cdimages`;
+    const url = `/v3.0/applicationexecutables/${id}/cdimages`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -402,7 +402,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdCdimages(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/cdimages`;
+    const url = `/v3.0/applicationexecutables/${id}/cdimages`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -418,7 +418,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutablesCdimages(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/cdimages`;
+    const url = `/v3.0/applicationexecutables/cdimages`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -434,7 +434,7 @@ export class ApplicationExecutables {
     cdimageId,
     params = {},
   ) {
-    const url = `/api/v3.0/applicationexecutables/${id}/cdimages/${cdimageId}`;
+    const url = `/v3.0/applicationexecutables/${id}/cdimages/${cdimageId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -444,7 +444,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdImage(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/image`;
+    const url = `/v3.0/applicationexecutables/${id}/image`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -455,7 +455,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   putApplicationExecutablesByIdImage(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/image`;
+    const url = `/v3.0/applicationexecutables/${id}/image`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -467,7 +467,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdDuplicate(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/duplicate`;
+    const url = `/v3.0/applicationexecutables/${id}/duplicate`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -478,7 +478,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   getApplicationExecutablesByIdBranches(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/branches`;
+    const url = `/v3.0/applicationexecutables/${id}/branches`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -490,7 +490,7 @@ export class ApplicationExecutables {
    * @param {Object} params - additional query params
    */
   postApplicationExecutablesByIdBranches(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationexecutables/${id}/branches`;
+    const url = `/v3.0/applicationexecutables/${id}/branches`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

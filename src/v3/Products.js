@@ -25,7 +25,7 @@ export class Products {
          * @param {Object} params - additional query params
          */
   getProducts(options = {}, params = {}) {
-    const url = `/api/v3.0/products`;
+    const url = `/v3.0/products`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -107,7 +107,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProducts(data = {}, params = {}) {
-    const url = `/api/v3.0/products`;
+    const url = `/v3.0/products`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -144,7 +144,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProducts(data = {}, params = {}) {
-    const url = `/api/v3.0/products`;
+    const url = `/v3.0/products`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -157,7 +157,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}`;
+    const url = `/v3.0/products/${id}`;
     const expand = options.hasOwnProperty("expand")
       ? options["expand"]
       : undefined;
@@ -172,7 +172,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   deleteProductsById(id, params = {}) {
-    const url = `/api/v3.0/products/${id}`;
+    const url = `/v3.0/products/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -182,7 +182,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/products/${id}/undelete`;
+    const url = `/v3.0/products/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -192,7 +192,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsByIdPurchaseavailability(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/purchaseavailability`;
+    const url = `/v3.0/products/${id}/purchaseavailability`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -207,7 +207,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsByIdPurchaseavailability(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/purchaseavailability`;
+    const url = `/v3.0/products/${id}/purchaseavailability`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -218,7 +218,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsByIdImages(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/images`;
+    const url = `/v3.0/products/${id}/images`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -229,7 +229,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsByIdImages(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/images`;
+    const url = `/v3.0/products/${id}/images`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -242,7 +242,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsImages(data = {}, params = {}) {
-    const url = `/api/v3.0/products/images`;
+    const url = `/v3.0/products/images`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -254,7 +254,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   deleteProductsByIdImagesByProductImageId(id, productImageId, params = {}) {
-    const url = `/api/v3.0/products/${id}/images/${productImageId}`;
+    const url = `/v3.0/products/${id}/images/${productImageId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -264,7 +264,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsByIdUserprices(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/userprices`;
+    const url = `/v3.0/products/${id}/userprices`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -279,7 +279,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsByIdUserprices(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/userprices`;
+    const url = `/v3.0/products/${id}/userprices`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -296,7 +296,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsUserprices(data = {}, params = {}) {
-    const url = `/api/v3.0/products/userprices`;
+    const url = `/v3.0/products/userprices`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -308,7 +308,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   deleteProductsByIdUserpricesByUserPriceId(id, userPriceId, params = {}) {
-    const url = `/api/v3.0/products/${id}/userprices/${userPriceId}`;
+    const url = `/v3.0/products/${id}/userprices/${userPriceId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -318,7 +318,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsByIdDisallowedusergroups(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/disallowedusergroups`;
+    const url = `/v3.0/products/${id}/disallowedusergroups`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -330,7 +330,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsByIdDisallowedusergroups(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/disallowedusergroups`;
+    const url = `/v3.0/products/${id}/disallowedusergroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -344,7 +344,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsDisallowedusergroups(data = {}, params = {}) {
-    const url = `/api/v3.0/products/disallowedusergroups`;
+    const url = `/v3.0/products/disallowedusergroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -360,7 +360,7 @@ export class Products {
     productDisallowedUserGroupId,
     params = {},
   ) {
-    const url = `/api/v3.0/products/${id}/disallowedusergroups/${productDisallowedUserGroupId}`;
+    const url = `/v3.0/products/${id}/disallowedusergroups/${productDisallowedUserGroupId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -370,7 +370,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsBundleByIdBundledproducts(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/bundle/${id}/bundledproducts`;
+    const url = `/v3.0/products/bundle/${id}/bundledproducts`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -383,7 +383,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsBundleByIdBundledproducts(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/bundle/${id}/bundledproducts`;
+    const url = `/v3.0/products/bundle/${id}/bundledproducts`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -397,7 +397,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsBundleBundledproducts(data = {}, params = {}) {
-    const url = `/api/v3.0/products/bundle/bundledproducts`;
+    const url = `/v3.0/products/bundle/bundledproducts`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -413,7 +413,7 @@ export class Products {
     bundledProductId,
     params = {},
   ) {
-    const url = `/api/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}`;
+    const url = `/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -429,7 +429,7 @@ export class Products {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}/userprices`;
+    const url = `/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}/userprices`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -447,7 +447,7 @@ export class Products {
     data = {},
     params = {},
   ) {
-    const url = `/api/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}/userprices`;
+    const url = `/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}/userprices`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -461,7 +461,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsBundleBundledproductsUserprices(data = {}, params = {}) {
-    const url = `/api/v3.0/products/bundle/bundledproducts/userprices`;
+    const url = `/v3.0/products/bundle/bundledproducts/userprices`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -479,7 +479,7 @@ export class Products {
     userPriceId,
     params = {},
   ) {
-    const url = `/api/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}/userprices/${userPriceId}`;
+    const url = `/v3.0/products/bundle/${id}/bundledproducts/${bundledProductId}/userprices/${userPriceId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -489,7 +489,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsTimeByIdUsageavailability(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/time/${id}/usageavailability`;
+    const url = `/v3.0/products/time/${id}/usageavailability`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -504,7 +504,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsTimeByIdUsageavailability(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/time/${id}/usageavailability`;
+    const url = `/v3.0/products/time/${id}/usageavailability`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -515,7 +515,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsTimeByIdDisallowedhostgroups(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/time/${id}/disallowedhostgroups`;
+    const url = `/v3.0/products/time/${id}/disallowedhostgroups`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -527,7 +527,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsTimeByIdDisallowedhostgroups(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/time/${id}/disallowedhostgroups`;
+    const url = `/v3.0/products/time/${id}/disallowedhostgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -541,7 +541,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsTimeDisallowedhostgroups(data = {}, params = {}) {
-    const url = `/api/v3.0/products/time/disallowedhostgroups`;
+    const url = `/v3.0/products/time/disallowedhostgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -557,7 +557,7 @@ export class Products {
     timeProductDisallowedHostGroupId,
     params = {},
   ) {
-    const url = `/api/v3.0/products/time/${id}/disallowedhostgroups/${timeProductDisallowedHostGroupId}`;
+    const url = `/v3.0/products/time/${id}/disallowedhostgroups/${timeProductDisallowedHostGroupId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -575,7 +575,7 @@ export class Products {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/products/${productId}/user/${userId}/quantity/${quantity}/price`;
+    const url = `/v3.0/products/${productId}/user/${userId}/quantity/${quantity}/price`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -591,7 +591,7 @@ export class Products {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/products/${productId}/quantity/${quantity}/price`;
+    const url = `/v3.0/products/${productId}/quantity/${quantity}/price`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -609,7 +609,7 @@ export class Products {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/products/${productId}/usergroup/${userGroupId}/quantity/${quantity}/price`;
+    const url = `/v3.0/products/${productId}/usergroup/${userGroupId}/quantity/${quantity}/price`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -619,7 +619,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsByIdBranches(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/branches`;
+    const url = `/v3.0/products/${id}/branches`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -631,7 +631,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsByIdBranches(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/branches`;
+    const url = `/v3.0/products/${id}/branches`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -642,7 +642,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsByIdHiddenhostgroups(id, options = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/hiddenhostgroups`;
+    const url = `/v3.0/products/${id}/hiddenhostgroups`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -654,7 +654,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   postProductsByIdHiddenhostgroups(id, data = {}, params = {}) {
-    const url = `/api/v3.0/products/${id}/hiddenhostgroups`;
+    const url = `/v3.0/products/${id}/hiddenhostgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -668,7 +668,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsHiddenhostgroups(data = {}, params = {}) {
-    const url = `/api/v3.0/products/hiddenhostgroups`;
+    const url = `/v3.0/products/hiddenhostgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -684,7 +684,7 @@ export class Products {
     productHiddenHostGroupId,
     params = {},
   ) {
-    const url = `/api/v3.0/products/${id}/hiddenhostgroups/${productHiddenHostGroupId}`;
+    const url = `/v3.0/products/${id}/hiddenhostgroups/${productHiddenHostGroupId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -694,7 +694,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/products/name/${name}/exist`;
+    const url = `/v3.0/products/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -703,7 +703,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   getProductsCounters(options = {}, params = {}) {
-    const url = `/api/v3.0/products/counters`;
+    const url = `/v3.0/products/counters`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -713,7 +713,7 @@ export class Products {
    * @param {Object} params - additional query params
    */
   putProductsDisplayorder(data = {}, params = {}) {
-    const url = `/api/v3.0/products/displayorder`;
+    const url = `/v3.0/products/displayorder`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

@@ -23,7 +23,7 @@ export class ClientTasks {
          * @param {Object} params - additional query params
          */
   getClientTasks(options = {}, params = {}) {
-    const url = `/api/v3.0/clienttasks`;
+    const url = `/v3.0/clienttasks`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -74,7 +74,7 @@ export class ClientTasks {
    * @param {Object} params - additional query params
    */
   postClientTasks(data = {}, params = {}) {
-    const url = `/api/v3.0/clienttasks`;
+    const url = `/v3.0/clienttasks`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -89,7 +89,7 @@ export class ClientTasks {
    * @param {Object} params - additional query params
    */
   putClientTasks(data = {}, params = {}) {
-    const url = `/api/v3.0/clienttasks`;
+    const url = `/v3.0/clienttasks`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -100,7 +100,7 @@ export class ClientTasks {
    * @param {Object} params - additional query params
    */
   getClientTasksById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/clienttasks/${id}`;
+    const url = `/v3.0/clienttasks/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -110,7 +110,7 @@ export class ClientTasks {
    * @param {Object} params - additional query params
    */
   deleteClientTasksById(id, params = {}) {
-    const url = `/api/v3.0/clienttasks/${id}`;
+    const url = `/v3.0/clienttasks/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -120,7 +120,7 @@ export class ClientTasks {
    * @param {Object} params - additional query params
    */
   putClientTasksByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/clienttasks/${id}/enable`;
+    const url = `/v3.0/clienttasks/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -130,7 +130,7 @@ export class ClientTasks {
    * @param {Object} params - additional query params
    */
   putClientTasksByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/clienttasks/${id}/disable`;
+    const url = `/v3.0/clienttasks/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 }

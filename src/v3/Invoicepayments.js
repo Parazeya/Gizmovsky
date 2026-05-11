@@ -25,7 +25,7 @@ export class InvoicePayments {
          * @param {Object} params - additional query params
          */
   getInvoicePayments(options = {}, params = {}) {
-    const url = `/api/v3.0/invoicepayments`;
+    const url = `/v3.0/invoicepayments`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -84,7 +84,7 @@ export class InvoicePayments {
    * @param {Object} params - additional query params
    */
   postInvoicePayments(data = {}, params = {}) {
-    const url = `/api/v3.0/invoicepayments`;
+    const url = `/v3.0/invoicepayments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -95,7 +95,7 @@ export class InvoicePayments {
    * @param {Object} params - additional query params
    */
   getInvoicePaymentsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/invoicepayments/${id}`;
+    const url = `/v3.0/invoicepayments/${id}`;
     return this.client.request("get", url, {}, params);
   }
 }

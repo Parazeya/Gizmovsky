@@ -22,7 +22,7 @@ export class ApplicationLicenses {
          * @param {Object} params - additional query params
          */
   getApplicationLicenses(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses`;
+    const url = `/v3.0/applicationlicenses`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -69,7 +69,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   postApplicationLicenses(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses`;
+    const url = `/v3.0/applicationlicenses`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -83,7 +83,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   putApplicationLicenses(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses`;
+    const url = `/v3.0/applicationlicenses`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -94,7 +94,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   getApplicationLicensesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/${id}`;
+    const url = `/v3.0/applicationlicenses/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -104,7 +104,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   deleteApplicationLicensesById(id, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/${id}`;
+    const url = `/v3.0/applicationlicenses/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -114,7 +114,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   getApplicationLicensesNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/name/${name}/exist`;
+    const url = `/v3.0/applicationlicenses/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -124,7 +124,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   putApplicationLicensesByIdUnassign(id, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/${id}/unassign`;
+    const url = `/v3.0/applicationlicenses/${id}/unassign`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -134,7 +134,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   getApplicationLicensesByIdOptions(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/${id}/options`;
+    const url = `/v3.0/applicationlicenses/${id}/options`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -144,7 +144,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   getApplicationLicensesByIdKeys(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/${id}/keys`;
+    const url = `/v3.0/applicationlicenses/${id}/keys`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -156,7 +156,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   postApplicationLicensesByIdKeys(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/${id}/keys`;
+    const url = `/v3.0/applicationlicenses/${id}/keys`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -166,7 +166,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   getApplicationLicensesMetadata(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/metadata`;
+    const url = `/v3.0/applicationlicenses/metadata`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -176,7 +176,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   getApplicationLicensesKeysByKeyId(keyId, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/keys/${keyId}`;
+    const url = `/v3.0/applicationlicenses/keys/${keyId}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -186,7 +186,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   deleteApplicationLicensesKeysByKeyId(keyId, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/keys/${keyId}`;
+    const url = `/v3.0/applicationlicenses/keys/${keyId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -197,7 +197,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   putApplicationLicensesKeysByKeyIdEnableByEnable(keyId, enable, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/keys/${keyId}/enable/${enable}`;
+    const url = `/v3.0/applicationlicenses/keys/${keyId}/enable/${enable}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -208,7 +208,7 @@ export class ApplicationLicenses {
    * @param {Object} params - additional query params
    */
   putApplicationLicensesKeysByKeyIdHost(keyId, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationlicenses/keys/${keyId}/host`;
+    const url = `/v3.0/applicationlicenses/keys/${keyId}/host`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -225,7 +225,7 @@ export class ApplicationLicenses {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/applicationlicenses/${plugin}/keys/displayvalue`;
+    const url = `/v3.0/applicationlicenses/${plugin}/keys/displayvalue`;
     const values = options.hasOwnProperty("values")
       ? options["values"]
       : undefined;

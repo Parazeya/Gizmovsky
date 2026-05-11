@@ -21,7 +21,7 @@ export class ApplicationEnterprises {
          * @param {Object} params - additional query params
          */
   getApplicationEnterprises(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationenterprises`;
+    const url = `/v3.0/applicationenterprises`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -61,7 +61,7 @@ export class ApplicationEnterprises {
    * @param {Object} params - additional query params
    */
   postApplicationEnterprises(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationenterprises`;
+    const url = `/v3.0/applicationenterprises`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -73,7 +73,7 @@ export class ApplicationEnterprises {
    * @param {Object} params - additional query params
    */
   putApplicationEnterprises(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationenterprises`;
+    const url = `/v3.0/applicationenterprises`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -84,7 +84,7 @@ export class ApplicationEnterprises {
    * @param {Object} params - additional query params
    */
   getApplicationEnterprisesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationenterprises/${id}`;
+    const url = `/v3.0/applicationenterprises/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -94,7 +94,7 @@ export class ApplicationEnterprises {
    * @param {Object} params - additional query params
    */
   deleteApplicationEnterprisesById(id, params = {}) {
-    const url = `/api/v3.0/applicationenterprises/${id}`;
+    const url = `/v3.0/applicationenterprises/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

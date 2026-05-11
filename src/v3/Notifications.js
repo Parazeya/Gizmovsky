@@ -23,7 +23,7 @@ export class Notifications {
          * @param {Object} params - additional query params
          */
   getNotifications(options = {}, params = {}) {
-    const url = `/api/v3.0/notifications`;
+    const url = `/v3.0/notifications`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -69,7 +69,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   getNotificationsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/notifications/${id}`;
+    const url = `/v3.0/notifications/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -79,7 +79,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   deleteNotificationsById(id, params = {}) {
-    const url = `/api/v3.0/notifications/${id}`;
+    const url = `/v3.0/notifications/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -92,7 +92,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   postNotificationsTimedRemaining(data = {}, params = {}) {
-    const url = `/api/v3.0/notifications/timed/remaining`;
+    const url = `/v3.0/notifications/timed/remaining`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -107,7 +107,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   putNotificationsTimedRemaining(data = {}, params = {}) {
-    const url = `/api/v3.0/notifications/timed/remaining`;
+    const url = `/v3.0/notifications/timed/remaining`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -121,7 +121,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   postNotificationsTimedReservation(data = {}, params = {}) {
-    const url = `/api/v3.0/notifications/timed/reservation`;
+    const url = `/v3.0/notifications/timed/reservation`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -136,7 +136,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   putNotificationsTimedReservation(data = {}, params = {}) {
-    const url = `/api/v3.0/notifications/timed/reservation`;
+    const url = `/v3.0/notifications/timed/reservation`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -147,7 +147,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   putNotificationsByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/notifications/${id}/enable`;
+    const url = `/v3.0/notifications/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -157,7 +157,7 @@ export class Notifications {
    * @param {Object} params - additional query params
    */
   putNotificationsByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/notifications/${id}/disable`;
+    const url = `/v3.0/notifications/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 }

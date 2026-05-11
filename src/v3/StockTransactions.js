@@ -27,7 +27,7 @@ export class StockTransactions {
          * @param {Object} params - additional query params
          */
   getStockTransactions(options = {}, params = {}) {
-    const url = `/api/v3.0/stocktransactions`;
+    const url = `/v3.0/stocktransactions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -92,7 +92,7 @@ export class StockTransactions {
    * @param {Object} params - additional query params
    */
   postStockTransactions(data = {}, params = {}) {
-    const url = `/api/v3.0/stocktransactions`;
+    const url = `/v3.0/stocktransactions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -103,7 +103,7 @@ export class StockTransactions {
    * @param {Object} params - additional query params
    */
   getStockTransactionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/stocktransactions/${id}`;
+    const url = `/v3.0/stocktransactions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 }

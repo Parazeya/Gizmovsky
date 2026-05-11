@@ -22,7 +22,7 @@ export class AssetTypes {
          * @param {Object} params - additional query params
          */
   getAssetTypes(options = {}, params = {}) {
-    const url = `/api/v3.0/assettypes`;
+    const url = `/v3.0/assettypes`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -67,7 +67,7 @@ export class AssetTypes {
    * @param {Object} params - additional query params
    */
   postAssetTypes(data = {}, params = {}) {
-    const url = `/api/v3.0/assettypes`;
+    const url = `/v3.0/assettypes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -80,7 +80,7 @@ export class AssetTypes {
    * @param {Object} params - additional query params
    */
   putAssetTypes(data = {}, params = {}) {
-    const url = `/api/v3.0/assettypes`;
+    const url = `/v3.0/assettypes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -91,7 +91,7 @@ export class AssetTypes {
    * @param {Object} params - additional query params
    */
   getAssetTypesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/assettypes/${id}`;
+    const url = `/v3.0/assettypes/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -101,7 +101,7 @@ export class AssetTypes {
    * @param {Object} params - additional query params
    */
   deleteAssetTypesById(id, params = {}) {
-    const url = `/api/v3.0/assettypes/${id}`;
+    const url = `/v3.0/assettypes/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

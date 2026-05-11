@@ -22,7 +22,7 @@ export class InventoryAdjustmentReasons {
          * @param {Object} params - additional query params
          */
   getInventoryAdjustmentReasons(options = {}, params = {}) {
-    const url = `/api/v3.0/inventoryadjustmentreasons`;
+    const url = `/v3.0/inventoryadjustmentreasons`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -67,7 +67,7 @@ export class InventoryAdjustmentReasons {
    * @param {Object} params - additional query params
    */
   postInventoryAdjustmentReasons(data = {}, params = {}) {
-    const url = `/api/v3.0/inventoryadjustmentreasons`;
+    const url = `/v3.0/inventoryadjustmentreasons`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -80,7 +80,7 @@ export class InventoryAdjustmentReasons {
    * @param {Object} params - additional query params
    */
   putInventoryAdjustmentReasons(data = {}, params = {}) {
-    const url = `/api/v3.0/inventoryadjustmentreasons`;
+    const url = `/v3.0/inventoryadjustmentreasons`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -91,7 +91,7 @@ export class InventoryAdjustmentReasons {
    * @param {Object} params - additional query params
    */
   getInventoryAdjustmentReasonsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/inventoryadjustmentreasons/${id}`;
+    const url = `/v3.0/inventoryadjustmentreasons/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -101,7 +101,7 @@ export class InventoryAdjustmentReasons {
    * @param {Object} params - additional query params
    */
   deleteInventoryAdjustmentReasonsById(id, params = {}) {
-    const url = `/api/v3.0/inventoryadjustmentreasons/${id}`;
+    const url = `/v3.0/inventoryadjustmentreasons/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -111,7 +111,7 @@ export class InventoryAdjustmentReasons {
    * @param {Object} params - additional query params
    */
   putInventoryAdjustmentReasonsByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/inventoryadjustmentreasons/${id}/undelete`;
+    const url = `/v3.0/inventoryadjustmentreasons/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -125,7 +125,7 @@ export class InventoryAdjustmentReasons {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/inventoryadjustmentreasons/name/${name}/exists`;
+    const url = `/v3.0/inventoryadjustmentreasons/name/${name}/exists`;
     return this.client.request("get", url, {}, params);
   }
 }

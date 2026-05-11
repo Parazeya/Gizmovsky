@@ -23,7 +23,7 @@ export class TimeProducts {
          * @param {Object} params - additional query params
          */
   getTimeProducts(options = {}, params = {}) {
-    const url = `/api/v3.0/timeproducts`;
+    const url = `/v3.0/timeproducts`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -71,7 +71,7 @@ export class TimeProducts {
    * @param {Object} params - additional query params
    */
   deleteTimeProductsById(id, params = {}) {
-    const url = `/api/v3.0/timeproducts/${id}`;
+    const url = `/v3.0/timeproducts/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

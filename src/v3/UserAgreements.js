@@ -22,7 +22,7 @@ export class UserAgreements {
          * @param {Object} params - additional query params
          */
   getUserAgreements(options = {}, params = {}) {
-    const url = `/api/v3.0/useragreements`;
+    const url = `/v3.0/useragreements`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -71,7 +71,7 @@ export class UserAgreements {
    * @param {Object} params - additional query params
    */
   postUserAgreements(data = {}, params = {}) {
-    const url = `/api/v3.0/useragreements`;
+    const url = `/v3.0/useragreements`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -88,7 +88,7 @@ export class UserAgreements {
    * @param {Object} params - additional query params
    */
   putUserAgreements(data = {}, params = {}) {
-    const url = `/api/v3.0/useragreements`;
+    const url = `/v3.0/useragreements`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -99,7 +99,7 @@ export class UserAgreements {
    * @param {Object} params - additional query params
    */
   getUserAgreementsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/useragreements/${id}`;
+    const url = `/v3.0/useragreements/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -109,7 +109,7 @@ export class UserAgreements {
    * @param {Object} params - additional query params
    */
   deleteUserAgreementsById(id, params = {}) {
-    const url = `/api/v3.0/useragreements/${id}`;
+    const url = `/v3.0/useragreements/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -119,7 +119,7 @@ export class UserAgreements {
    * @param {Object} params - additional query params
    */
   deleteUserAgreementsByIdResetstates(id, params = {}) {
-    const url = `/api/v3.0/useragreements/${id}/resetstates`;
+    const url = `/v3.0/useragreements/${id}/resetstates`;
     return this.client.request("delete", url, {}, params);
   }
 }

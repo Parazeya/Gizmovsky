@@ -24,7 +24,7 @@ export class Operators {
          * @param {Object} params - additional query params
          */
   getOperators(options = {}, params = {}) {
-    const url = `/api/v3.0/operators`;
+    const url = `/v3.0/operators`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -94,7 +94,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   postOperators(data = {}, params = {}) {
-    const url = `/api/v3.0/operators`;
+    const url = `/v3.0/operators`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -124,7 +124,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   putOperators(data = {}, params = {}) {
-    const url = `/api/v3.0/operators`;
+    const url = `/v3.0/operators`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -135,7 +135,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/operators/${id}`;
+    const url = `/v3.0/operators/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -145,7 +145,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   deleteOperatorsById(id, params = {}) {
-    const url = `/api/v3.0/operators/${id}`;
+    const url = `/v3.0/operators/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -154,7 +154,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsCurrent(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current`;
+    const url = `/v3.0/operators/current`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -163,7 +163,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsCurrentShiftOptions(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/shift/options`;
+    const url = `/v3.0/operators/current/shift/options`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -183,7 +183,7 @@ export class Operators {
          * @param {Object} params - additional query params
          */
   getOperatorsCurrentBranches(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/branches`;
+    const url = `/v3.0/operators/current/branches`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -234,7 +234,7 @@ export class Operators {
          * @param {Object} params - additional query params
          */
   getOperatorsByOperatorIdBranches(operatorId, options = {}, params = {}) {
-    const url = `/api/v3.0/operators/${operatorId}/branches`;
+    const url = `/v3.0/operators/${operatorId}/branches`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -273,7 +273,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsCurrentBranchesCurrent(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/branches/current`;
+    const url = `/v3.0/operators/current/branches/current`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -298,7 +298,7 @@ export class Operators {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/operators/current/branches/${branchId}/registers`;
+    const url = `/v3.0/operators/current/branches/${branchId}/registers`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -348,7 +348,7 @@ export class Operators {
          * @param {Object} params - additional query params
          */
   getOperatorsCurrentRegisters(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/registers`;
+    const url = `/v3.0/operators/current/registers`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -387,7 +387,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsCurrentRegistersCurrent(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/registers/current`;
+    const url = `/v3.0/operators/current/registers/current`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -398,7 +398,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   postOperatorsCurrentShiftStart(data = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/shift/start`;
+    const url = `/v3.0/operators/current/shift/start`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -411,7 +411,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   postOperatorsByOperatorIdShiftStart(operatorId, data = {}, params = {}) {
-    const url = `/api/v3.0/operators/${operatorId}/shift/start`;
+    const url = `/v3.0/operators/${operatorId}/shift/start`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -421,7 +421,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   putOperatorsCurrentShiftActiveLock(params = {}) {
-    const url = `/api/v3.0/operators/current/shift/active/lock`;
+    const url = `/v3.0/operators/current/shift/active/lock`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -430,7 +430,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   putOperatorsCurrentShiftActiveUnlock(params = {}) {
-    const url = `/api/v3.0/operators/current/shift/active/unlock`;
+    const url = `/v3.0/operators/current/shift/active/unlock`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -439,7 +439,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsCurrentShiftActive(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/shift/active`;
+    const url = `/v3.0/operators/current/shift/active`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -449,7 +449,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   postOperatorsCurrentShiftActiveEnd(data = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/shift/active/end`;
+    const url = `/v3.0/operators/current/shift/active/end`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -459,7 +459,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsCurrentShiftActiveExpected(options = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/shift/active/expected`;
+    const url = `/v3.0/operators/current/shift/active/expected`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -469,7 +469,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   postOperatorsCurrentPassword(data = {}, params = {}) {
-    const url = `/api/v3.0/operators/current/password`;
+    const url = `/v3.0/operators/current/password`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -481,7 +481,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   postOperatorsByOperatorIdBranchByBranchId(operatorId, branchId, params = {}) {
-    const url = `/api/v3.0/operators/${operatorId}/branch/${branchId}`;
+    const url = `/v3.0/operators/${operatorId}/branch/${branchId}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -496,7 +496,7 @@ export class Operators {
     branchId,
     params = {},
   ) {
-    const url = `/api/v3.0/operators/${operatorId}/branch/${branchId}`;
+    const url = `/v3.0/operators/${operatorId}/branch/${branchId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -513,7 +513,7 @@ export class Operators {
     isDefault,
     params = {},
   ) {
-    const url = `/api/v3.0/operators/${operatorId}/branch/${branchId}/default/${isDefault}`;
+    const url = `/v3.0/operators/${operatorId}/branch/${branchId}/default/${isDefault}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -523,7 +523,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsByOperatorIdBranchDefault(operatorId, options = {}, params = {}) {
-    const url = `/api/v3.0/operators/${operatorId}/branch/default`;
+    const url = `/v3.0/operators/${operatorId}/branch/default`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -538,7 +538,7 @@ export class Operators {
     permissionSetId,
     params = {},
   ) {
-    const url = `/api/v3.0/operators/${operatorId}/permissionset/${permissionSetId}`;
+    const url = `/v3.0/operators/${operatorId}/permissionset/${permissionSetId}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -548,7 +548,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   getOperatorsByOperatorIdPermissions(operatorId, options = {}, params = {}) {
-    const url = `/api/v3.0/operators/${operatorId}/permissions`;
+    const url = `/v3.0/operators/${operatorId}/permissions`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -558,7 +558,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   putOperatorsByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/operators/${id}/enable`;
+    const url = `/v3.0/operators/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -568,7 +568,7 @@ export class Operators {
    * @param {Object} params - additional query params
    */
   putOperatorsByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/operators/${id}/disable`;
+    const url = `/v3.0/operators/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 }

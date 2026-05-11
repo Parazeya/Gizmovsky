@@ -1,6 +1,6 @@
 {
   "name": "gizmovsky",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Unofficial SDK for Gizmo API",
   "main": "dist/gizmo-sdk.cjs.js",
   "module": "dist/gizmo-sdk.esm.js",

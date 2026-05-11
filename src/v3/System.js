@@ -10,7 +10,7 @@ export class System {
    * @param {Object} params - additional query params
    */
   getSystemTimezones(options = {}, params = {}) {
-    const url = `/api/v3.0/system/timezones`;
+    const url = `/v3.0/system/timezones`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -19,7 +19,7 @@ export class System {
    * @param {Object} params - additional query params
    */
   getSystemTimezonesLocal(options = {}, params = {}) {
-    const url = `/api/v3.0/system/timezones/local`;
+    const url = `/v3.0/system/timezones/local`;
     return this.client.request("get", url, {}, params);
   }
 }

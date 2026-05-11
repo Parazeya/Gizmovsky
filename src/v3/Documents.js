@@ -23,7 +23,7 @@ export class Documents {
          * @param {Object} params - additional query params
          */
   getDocuments(options = {}, params = {}) {
-    const url = `/api/v3.0/documents`;
+    const url = `/v3.0/documents`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -71,7 +71,7 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   postDocuments(data = {}, params = {}) {
-    const url = `/api/v3.0/documents`;
+    const url = `/v3.0/documents`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -85,7 +85,7 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   putDocuments(data = {}, params = {}) {
-    const url = `/api/v3.0/documents`;
+    const url = `/v3.0/documents`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -96,7 +96,7 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   getDocumentsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/documents/${id}`;
+    const url = `/v3.0/documents/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -106,7 +106,7 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   deleteDocumentsById(id, params = {}) {
-    const url = `/api/v3.0/documents/${id}`;
+    const url = `/v3.0/documents/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -116,7 +116,7 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   putDocumentsByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/documents/${id}/undelete`;
+    const url = `/v3.0/documents/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -126,7 +126,7 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   getDocumentsFileByFileNameExists(fileName, options = {}, params = {}) {
-    const url = `/api/v3.0/documents/file/${fileName}/exists`;
+    const url = `/v3.0/documents/file/${fileName}/exists`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -136,18 +136,18 @@ export class Documents {
    * @param {Object} params - additional query params
    */
   getDocumentsByIdDescription(id, options = {}, params = {}) {
-    const url = `/api/v3.0/documents/${id}/description`;
+    const url = `/v3.0/documents/${id}/description`;
     return this.client.request("get", url, {}, params);
   }
 
   /**
    * Sets description.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/documents/{id}/description"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/documents/{id}/description"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putDocumentsByIdDescription(id, data = {}, params = {}) {
-    const url = `/api/v3.0/documents/${id}/description`;
+    const url = `/v3.0/documents/${id}/description`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

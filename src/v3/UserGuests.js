@@ -14,7 +14,7 @@ export class UserGuests {
    * @param {Object} params - additional query params
    */
   getUserGuestsVirtual(options = {}, params = {}) {
-    const url = `/api/v3.0/userguests/virtual`;
+    const url = `/v3.0/userguests/virtual`;
     const limit = options.hasOwnProperty("limit")
       ? options["limit"]
       : undefined;
@@ -39,7 +39,7 @@ export class UserGuests {
    * @param {Object} params - additional query params
    */
   postUserGuestsReserve(data = {}, params = {}) {
-    const url = `/api/v3.0/userguests/reserve`;
+    const url = `/v3.0/userguests/reserve`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -50,7 +50,7 @@ export class UserGuests {
    * @param {Object} params - additional query params
    */
   postUserGuestsHostByHostIdRelease(hostId, params = {}) {
-    const url = `/api/v3.0/userguests/host/${hostId}/release`;
+    const url = `/v3.0/userguests/host/${hostId}/release`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -60,7 +60,7 @@ export class UserGuests {
    * @param {Object} params - additional query params
    */
   postUserGuestsByUserIdRelease(userId, params = {}) {
-    const url = `/api/v3.0/userguests/${userId}/release`;
+    const url = `/v3.0/userguests/${userId}/release`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -69,7 +69,7 @@ export class UserGuests {
    * @param {Object} params - additional query params
    */
   getUserGuestsJoined(options = {}, params = {}) {
-    const url = `/api/v3.0/userguests/joined`;
+    const url = `/v3.0/userguests/joined`;
     return this.client.request("get", url, {}, params);
   }
 }

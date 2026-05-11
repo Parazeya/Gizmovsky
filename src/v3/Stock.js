@@ -24,7 +24,7 @@ export class Stock {
          * @param {Object} params - additional query params
          */
   getStock(options = {}, params = {}) {
-    const url = `/api/v3.0/stock`;
+    const url = `/v3.0/stock`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -77,7 +77,7 @@ export class Stock {
    * @param {Object} params - additional query params
    */
   postStock(data = {}, params = {}) {
-    const url = `/api/v3.0/stock`;
+    const url = `/v3.0/stock`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -92,7 +92,7 @@ export class Stock {
    * @param {Object} params - additional query params
    */
   putStock(data = {}, params = {}) {
-    const url = `/api/v3.0/stock`;
+    const url = `/v3.0/stock`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -103,7 +103,7 @@ export class Stock {
    * @param {Object} params - additional query params
    */
   getStockById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/stock/${id}`;
+    const url = `/v3.0/stock/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -113,7 +113,7 @@ export class Stock {
    * @param {Object} params - additional query params
    */
   deleteStockById(id, params = {}) {
-    const url = `/api/v3.0/stock/${id}`;
+    const url = `/v3.0/stock/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -123,18 +123,18 @@ export class Stock {
    * @param {Object} params - additional query params
    */
   putStockByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/stock/${id}/undelete`;
+    const url = `/v3.0/stock/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
   /**
    * Sets entry name.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/stock/{id}/name"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/stock/{id}/name"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putStockByIdName(id, data = {}, params = {}) {
-    const url = `/api/v3.0/stock/${id}/name`;
+    const url = `/v3.0/stock/${id}/name`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -145,7 +145,7 @@ export class Stock {
    * @param {Object} params - additional query params
    */
   getStockNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/stock/name/${name}/exist`;
+    const url = `/v3.0/stock/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -161,7 +161,7 @@ export class Stock {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/stock/name/${name}/branch/${branchId}/exist`;
+    const url = `/v3.0/stock/name/${name}/branch/${branchId}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

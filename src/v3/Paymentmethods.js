@@ -23,7 +23,7 @@ export class PaymentMethods {
          * @param {Object} params - additional query params
          */
   getPaymentMethods(options = {}, params = {}) {
-    const url = `/api/v3.0/paymentmethods`;
+    const url = `/v3.0/paymentmethods`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -77,7 +77,7 @@ export class PaymentMethods {
    * @param {Object} params - additional query params
    */
   postPaymentMethods(data = {}, params = {}) {
-    const url = `/api/v3.0/paymentmethods`;
+    const url = `/v3.0/paymentmethods`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -97,7 +97,7 @@ export class PaymentMethods {
    * @param {Object} params - additional query params
    */
   putPaymentMethods(data = {}, params = {}) {
-    const url = `/api/v3.0/paymentmethods`;
+    const url = `/v3.0/paymentmethods`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -108,7 +108,7 @@ export class PaymentMethods {
    * @param {Object} params - additional query params
    */
   getPaymentMethodsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentmethods/${id}`;
+    const url = `/v3.0/paymentmethods/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -118,7 +118,7 @@ export class PaymentMethods {
    * @param {Object} params - additional query params
    */
   deletePaymentMethodsById(id, params = {}) {
-    const url = `/api/v3.0/paymentmethods/${id}`;
+    const url = `/v3.0/paymentmethods/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -128,7 +128,7 @@ export class PaymentMethods {
    * @param {Object} params - additional query params
    */
   getPaymentMethodsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentmethods/name/${name}/exist`;
+    const url = `/v3.0/paymentmethods/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

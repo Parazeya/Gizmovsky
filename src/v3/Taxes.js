@@ -21,7 +21,7 @@ export class Taxes {
          * @param {Object} params - additional query params
          */
   getTaxes(options = {}, params = {}) {
-    const url = `/api/v3.0/taxes`;
+    const url = `/v3.0/taxes`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -63,7 +63,7 @@ export class Taxes {
    * @param {Object} params - additional query params
    */
   postTaxes(data = {}, params = {}) {
-    const url = `/api/v3.0/taxes`;
+    const url = `/v3.0/taxes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -77,7 +77,7 @@ export class Taxes {
    * @param {Object} params - additional query params
    */
   putTaxes(data = {}, params = {}) {
-    const url = `/api/v3.0/taxes`;
+    const url = `/v3.0/taxes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -88,7 +88,7 @@ export class Taxes {
    * @param {Object} params - additional query params
    */
   getTaxesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/taxes/${id}`;
+    const url = `/v3.0/taxes/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -98,7 +98,7 @@ export class Taxes {
    * @param {Object} params - additional query params
    */
   deleteTaxesById(id, params = {}) {
-    const url = `/api/v3.0/taxes/${id}`;
+    const url = `/v3.0/taxes/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

@@ -24,7 +24,7 @@ export class RegisterTransactions {
          * @param {Object} params - additional query params
          */
   getRegisterTransactions(options = {}, params = {}) {
-    const url = `/api/v3.0/registertransactions`;
+    const url = `/v3.0/registertransactions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -77,7 +77,7 @@ export class RegisterTransactions {
    * @param {Object} params - additional query params
    */
   postRegisterTransactions(data = {}, params = {}) {
-    const url = `/api/v3.0/registertransactions`;
+    const url = `/v3.0/registertransactions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -88,7 +88,7 @@ export class RegisterTransactions {
    * @param {Object} params - additional query params
    */
   getRegisterTransactionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/registertransactions/${id}`;
+    const url = `/v3.0/registertransactions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -98,7 +98,7 @@ export class RegisterTransactions {
    * @param {Object} params - additional query params
    */
   getRegisterTransactionsByIdReceiptWait(id, options = {}, params = {}) {
-    const url = `/api/v3.0/registertransactions/${id}/receipt/wait`;
+    const url = `/v3.0/registertransactions/${id}/receipt/wait`;
     return this.client.request("get", url, {}, params);
   }
 }

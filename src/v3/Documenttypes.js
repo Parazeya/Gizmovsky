@@ -22,7 +22,7 @@ export class DocumentTypes {
          * @param {Object} params - additional query params
          */
   getDocumentTypes(options = {}, params = {}) {
-    const url = `/api/v3.0/documenttypes`;
+    const url = `/v3.0/documenttypes`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -66,7 +66,7 @@ export class DocumentTypes {
    * @param {Object} params - additional query params
    */
   postDocumentTypes(data = {}, params = {}) {
-    const url = `/api/v3.0/documenttypes`;
+    const url = `/v3.0/documenttypes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -78,7 +78,7 @@ export class DocumentTypes {
    * @param {Object} params - additional query params
    */
   putDocumentTypes(data = {}, params = {}) {
-    const url = `/api/v3.0/documenttypes`;
+    const url = `/v3.0/documenttypes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -89,7 +89,7 @@ export class DocumentTypes {
    * @param {Object} params - additional query params
    */
   getDocumentTypesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/documenttypes/${id}`;
+    const url = `/v3.0/documenttypes/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -99,7 +99,7 @@ export class DocumentTypes {
    * @param {Object} params - additional query params
    */
   deleteDocumentTypesById(id, params = {}) {
-    const url = `/api/v3.0/documenttypes/${id}`;
+    const url = `/v3.0/documenttypes/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -109,7 +109,7 @@ export class DocumentTypes {
    * @param {Object} params - additional query params
    */
   putDocumentTypesByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/documenttypes/${id}/undelete`;
+    const url = `/v3.0/documenttypes/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 }

@@ -23,7 +23,7 @@ export class HostGroups {
          * @param {Object} params - additional query params
          */
   getHostGroups(options = {}, params = {}) {
-    const url = `/api/v3.0/hostgroups`;
+    const url = `/v3.0/hostgroups`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -78,7 +78,7 @@ export class HostGroups {
    * @param {Object} params - additional query params
    */
   postHostGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/hostgroups`;
+    const url = `/v3.0/hostgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -97,7 +97,7 @@ export class HostGroups {
    * @param {Object} params - additional query params
    */
   putHostGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/hostgroups`;
+    const url = `/v3.0/hostgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -108,7 +108,7 @@ export class HostGroups {
    * @param {Object} params - additional query params
    */
   getHostGroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hostgroups/${id}`;
+    const url = `/v3.0/hostgroups/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -118,7 +118,7 @@ export class HostGroups {
    * @param {Object} params - additional query params
    */
   deleteHostGroupsById(id, params = {}) {
-    const url = `/api/v3.0/hostgroups/${id}`;
+    const url = `/v3.0/hostgroups/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -133,7 +133,7 @@ export class HostGroups {
     billingProfileId,
     params = {},
   ) {
-    const url = `/api/v3.0/hostgroups/${id}/billingprofile/${billingProfileId}`;
+    const url = `/v3.0/hostgroups/${id}/billingprofile/${billingProfileId}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -143,7 +143,7 @@ export class HostGroups {
    * @param {Object} params - additional query params
    */
   deleteHostGroupsByIdBillingprofile(id, params = {}) {
-    const url = `/api/v3.0/hostgroups/${id}/billingprofile`;
+    const url = `/v3.0/hostgroups/${id}/billingprofile`;
     return this.client.request("delete", url, {}, params);
   }
 }

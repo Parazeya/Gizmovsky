@@ -15,7 +15,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdScreen(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/screen`;
+    const url = `/v3.0/hostcomputers/${hostId}/screen`;
     const width = options.hasOwnProperty("width")
       ? options["width"]
       : undefined;
@@ -38,7 +38,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdScreenLast(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/screen/last`;
+    const url = `/v3.0/hostcomputers/${hostId}/screen/last`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -48,7 +48,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdReboot(hostId, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/reboot`;
+    const url = `/v3.0/hostcomputers/${hostId}/reboot`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -58,7 +58,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdShutdown(hostId, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/shutdown`;
+    const url = `/v3.0/hostcomputers/${hostId}/shutdown`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -69,7 +69,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdInputLockByValue(hostId, value, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/input/lock/${value}`;
+    const url = `/v3.0/hostcomputers/${hostId}/input/lock/${value}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -79,7 +79,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdInputLock(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/input/lock`;
+    const url = `/v3.0/hostcomputers/${hostId}/input/lock`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -90,7 +90,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdMaintenanceByValue(hostId, value, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/maintenance/${value}`;
+    const url = `/v3.0/hostcomputers/${hostId}/maintenance/${value}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -100,7 +100,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdMaintenance(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/maintenance`;
+    const url = `/v3.0/hostcomputers/${hostId}/maintenance`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -111,7 +111,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdSecurityByValue(hostId, value, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/security/${value}`;
+    const url = `/v3.0/hostcomputers/${hostId}/security/${value}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -121,7 +121,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdSecurity(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/security`;
+    const url = `/v3.0/hostcomputers/${hostId}/security`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -132,7 +132,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdOutoforderByValue(hostId, value, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/outoforder/${value}`;
+    const url = `/v3.0/hostcomputers/${hostId}/outoforder/${value}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -142,7 +142,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdOutoforder(hostId, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/outoforder`;
+    const url = `/v3.0/hostcomputers/${hostId}/outoforder`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -152,7 +152,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdClientRestart(hostId, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/client/restart`;
+    const url = `/v3.0/hostcomputers/${hostId}/client/restart`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -174,7 +174,7 @@ export class HostComputers {
          * @param {Object} params - additional query params
          */
   getHostComputersClientConnections(options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/client/connections`;
+    const url = `/v3.0/hostcomputers/client/connections`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -222,7 +222,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdClientConnection(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/client/connection`;
+    const url = `/v3.0/hostcomputers/${hostId}/client/connection`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -234,7 +234,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdProcesses(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes`;
     const processName = options.hasOwnProperty("processName")
       ? options["processName"]
       : undefined;
@@ -256,7 +256,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdProcesses(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -273,7 +273,7 @@ export class HostComputers {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes/${processId}`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes/${processId}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -288,7 +288,7 @@ export class HostComputers {
     processId,
     params = {},
   ) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes/${processId}`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes/${processId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -304,7 +304,7 @@ export class HostComputers {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes/${processId}/module`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes/${processId}/module`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -319,7 +319,7 @@ export class HostComputers {
     processName,
     params = {},
   ) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes/${processName}`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes/${processName}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -334,7 +334,7 @@ export class HostComputers {
     executablePath,
     params = {},
   ) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/processes/path/${executablePath}`;
+    const url = `/v3.0/hostcomputers/${hostId}/processes/path/${executablePath}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -344,7 +344,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   getHostComputersByHostIdCpuUsage(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/cpu/usage`;
+    const url = `/v3.0/hostcomputers/${hostId}/cpu/usage`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -358,7 +358,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdScriptBatch(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/script/batch`;
+    const url = `/v3.0/hostcomputers/${hostId}/script/batch`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -373,7 +373,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdScriptAutoit(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/script/autoit`;
+    const url = `/v3.0/hostcomputers/${hostId}/script/autoit`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -388,7 +388,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdScriptVisualbasic(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/script/visualbasic`;
+    const url = `/v3.0/hostcomputers/${hostId}/script/visualbasic`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -400,7 +400,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdRegistryImport(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/registry/import`;
+    const url = `/v3.0/hostcomputers/${hostId}/registry/import`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -415,7 +415,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdNotificationsAlert(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/notifications/alert`;
+    const url = `/v3.0/hostcomputers/${hostId}/notifications/alert`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -429,7 +429,7 @@ export class HostComputers {
    * @param {Object} params - additional query params
    */
   postHostComputersByHostIdJunction(hostId, data = {}, params = {}) {
-    const url = `/api/v3.0/hostcomputers/${hostId}/junction`;
+    const url = `/v3.0/hostcomputers/${hostId}/junction`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

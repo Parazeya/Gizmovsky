@@ -22,7 +22,7 @@ export class ApplicationGroups {
          * @param {Object} params - additional query params
          */
   getApplicationGroups(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups`;
+    const url = `/v3.0/applicationgroups`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -66,7 +66,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   postApplicationGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups`;
+    const url = `/v3.0/applicationgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -78,7 +78,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   putApplicationGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups`;
+    const url = `/v3.0/applicationgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -89,7 +89,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   getApplicationGroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/${id}`;
+    const url = `/v3.0/applicationgroups/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -99,7 +99,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   deleteApplicationGroupsById(id, params = {}) {
-    const url = `/api/v3.0/applicationgroups/${id}`;
+    const url = `/v3.0/applicationgroups/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -109,7 +109,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   getApplicationGroupsByIdApplications(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/${id}/applications`;
+    const url = `/v3.0/applicationgroups/${id}/applications`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -120,7 +120,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   postApplicationGroupsByIdApplications(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/${id}/applications`;
+    const url = `/v3.0/applicationgroups/${id}/applications`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -131,7 +131,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   getApplicationGroupsApplicationById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/application/${id}`;
+    const url = `/v3.0/applicationgroups/application/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -146,7 +146,7 @@ export class ApplicationGroups {
     applicationId,
     params = {},
   ) {
-    const url = `/api/v3.0/applicationgroups/${id}/applications/${applicationId}`;
+    const url = `/v3.0/applicationgroups/${id}/applications/${applicationId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -157,7 +157,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   postApplicationGroupsApplicationsCreate(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/applications/create`;
+    const url = `/v3.0/applicationgroups/applications/create`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -170,7 +170,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   putApplicationGroupsApplicationsUpdate(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/applications/update`;
+    const url = `/v3.0/applicationgroups/applications/update`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -182,7 +182,7 @@ export class ApplicationGroups {
    * @param {Object} params - additional query params
    */
   putApplicationGroupsApplicationByIdUpdate(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationgroups/application/${id}/update`;
+    const url = `/v3.0/applicationgroups/application/${id}/update`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

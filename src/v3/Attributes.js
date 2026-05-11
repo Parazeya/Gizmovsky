@@ -22,7 +22,7 @@ export class Attributes {
          * @param {Object} params - additional query params
          */
   getAttributes(options = {}, params = {}) {
-    const url = `/api/v3.0/attributes`;
+    const url = `/v3.0/attributes`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -67,7 +67,7 @@ export class Attributes {
    * @param {Object} params - additional query params
    */
   postAttributes(data = {}, params = {}) {
-    const url = `/api/v3.0/attributes`;
+    const url = `/v3.0/attributes`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -80,7 +80,7 @@ export class Attributes {
    * @param {Object} params - additional query params
    */
   putAttributes(data = {}, params = {}) {
-    const url = `/api/v3.0/attributes`;
+    const url = `/v3.0/attributes`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -91,7 +91,7 @@ export class Attributes {
    * @param {Object} params - additional query params
    */
   getAttributesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/attributes/${id}`;
+    const url = `/v3.0/attributes/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -101,7 +101,7 @@ export class Attributes {
    * @param {Object} params - additional query params
    */
   deleteAttributesById(id, params = {}) {
-    const url = `/api/v3.0/attributes/${id}`;
+    const url = `/v3.0/attributes/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

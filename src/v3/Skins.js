@@ -10,7 +10,7 @@ export class Skins {
    * @param {Object} params - additional query params
    */
   getSkins(options = {}, params = {}) {
-    const url = `/api/v3.0/skins`;
+    const url = `/v3.0/skins`;
     return this.client.request("get", url, {}, params);
   }
 }

@@ -22,7 +22,7 @@ export class ProductGroups {
          * @param {Object} params - additional query params
          */
   getProductGroups(options = {}, params = {}) {
-    const url = `/api/v3.0/productgroups`;
+    const url = `/v3.0/productgroups`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -68,7 +68,7 @@ export class ProductGroups {
    * @param {Object} params - additional query params
    */
   postProductGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/productgroups`;
+    const url = `/v3.0/productgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -82,7 +82,7 @@ export class ProductGroups {
    * @param {Object} params - additional query params
    */
   putProductGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/productgroups`;
+    const url = `/v3.0/productgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -93,7 +93,7 @@ export class ProductGroups {
    * @param {Object} params - additional query params
    */
   getProductGroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productgroups/${id}`;
+    const url = `/v3.0/productgroups/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -103,7 +103,7 @@ export class ProductGroups {
    * @param {Object} params - additional query params
    */
   deleteProductGroupsById(id, params = {}) {
-    const url = `/api/v3.0/productgroups/${id}`;
+    const url = `/v3.0/productgroups/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -113,7 +113,7 @@ export class ProductGroups {
    * @param {Object} params - additional query params
    */
   getProductGroupsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/productgroups/name/${name}/exist`;
+    const url = `/v3.0/productgroups/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

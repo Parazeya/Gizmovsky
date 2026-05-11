@@ -26,7 +26,7 @@ export class UserSessions {
          * @param {Object} params - additional query params
          */
   getUserSessions(options = {}, params = {}) {
-    const url = `/api/v3.0/usersessions`;
+    const url = `/v3.0/usersessions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -86,7 +86,7 @@ export class UserSessions {
    * @param {Object} params - additional query params
    */
   getUserSessionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/usersessions/${id}`;
+    const url = `/v3.0/usersessions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 }

@@ -14,7 +14,7 @@ export class ReportModules {
    * @param {Object} params - additional query params
    */
   postReportModulesByReportIdExport(reportId, data = {}, params = {}) {
-    const url = `/api/v3.0/reportmodules/${reportId}/export`;
+    const url = `/v3.0/reportmodules/${reportId}/export`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -27,7 +27,7 @@ export class ReportModules {
    * @param {Object} params - additional query params
    */
   getReportModulesByReportId(reportId, options = {}, params = {}) {
-    const url = `/api/v3.0/reportmodules/${reportId}`;
+    const url = `/v3.0/reportmodules/${reportId}`;
     const reportFilter = options.hasOwnProperty("reportFilter")
       ? options["reportFilter"]
       : undefined;

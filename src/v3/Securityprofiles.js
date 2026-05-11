@@ -22,7 +22,7 @@ export class SecurityProfiles {
          * @param {Object} params - additional query params
          */
   getSecurityProfiles(options = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles`;
+    const url = `/v3.0/securityprofiles`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -70,7 +70,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   postSecurityProfiles(data = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles`;
+    const url = `/v3.0/securityprofiles`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -88,7 +88,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   putSecurityProfiles(data = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles`;
+    const url = `/v3.0/securityprofiles`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -99,7 +99,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   getSecurityProfilesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles/${id}`;
+    const url = `/v3.0/securityprofiles/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -109,7 +109,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   deleteSecurityProfilesById(id, params = {}) {
-    const url = `/api/v3.0/securityprofiles/${id}`;
+    const url = `/v3.0/securityprofiles/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -119,7 +119,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   getSecurityProfilesByIdRestrictions(id, options = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles/${id}/restrictions`;
+    const url = `/v3.0/securityprofiles/${id}/restrictions`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -129,7 +129,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   getSecurityProfilesByIdPolicies(id, options = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles/${id}/policies`;
+    const url = `/v3.0/securityprofiles/${id}/policies`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -138,7 +138,7 @@ export class SecurityProfiles {
    * @param {Object} params - additional query params
    */
   getSecurityProfilesPoliciesMetadata(options = {}, params = {}) {
-    const url = `/api/v3.0/securityprofiles/policies/metadata`;
+    const url = `/v3.0/securityprofiles/policies/metadata`;
     return this.client.request("get", url, {}, params);
   }
 }

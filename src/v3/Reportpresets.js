@@ -21,7 +21,7 @@ export class ReportPresets {
          * @param {Object} params - additional query params
          */
   getReportPresets(options = {}, params = {}) {
-    const url = `/api/v3.0/reportpresets`;
+    const url = `/v3.0/reportpresets`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -65,7 +65,7 @@ export class ReportPresets {
    * @param {Object} params - additional query params
    */
   postReportPresets(data = {}, params = {}) {
-    const url = `/api/v3.0/reportpresets`;
+    const url = `/v3.0/reportpresets`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -81,7 +81,7 @@ export class ReportPresets {
    * @param {Object} params - additional query params
    */
   putReportPresets(data = {}, params = {}) {
-    const url = `/api/v3.0/reportpresets`;
+    const url = `/v3.0/reportpresets`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -92,7 +92,7 @@ export class ReportPresets {
    * @param {Object} params - additional query params
    */
   getReportPresetsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/reportpresets/${id}`;
+    const url = `/v3.0/reportpresets/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -102,7 +102,7 @@ export class ReportPresets {
    * @param {Object} params - additional query params
    */
   deleteReportPresetsById(id, params = {}) {
-    const url = `/api/v3.0/reportpresets/${id}`;
+    const url = `/v3.0/reportpresets/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -117,7 +117,7 @@ export class ReportPresets {
     displayOrder,
     params = {},
   ) {
-    const url = `/api/v3.0/reportpresets/${id}/displayorder/${displayOrder}`;
+    const url = `/v3.0/reportpresets/${id}/displayorder/${displayOrder}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -125,11 +125,11 @@ export class ReportPresets {
    * Updates report preset name.
    * @param {integer} id - Report preset id.
    * @param {string} name - path
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/reportpresets/{id}/name/{name}"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/reportpresets/{id}/name/{name}"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putReportPresetsByIdNameByName(id, name, data = {}, params = {}) {
-    const url = `/api/v3.0/reportpresets/${id}/name/${name}`;
+    const url = `/v3.0/reportpresets/${id}/name/${name}`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -140,7 +140,7 @@ export class ReportPresets {
    * @param {Object} params - additional query params
    */
   getReportPresetsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/reportpresets/name/${name}/exist`;
+    const url = `/v3.0/reportpresets/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

@@ -23,7 +23,7 @@ export class ApplicationCategories {
          * @param {Object} params - additional query params
          */
   getApplicationCategories(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationcategories`;
+    const url = `/v3.0/applicationcategories`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -72,7 +72,7 @@ export class ApplicationCategories {
    * @param {Object} params - additional query params
    */
   postApplicationCategories(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationcategories`;
+    const url = `/v3.0/applicationcategories`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -85,7 +85,7 @@ export class ApplicationCategories {
    * @param {Object} params - additional query params
    */
   putApplicationCategories(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationcategories`;
+    const url = `/v3.0/applicationcategories`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -96,7 +96,7 @@ export class ApplicationCategories {
    * @param {Object} params - additional query params
    */
   getApplicationCategoriesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationcategories/${id}`;
+    const url = `/v3.0/applicationcategories/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -106,7 +106,7 @@ export class ApplicationCategories {
    * @param {Object} params - additional query params
    */
   deleteApplicationCategoriesById(id, params = {}) {
-    const url = `/api/v3.0/applicationcategories/${id}`;
+    const url = `/v3.0/applicationcategories/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

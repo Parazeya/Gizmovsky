@@ -10,7 +10,7 @@ export class SmsProviders {
    * @param {Object} params - additional query params
    */
   getSmsProviders(options = {}, params = {}) {
-    const url = `/api/v3.0/smsproviders`;
+    const url = `/v3.0/smsproviders`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -20,7 +20,7 @@ export class SmsProviders {
    * @param {Object} params - additional query params
    */
   getSmsProvidersByProviderGuid(providerGuid, options = {}, params = {}) {
-    const url = `/api/v3.0/smsproviders/${providerGuid}`;
+    const url = `/v3.0/smsproviders/${providerGuid}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -34,18 +34,18 @@ export class SmsProviders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/smsproviders/${providerGuid}/options`;
+    const url = `/v3.0/smsproviders/${providerGuid}/options`;
     return this.client.request("get", url, {}, params);
   }
 
   /**
    *
    * @param {string} providerGuid - path
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/smsproviders/{providerGuid}/options"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/smsproviders/{providerGuid}/options"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putSmsProvidersByProviderGuidOptions(providerGuid, data = {}, params = {}) {
-    const url = `/api/v3.0/smsproviders/${providerGuid}/options`;
+    const url = `/v3.0/smsproviders/${providerGuid}/options`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

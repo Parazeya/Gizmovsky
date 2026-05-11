@@ -32,7 +32,7 @@ export class ProductOrders {
          * @param {Object} params - additional query params
          */
   getProductOrders(options = {}, params = {}) {
-    const url = `/api/v3.0/productorders`;
+    const url = `/v3.0/productorders`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -118,7 +118,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}`;
+    const url = `/v3.0/productorders/${id}`;
     const expand = options.hasOwnProperty("expand")
       ? options["expand"]
       : undefined;
@@ -143,7 +143,7 @@ export class ProductOrders {
          * @param {Object} params - additional query params
          */
   getProductOrdersActive(options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/active`;
+    const url = `/v3.0/productorders/active`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -183,7 +183,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdActive(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/active`;
+    const url = `/v3.0/productorders/${id}/active`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -193,7 +193,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   putProductOrdersByIdProcess(id, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/process`;
+    const url = `/v3.0/productorders/${id}/process`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -203,7 +203,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   putProductOrdersByIdComplete(id, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/complete`;
+    const url = `/v3.0/productorders/${id}/complete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -213,7 +213,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   putProductOrdersByIdCancel(id, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/cancel`;
+    const url = `/v3.0/productorders/${id}/cancel`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -223,7 +223,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdDelivered(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/delivered`;
+    const url = `/v3.0/productorders/${id}/delivered`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -233,7 +233,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   putProductOrdersByIdDelivered(id, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/delivered`;
+    const url = `/v3.0/productorders/${id}/delivered`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -247,7 +247,7 @@ export class ProductOrders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/orderlines/${orderLineId}/delivered`;
+    const url = `/v3.0/productorders/orderlines/${orderLineId}/delivered`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -257,7 +257,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdOrderlinesDelivered(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/orderlines/delivered`;
+    const url = `/v3.0/productorders/${id}/orderlines/delivered`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -272,7 +272,7 @@ export class ProductOrders {
     quantity,
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/orderlines/${orderLineId}/delivered/${quantity}`;
+    const url = `/v3.0/productorders/orderlines/${orderLineId}/delivered/${quantity}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -290,7 +290,7 @@ export class ProductOrders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/product/${productId}/user/${userId}/quantity/${quantity}/price`;
+    const url = `/v3.0/productorders/product/${productId}/user/${userId}/quantity/${quantity}/price`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -306,7 +306,7 @@ export class ProductOrders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/product/${productId}/quantity/${quantity}/price`;
+    const url = `/v3.0/productorders/product/${productId}/quantity/${quantity}/price`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -324,7 +324,7 @@ export class ProductOrders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/product/${productId}/usergroup/${userGroupId}/quantity/${quantity}/price`;
+    const url = `/v3.0/productorders/product/${productId}/usergroup/${userGroupId}/quantity/${quantity}/price`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -339,7 +339,7 @@ export class ProductOrders {
     mark,
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/orderlines/${productOrderLineId}/mark/${mark}`;
+    const url = `/v3.0/productorders/orderlines/${productOrderLineId}/mark/${mark}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -350,7 +350,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   putProductOrdersOrderlinesMark(data = {}, params = {}) {
-    const url = `/api/v3.0/productorders/orderlines/mark`;
+    const url = `/v3.0/productorders/orderlines/mark`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -361,7 +361,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersOrderlinesMarkByMark(mark, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/orderlines/mark/${mark}`;
+    const url = `/v3.0/productorders/orderlines/mark/${mark}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -371,7 +371,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdPaymentMethodsAllowed(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/payment/methods/allowed`;
+    const url = `/v3.0/productorders/${id}/payment/methods/allowed`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -383,7 +383,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   postProductOrdersByIdPayments(id, data = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/payments`;
+    const url = `/v3.0/productorders/${id}/payments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -394,7 +394,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdPayments(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/payments`;
+    const url = `/v3.0/productorders/${id}/payments`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -408,7 +408,7 @@ export class ProductOrders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/intent/${identifier}/payment/methods/allowed`;
+    const url = `/v3.0/productorders/intent/${identifier}/payment/methods/allowed`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -424,7 +424,7 @@ export class ProductOrders {
     data = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/intent/${identifier}/payments`;
+    const url = `/v3.0/productorders/intent/${identifier}/payments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -439,7 +439,7 @@ export class ProductOrders {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productorders/intent/${identifier}/state`;
+    const url = `/v3.0/productorders/intent/${identifier}/state`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -449,7 +449,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdLines(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/lines`;
+    const url = `/v3.0/productorders/${id}/lines`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -459,7 +459,7 @@ export class ProductOrders {
    * @param {Object} params - additional query params
    */
   getProductOrdersByIdNote(id, options = {}, params = {}) {
-    const url = `/api/v3.0/productorders/${id}/note`;
+    const url = `/v3.0/productorders/${id}/note`;
     return this.client.request("get", url, {}, params);
   }
 }

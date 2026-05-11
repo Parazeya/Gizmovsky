@@ -23,7 +23,7 @@ export class Companions {
          * @param {Object} params - additional query params
          */
   getCompanions(options = {}, params = {}) {
-    const url = `/api/v3.0/companions`;
+    const url = `/v3.0/companions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -71,7 +71,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanions(data = {}, params = {}) {
-    const url = `/api/v3.0/companions`;
+    const url = `/v3.0/companions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -83,7 +83,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   putCompanions(data = {}, params = {}) {
-    const url = `/api/v3.0/companions`;
+    const url = `/v3.0/companions`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -94,7 +94,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   getCompanionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/companions/${id}`;
+    const url = `/v3.0/companions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -104,7 +104,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   deleteCompanionsById(id, params = {}) {
-    const url = `/api/v3.0/companions/${id}`;
+    const url = `/v3.0/companions/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -113,7 +113,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   getCompanionsConnections(options = {}, params = {}) {
-    const url = `/api/v3.0/companions/connections`;
+    const url = `/v3.0/companions/connections`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -123,7 +123,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanionsByGuidCashdrawerOpen(guid, params = {}) {
-    const url = `/api/v3.0/companions/${guid}/cashdrawer/open`;
+    const url = `/v3.0/companions/${guid}/cashdrawer/open`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -132,7 +132,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanionsCashdrawerOpen(params = {}) {
-    const url = `/api/v3.0/companions/cashdrawer/open`;
+    const url = `/v3.0/companions/cashdrawer/open`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -142,7 +142,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanionsByGuidPrinterXreport(guid, params = {}) {
-    const url = `/api/v3.0/companions/${guid}/printer/x-report`;
+    const url = `/v3.0/companions/${guid}/printer/x-report`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -151,7 +151,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanionsPrinterXreport(params = {}) {
-    const url = `/api/v3.0/companions/printer/x-report`;
+    const url = `/v3.0/companions/printer/x-report`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -161,7 +161,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanionsByGuidTerminalXreport(guid, params = {}) {
-    const url = `/api/v3.0/companions/${guid}/terminal/x-report`;
+    const url = `/v3.0/companions/${guid}/terminal/x-report`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -170,7 +170,7 @@ export class Companions {
    * @param {Object} params - additional query params
    */
   postCompanionsTerminalXreport(params = {}) {
-    const url = `/api/v3.0/companions/terminal/x-report`;
+    const url = `/v3.0/companions/terminal/x-report`;
     return this.client.request("post", url, {}, params);
   }
 }

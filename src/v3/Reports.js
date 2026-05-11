@@ -13,7 +13,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsOverview(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/overview`;
+    const url = `/v3.0/reports/overview`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -37,7 +37,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsFinancial(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/financial`;
+    const url = `/v3.0/reports/financial`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -73,7 +73,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsHostusage(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/hostusage`;
+    const url = `/v3.0/reports/hostusage`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -104,7 +104,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsTopusers(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/topusers`;
+    const url = `/v3.0/reports/topusers`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -130,7 +130,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsUser(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/user`;
+    const url = `/v3.0/reports/user`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -157,7 +157,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsProduct(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/product`;
+    const url = `/v3.0/reports/product`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -189,7 +189,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsProducts(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/products`;
+    const url = `/v3.0/reports/products`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -225,7 +225,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsProductslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/productslog`;
+    const url = `/v3.0/reports/productslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -261,7 +261,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsStock(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/stock`;
+    const url = `/v3.0/reports/stock`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -287,7 +287,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsTransactionslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/transactionslog`;
+    const url = `/v3.0/reports/transactionslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -334,7 +334,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsShiftslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/shiftslog`;
+    const url = `/v3.0/reports/shiftslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -373,7 +373,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsAssetslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/assetslog`;
+    const url = `/v3.0/reports/assetslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -417,7 +417,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsInvoice(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/invoice`;
+    const url = `/v3.0/reports/invoice`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -446,7 +446,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsInvoiceslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/invoiceslog`;
+    const url = `/v3.0/reports/invoiceslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -484,7 +484,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsZ(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/z`;
+    const url = `/v3.0/reports/z`;
     const date = options.hasOwnProperty("date") ? options["date"] : undefined;
     const query = Object.assign({}, params);
     if (date !== undefined) query["Date"] = date;
@@ -499,7 +499,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsZlog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/zlog`;
+    const url = `/v3.0/reports/zlog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -522,7 +522,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsApplication(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/application`;
+    const url = `/v3.0/reports/application`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -553,7 +553,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsApplications(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/applications`;
+    const url = `/v3.0/reports/applications`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -585,7 +585,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsSessionslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/sessionslog`;
+    const url = `/v3.0/reports/sessionslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -619,7 +619,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsLicense(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/license`;
+    const url = `/v3.0/reports/license`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -646,7 +646,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsLicenses(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/licenses`;
+    const url = `/v3.0/reports/licenses`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -679,7 +679,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsOrderslog(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/orderslog`;
+    const url = `/v3.0/reports/orderslog`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -720,7 +720,7 @@ export class Reports {
    * @param {Object} params - additional query params
    */
   getReportsOrdersstatistics(options = {}, params = {}) {
-    const url = `/api/v3.0/reports/ordersstatistics`;
+    const url = `/v3.0/reports/ordersstatistics`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;

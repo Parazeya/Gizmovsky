@@ -21,7 +21,7 @@ export class Feeds {
          * @param {Object} params - additional query params
          */
   getFeeds(options = {}, params = {}) {
-    const url = `/api/v3.0/feeds`;
+    const url = `/v3.0/feeds`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -63,7 +63,7 @@ export class Feeds {
    * @param {Object} params - additional query params
    */
   postFeeds(data = {}, params = {}) {
-    const url = `/api/v3.0/feeds`;
+    const url = `/v3.0/feeds`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -77,7 +77,7 @@ export class Feeds {
    * @param {Object} params - additional query params
    */
   putFeeds(data = {}, params = {}) {
-    const url = `/api/v3.0/feeds`;
+    const url = `/v3.0/feeds`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -88,7 +88,7 @@ export class Feeds {
    * @param {Object} params - additional query params
    */
   getFeedsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/feeds/${id}`;
+    const url = `/v3.0/feeds/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -98,7 +98,7 @@ export class Feeds {
    * @param {Object} params - additional query params
    */
   deleteFeedsById(id, params = {}) {
-    const url = `/api/v3.0/feeds/${id}`;
+    const url = `/v3.0/feeds/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -108,7 +108,7 @@ export class Feeds {
    * @param {Object} params - additional query params
    */
   getFeedsByIdBranches(id, options = {}, params = {}) {
-    const url = `/api/v3.0/feeds/${id}/branches`;
+    const url = `/v3.0/feeds/${id}/branches`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -120,7 +120,7 @@ export class Feeds {
    * @param {Object} params - additional query params
    */
   postFeedsByIdBranches(id, data = {}, params = {}) {
-    const url = `/api/v3.0/feeds/${id}/branches`;
+    const url = `/v3.0/feeds/${id}/branches`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

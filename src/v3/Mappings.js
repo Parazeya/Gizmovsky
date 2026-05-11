@@ -22,7 +22,7 @@ export class Mappings {
          * @param {Object} params - additional query params
          */
   getMappings(options = {}, params = {}) {
-    const url = `/api/v3.0/mappings`;
+    const url = `/v3.0/mappings`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -64,7 +64,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   getMappingsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/mappings/${id}`;
+    const url = `/v3.0/mappings/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -74,7 +74,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   deleteMappingsById(id, params = {}) {
-    const url = `/api/v3.0/mappings/${id}`;
+    const url = `/v3.0/mappings/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -89,7 +89,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   postMappingsVirtualdrive(data = {}, params = {}) {
-    const url = `/api/v3.0/mappings/virtualdrive`;
+    const url = `/v3.0/mappings/virtualdrive`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -106,7 +106,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   putMappingsVirtualdrive(data = {}, params = {}) {
-    const url = `/api/v3.0/mappings/virtualdrive`;
+    const url = `/v3.0/mappings/virtualdrive`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -120,7 +120,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   postMappingsVirtualfolder(data = {}, params = {}) {
-    const url = `/api/v3.0/mappings/virtualfolder`;
+    const url = `/v3.0/mappings/virtualfolder`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -135,7 +135,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   putMappingsVirtualfolder(data = {}, params = {}) {
-    const url = `/api/v3.0/mappings/virtualfolder`;
+    const url = `/v3.0/mappings/virtualfolder`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -150,7 +150,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   postMappingsNetworkdrive(data = {}, params = {}) {
-    const url = `/api/v3.0/mappings/networkdrive`;
+    const url = `/v3.0/mappings/networkdrive`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -166,7 +166,7 @@ export class Mappings {
    * @param {Object} params - additional query params
    */
   putMappingsNetworkdrive(data = {}, params = {}) {
-    const url = `/api/v3.0/mappings/networkdrive`;
+    const url = `/v3.0/mappings/networkdrive`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -181,7 +181,7 @@ export class Mappings {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/mappings/mountpoint/${mountPoint}/exist`;
+    const url = `/v3.0/mappings/mountpoint/${mountPoint}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

@@ -22,7 +22,7 @@ export class UserGroups {
          * @param {Object} params - additional query params
          */
   getUserGroups(options = {}, params = {}) {
-    const url = `/api/v3.0/usergroups`;
+    const url = `/v3.0/usergroups`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -95,7 +95,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   postUserGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/usergroups`;
+    const url = `/v3.0/usergroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -136,7 +136,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   putUserGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/usergroups`;
+    const url = `/v3.0/usergroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -147,7 +147,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   getUserGroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/usergroups/${id}`;
+    const url = `/v3.0/usergroups/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -157,7 +157,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   deleteUserGroupsById(id, params = {}) {
-    const url = `/api/v3.0/usergroups/${id}`;
+    const url = `/v3.0/usergroups/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -167,7 +167,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   getUserGroupsByIdDisallowedhostgroups(id, options = {}, params = {}) {
-    const url = `/api/v3.0/usergroups/${id}/disallowedhostgroups`;
+    const url = `/v3.0/usergroups/${id}/disallowedhostgroups`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -179,7 +179,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   postUserGroupsByIdDisallowedhostgroups(id, data = {}, params = {}) {
-    const url = `/api/v3.0/usergroups/${id}/disallowedhostgroups`;
+    const url = `/v3.0/usergroups/${id}/disallowedhostgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -193,7 +193,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   putUserGroupsDisallowedhostgroups(data = {}, params = {}) {
-    const url = `/api/v3.0/usergroups/disallowedhostgroups`;
+    const url = `/v3.0/usergroups/disallowedhostgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -209,7 +209,7 @@ export class UserGroups {
     userGroupDisallowedHostGroupId,
     params = {},
   ) {
-    const url = `/api/v3.0/usergroups/${id}/disallowedhostgroups/${userGroupDisallowedHostGroupId}`;
+    const url = `/v3.0/usergroups/${id}/disallowedhostgroups/${userGroupDisallowedHostGroupId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -219,7 +219,7 @@ export class UserGroups {
    * @param {Object} params - additional query params
    */
   putUserGroupsByIdSetasdefault(id, params = {}) {
-    const url = `/api/v3.0/usergroups/${id}/setasdefault`;
+    const url = `/v3.0/usergroups/${id}/setasdefault`;
     return this.client.request("put", url, {}, params);
   }
 }

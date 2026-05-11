@@ -23,7 +23,7 @@ export class HostLayoutGroups {
          * @param {Object} params - additional query params
          */
   getHostLayoutGroups(options = {}, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups`;
+    const url = `/v3.0/hostlayoutgroups`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -74,7 +74,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   postHostLayoutGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups`;
+    const url = `/v3.0/hostlayoutgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -88,7 +88,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   putHostLayoutGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups`;
+    const url = `/v3.0/hostlayoutgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -101,7 +101,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   getHostLayoutGroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}`;
+    const url = `/v3.0/hostlayoutgroups/${id}`;
     const expand = options.hasOwnProperty("expand")
       ? options["expand"]
       : undefined;
@@ -116,7 +116,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   deleteHostLayoutGroupsById(id, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}`;
+    const url = `/v3.0/hostlayoutgroups/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -126,7 +126,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   getHostLayoutGroupsByIdLayouts(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/layouts`;
+    const url = `/v3.0/hostlayoutgroups/${id}/layouts`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -142,7 +142,7 @@ export class HostLayoutGroups {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout`;
+    const url = `/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -165,7 +165,7 @@ export class HostLayoutGroups {
     data = {},
     params = {},
   ) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout`;
+    const url = `/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -177,7 +177,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   deleteHostLayoutGroupsByIdHostByHostIdLayout(id, hostId, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout`;
+    const url = `/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -195,7 +195,7 @@ export class HostLayoutGroups {
     data = {},
     params = {},
   ) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout/grid/position`;
+    const url = `/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout/grid/position`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -213,7 +213,7 @@ export class HostLayoutGroups {
     hide,
     params = {},
   ) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout/hide/${hide}`;
+    const url = `/v3.0/hostlayoutgroups/${id}/host/${hostId}/layout/hide/${hide}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -224,7 +224,7 @@ export class HostLayoutGroups {
    * @param {Object} params - additional query params
    */
   putHostLayoutGroupsByIdHostLayoutGridPosition(id, data = {}, params = {}) {
-    const url = `/api/v3.0/hostlayoutgroups/${id}/host/layout/grid/position`;
+    const url = `/v3.0/hostlayoutgroups/${id}/host/layout/grid/position`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

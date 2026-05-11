@@ -17,7 +17,7 @@ export class Events {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/events/channel/${uniqueChannelName}`;
+    const url = `/v3.0/events/channel/${uniqueChannelName}`;
     const filter = options.hasOwnProperty("filter")
       ? options["filter"]
       : undefined;
@@ -32,7 +32,7 @@ export class Events {
    * @param {Object} params - additional query params
    */
   deleteEventsChannelByUniqueChannelName(uniqueChannelName, params = {}) {
-    const url = `/api/v3.0/events/channel/${uniqueChannelName}`;
+    const url = `/v3.0/events/channel/${uniqueChannelName}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -44,7 +44,7 @@ export class Events {
    * @param {Object} params - additional query params
    */
   getEventsEntity(options = {}, params = {}) {
-    const url = `/api/v3.0/events/entity`;
+    const url = `/v3.0/events/entity`;
     const connectionId = options.hasOwnProperty("connectionId")
       ? options["connectionId"]
       : undefined;
@@ -62,7 +62,7 @@ export class Events {
    * @param {Object} params - additional query params
    */
   deleteEventsEntity(params = {}) {
-    const url = `/api/v3.0/events/entity`;
+    const url = `/v3.0/events/entity`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -71,7 +71,7 @@ export class Events {
    * @param {Object} params - additional query params
    */
   getEventsMetadata(options = {}, params = {}) {
-    const url = `/api/v3.0/events/metadata`;
+    const url = `/v3.0/events/metadata`;
     return this.client.request("get", url, {}, params);
   }
 }

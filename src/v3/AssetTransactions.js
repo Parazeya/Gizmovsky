@@ -25,7 +25,7 @@ export class AssetTransactions {
          * @param {Object} params - additional query params
          */
   getAssetTransactions(options = {}, params = {}) {
-    const url = `/api/v3.0/assettransactions`;
+    const url = `/v3.0/assettransactions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -81,7 +81,7 @@ export class AssetTransactions {
    * @param {Object} params - additional query params
    */
   getAssetTransactionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/assettransactions/${id}`;
+    const url = `/v3.0/assettransactions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 }

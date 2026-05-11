@@ -26,7 +26,7 @@ export class ApplicationStats {
          * @param {Object} params - additional query params
          */
   getApplicationStats(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationstats`;
+    const url = `/v3.0/applicationstats`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -90,7 +90,7 @@ export class ApplicationStats {
    * @param {Object} params - additional query params
    */
   postApplicationStatsAppexeByAppExeId(appExeId, data = {}, params = {}) {
-    const url = `/api/v3.0/applicationstats/appexe/${appExeId}`;
+    const url = `/v3.0/applicationstats/appexe/${appExeId}`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

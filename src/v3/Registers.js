@@ -24,7 +24,7 @@ export class Registers {
          * @param {Object} params - additional query params
          */
   getRegisters(options = {}, params = {}) {
-    const url = `/api/v3.0/registers`;
+    const url = `/v3.0/registers`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -83,7 +83,7 @@ export class Registers {
    * @param {Object} params - additional query params
    */
   postRegisters(data = {}, params = {}) {
-    const url = `/api/v3.0/registers`;
+    const url = `/v3.0/registers`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -104,7 +104,7 @@ export class Registers {
    * @param {Object} params - additional query params
    */
   putRegisters(data = {}, params = {}) {
-    const url = `/api/v3.0/registers`;
+    const url = `/v3.0/registers`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -115,7 +115,7 @@ export class Registers {
    * @param {Object} params - additional query params
    */
   getRegistersById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/registers/${id}`;
+    const url = `/v3.0/registers/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -125,7 +125,7 @@ export class Registers {
    * @param {Object} params - additional query params
    */
   deleteRegistersById(id, params = {}) {
-    const url = `/api/v3.0/registers/${id}`;
+    const url = `/v3.0/registers/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -135,18 +135,18 @@ export class Registers {
    * @param {Object} params - additional query params
    */
   putRegistersByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/registers/${id}/undelete`;
+    const url = `/v3.0/registers/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
   /**
    * Sets entry name.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/registers/{id}/name"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/registers/{id}/name"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putRegistersByIdName(id, data = {}, params = {}) {
-    const url = `/api/v3.0/registers/${id}/name`;
+    const url = `/v3.0/registers/${id}/name`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -157,7 +157,7 @@ export class Registers {
    * @param {Object} params - additional query params
    */
   getRegistersNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/registers/name/${name}/exist`;
+    const url = `/v3.0/registers/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -173,7 +173,7 @@ export class Registers {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/registers/name/${name}/branch/${branchId}/exist`;
+    const url = `/v3.0/registers/name/${name}/branch/${branchId}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

@@ -25,7 +25,7 @@ export class PointsTransactions {
          * @param {Object} params - additional query params
          */
   getPointsTransactions(options = {}, params = {}) {
-    const url = `/api/v3.0/pointstransactions`;
+    const url = `/v3.0/pointstransactions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -81,7 +81,7 @@ export class PointsTransactions {
    * @param {Object} params - additional query params
    */
   postPointsTransactions(data = {}, params = {}) {
-    const url = `/api/v3.0/pointstransactions`;
+    const url = `/v3.0/pointstransactions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -92,7 +92,7 @@ export class PointsTransactions {
    * @param {Object} params - additional query params
    */
   getPointsTransactionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/pointstransactions/${id}`;
+    const url = `/v3.0/pointstransactions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 }

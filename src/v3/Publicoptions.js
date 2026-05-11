@@ -10,7 +10,7 @@ export class PublicOptions {
    * @param {Object} params - additional query params
    */
   getPublicOptionsGeneral(options = {}, params = {}) {
-    const url = `/api/v3.0/publicoptions/general`;
+    const url = `/v3.0/publicoptions/general`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -19,7 +19,7 @@ export class PublicOptions {
    * @param {Object} params - additional query params
    */
   getPublicOptionsGeneralPack(options = {}, params = {}) {
-    const url = `/api/v3.0/publicoptions/general/pack`;
+    const url = `/v3.0/publicoptions/general/pack`;
     return this.client.request("get", url, {}, params);
   }
 }

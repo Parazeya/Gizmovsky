@@ -25,7 +25,7 @@ export class Shifts {
          * @param {Object} params - additional query params
          */
   getShifts(options = {}, params = {}) {
-    const url = `/api/v3.0/shifts`;
+    const url = `/v3.0/shifts`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -81,7 +81,7 @@ export class Shifts {
    * @param {Object} params - additional query params
    */
   getShiftsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/shifts/${id}`;
+    const url = `/v3.0/shifts/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -92,7 +92,7 @@ export class Shifts {
    * @param {Object} params - additional query params
    */
   putShiftsByIdEnd(id, data = {}, params = {}) {
-    const url = `/api/v3.0/shifts/${id}/end`;
+    const url = `/v3.0/shifts/${id}/end`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -103,7 +103,7 @@ export class Shifts {
    * @param {Object} params - additional query params
    */
   putShiftsByIdLock(id, params = {}) {
-    const url = `/api/v3.0/shifts/${id}/lock`;
+    const url = `/v3.0/shifts/${id}/lock`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -113,7 +113,7 @@ export class Shifts {
    * @param {Object} params - additional query params
    */
   putShiftsByIdUnlock(id, params = {}) {
-    const url = `/api/v3.0/shifts/${id}/unlock`;
+    const url = `/v3.0/shifts/${id}/unlock`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -123,7 +123,7 @@ export class Shifts {
    * @param {Object} params - additional query params
    */
   getShiftsByIdExpected(id, options = {}, params = {}) {
-    const url = `/api/v3.0/shifts/${id}/expected`;
+    const url = `/v3.0/shifts/${id}/expected`;
     return this.client.request("get", url, {}, params);
   }
 }

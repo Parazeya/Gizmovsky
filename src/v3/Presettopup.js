@@ -21,7 +21,7 @@ export class PresetTopUp {
          * @param {Object} params - additional query params
          */
   getPresetTopUp(options = {}, params = {}) {
-    const url = `/api/v3.0/presettopup`;
+    const url = `/v3.0/presettopup`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -62,7 +62,7 @@ export class PresetTopUp {
    * @param {Object} params - additional query params
    */
   postPresetTopUp(data = {}, params = {}) {
-    const url = `/api/v3.0/presettopup`;
+    const url = `/v3.0/presettopup`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -75,7 +75,7 @@ export class PresetTopUp {
    * @param {Object} params - additional query params
    */
   putPresetTopUp(data = {}, params = {}) {
-    const url = `/api/v3.0/presettopup`;
+    const url = `/v3.0/presettopup`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -86,7 +86,7 @@ export class PresetTopUp {
    * @param {Object} params - additional query params
    */
   getPresetTopUpById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/presettopup/${id}`;
+    const url = `/v3.0/presettopup/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -96,7 +96,7 @@ export class PresetTopUp {
    * @param {Object} params - additional query params
    */
   deletePresetTopUpById(id, params = {}) {
-    const url = `/api/v3.0/presettopup/${id}`;
+    const url = `/v3.0/presettopup/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

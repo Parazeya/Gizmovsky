@@ -22,7 +22,7 @@ export class ApplicationDeployments {
          * @param {Object} params - additional query params
          */
   getApplicationDeployments(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationdeployments`;
+    const url = `/v3.0/applicationdeployments`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -79,7 +79,7 @@ export class ApplicationDeployments {
          * @param {Object} params - additional query params
          */
   postApplicationDeployments(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationdeployments`;
+    const url = `/v3.0/applicationdeployments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -104,7 +104,7 @@ export class ApplicationDeployments {
          * @param {Object} params - additional query params
          */
   putApplicationDeployments(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationdeployments`;
+    const url = `/v3.0/applicationdeployments`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -115,7 +115,7 @@ export class ApplicationDeployments {
    * @param {Object} params - additional query params
    */
   getApplicationDeploymentsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationdeployments/${id}`;
+    const url = `/v3.0/applicationdeployments/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -125,7 +125,7 @@ export class ApplicationDeployments {
    * @param {Object} params - additional query params
    */
   deleteApplicationDeploymentsById(id, params = {}) {
-    const url = `/api/v3.0/applicationdeployments/${id}`;
+    const url = `/v3.0/applicationdeployments/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -135,7 +135,7 @@ export class ApplicationDeployments {
    * @param {Object} params - additional query params
    */
   getApplicationDeploymentsByIdUsages(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationdeployments/${id}/usages`;
+    const url = `/v3.0/applicationdeployments/${id}/usages`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -145,7 +145,7 @@ export class ApplicationDeployments {
    * @param {Object} params - additional query params
    */
   putApplicationDeploymentsByIdUnassign(id, params = {}) {
-    const url = `/api/v3.0/applicationdeployments/${id}/unassign`;
+    const url = `/v3.0/applicationdeployments/${id}/unassign`;
     return this.client.request("put", url, {}, params);
   }
 }

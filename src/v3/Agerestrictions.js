@@ -22,7 +22,7 @@ export class AgeRestrictions {
          * @param {Object} params - additional query params
          */
   getAgeRestrictions(options = {}, params = {}) {
-    const url = `/api/v3.0/agerestrictions`;
+    const url = `/v3.0/agerestrictions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -64,7 +64,7 @@ export class AgeRestrictions {
    * @param {Object} params - additional query params
    */
   getAgeRestrictionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/agerestrictions/${id}`;
+    const url = `/v3.0/agerestrictions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -74,7 +74,7 @@ export class AgeRestrictions {
    * @param {Object} params - additional query params
    */
   deleteAgeRestrictionsById(id, params = {}) {
-    const url = `/api/v3.0/agerestrictions/${id}`;
+    const url = `/v3.0/agerestrictions/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -87,7 +87,7 @@ export class AgeRestrictions {
    * @param {Object} params - additional query params
    */
   postAgeRestrictionsLogin(data = {}, params = {}) {
-    const url = `/api/v3.0/agerestrictions/login`;
+    const url = `/v3.0/agerestrictions/login`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -102,7 +102,7 @@ export class AgeRestrictions {
    * @param {Object} params - additional query params
    */
   postAgeRestrictionsProduct(data = {}, params = {}) {
-    const url = `/api/v3.0/agerestrictions/product`;
+    const url = `/v3.0/agerestrictions/product`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

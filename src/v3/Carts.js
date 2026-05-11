@@ -179,7 +179,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   postCarts(data = {}, params = {}) {
-    const url = `/api/v3.0/carts`;
+    const url = `/v3.0/carts`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -190,7 +190,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   deleteCartsById(id, params = {}) {
-    const url = `/api/v3.0/carts/${id}`;
+    const url = `/v3.0/carts/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -200,7 +200,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   postCartsByIdClear(id, params = {}) {
-    const url = `/api/v3.0/carts/${id}/clear`;
+    const url = `/v3.0/carts/${id}/clear`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -211,7 +211,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   putCartsByIdUsersByUserId(id, userId, params = {}) {
-    const url = `/api/v3.0/carts/${id}/users/${userId}`;
+    const url = `/v3.0/carts/${id}/users/${userId}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -222,7 +222,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   deleteCartsByIdUsersByUserId(id, userId, params = {}) {
-    const url = `/api/v3.0/carts/${id}/users/${userId}`;
+    const url = `/v3.0/carts/${id}/users/${userId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -234,7 +234,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   putCartsByIdUsersByUserIdSwapByNewUserId(id, userId, newUserId, params = {}) {
-    const url = `/api/v3.0/carts/${id}/users/${userId}/swap/${newUserId}`;
+    const url = `/v3.0/carts/${id}/users/${userId}/swap/${newUserId}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -245,7 +245,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   putCartsByIdPromotion(id, data = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/promotion`;
+    const url = `/v3.0/carts/${id}/promotion`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -256,7 +256,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   deleteCartsByIdPromotion(id, params = {}) {
-    const url = `/api/v3.0/carts/${id}/promotion`;
+    const url = `/v3.0/carts/${id}/promotion`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -272,7 +272,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   postCartsByIdEntriesUsersByUserId(id, userId, data = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/entries/users/${userId}`;
+    const url = `/v3.0/carts/${id}/entries/users/${userId}`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -285,7 +285,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   postCartsByIdEntriesUsersByUserIdDeposit(id, userId, data = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/entries/users/${userId}/deposit`;
+    const url = `/v3.0/carts/${id}/entries/users/${userId}/deposit`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -297,7 +297,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   deleteCartsByIdEntriesByEntryId(id, entryId, params = {}) {
-    const url = `/api/v3.0/carts/${id}/entries/${entryId}`;
+    const url = `/v3.0/carts/${id}/entries/${entryId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -314,7 +314,7 @@ export class Carts {
     quantity,
     params = {},
   ) {
-    const url = `/api/v3.0/carts/${id}/entries/${entryId}/quantity/${quantity}`;
+    const url = `/v3.0/carts/${id}/entries/${entryId}/quantity/${quantity}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -326,7 +326,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   putCartsByIdEntriesByEntryIdPriceByPrice(id, entryId, price, params = {}) {
-    const url = `/api/v3.0/carts/${id}/entries/${entryId}/price/${price}`;
+    const url = `/v3.0/carts/${id}/entries/${entryId}/price/${price}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -343,7 +343,7 @@ export class Carts {
     price,
     params = {},
   ) {
-    const url = `/api/v3.0/carts/${id}/entries/${entryId}/price/points/${price}`;
+    const url = `/v3.0/carts/${id}/entries/${entryId}/price/points/${price}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -360,7 +360,7 @@ export class Carts {
     payType,
     params = {},
   ) {
-    const url = `/api/v3.0/carts/${id}/entries/${entryId}/paymenttype/${payType}`;
+    const url = `/v3.0/carts/${id}/entries/${entryId}/paymenttype/${payType}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -371,7 +371,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   putCartsByIdUsersByUserIdNote(id, userId, params = {}) {
-    const url = `/api/v3.0/carts/${id}/users/${userId}/note`;
+    const url = `/v3.0/carts/${id}/users/${userId}/note`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -385,7 +385,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   postCartsByIdAccept(id, data = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/accept`;
+    const url = `/v3.0/carts/${id}/accept`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -399,7 +399,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   postCartsByIdPayments(id, data = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/payments`;
+    const url = `/v3.0/carts/${id}/payments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -411,7 +411,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   deleteCartsByIdPaymentsByPaymentMethodId(id, paymentMethodId, params = {}) {
-    const url = `/api/v3.0/carts/${id}/payments/${paymentMethodId}`;
+    const url = `/v3.0/carts/${id}/payments/${paymentMethodId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -421,7 +421,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   getCartsByIdState(id, options = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/state`;
+    const url = `/v3.0/carts/${id}/state`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -431,7 +431,7 @@ export class Carts {
    * @param {Object} params - additional query params
    */
   getCartsByIdPaymentsState(id, options = {}, params = {}) {
-    const url = `/api/v3.0/carts/${id}/payments/state`;
+    const url = `/v3.0/carts/${id}/payments/state`;
     return this.client.request("get", url, {}, params);
   }
 }

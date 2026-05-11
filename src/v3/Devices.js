@@ -23,7 +23,7 @@ export class Devices {
          * @param {Object} params - additional query params
          */
   getDevices(options = {}, params = {}) {
-    const url = `/api/v3.0/devices`;
+    const url = `/v3.0/devices`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -75,7 +75,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   postDevices(data = {}, params = {}) {
-    const url = `/api/v3.0/devices`;
+    const url = `/v3.0/devices`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -90,7 +90,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   putDevices(data = {}, params = {}) {
-    const url = `/api/v3.0/devices`;
+    const url = `/v3.0/devices`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -101,7 +101,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   getDevicesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/devices/${id}`;
+    const url = `/v3.0/devices/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -111,7 +111,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   deleteDevicesById(id, params = {}) {
-    const url = `/api/v3.0/devices/${id}`;
+    const url = `/v3.0/devices/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -121,7 +121,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   putDevicesByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/devices/${id}/enable`;
+    const url = `/v3.0/devices/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -131,7 +131,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   putDevicesByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/devices/${id}/disable`;
+    const url = `/v3.0/devices/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -154,7 +154,7 @@ export class Devices {
          * @param {Object} params - additional query params
          */
   getDevicesHosts(options = {}, params = {}) {
-    const url = `/api/v3.0/devices/hosts`;
+    const url = `/v3.0/devices/hosts`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -205,7 +205,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   postDevicesByDeviceIdHostByHostId(deviceId, hostId, params = {}) {
-    const url = `/api/v3.0/devices/${deviceId}/host/${hostId}`;
+    const url = `/v3.0/devices/${deviceId}/host/${hostId}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -216,7 +216,7 @@ export class Devices {
    * @param {Object} params - additional query params
    */
   deleteDevicesByDeviceIdHostByHostId(deviceId, hostId, params = {}) {
-    const url = `/api/v3.0/devices/${deviceId}/host/${hostId}`;
+    const url = `/v3.0/devices/${deviceId}/host/${hostId}`;
     return this.client.request("delete", url, {}, params);
   }
 }

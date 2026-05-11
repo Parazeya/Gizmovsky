@@ -21,7 +21,7 @@ export class ClientOptions {
          * @param {Object} params - additional query params
          */
   getClientOptions(options = {}, params = {}) {
-    const url = `/api/v3.0/clientoptions`;
+    const url = `/v3.0/clientoptions`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -64,7 +64,7 @@ export class ClientOptions {
    * @param {Object} params - additional query params
    */
   postClientOptions(data = {}, params = {}) {
-    const url = `/api/v3.0/clientoptions`;
+    const url = `/v3.0/clientoptions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -79,7 +79,7 @@ export class ClientOptions {
    * @param {Object} params - additional query params
    */
   putClientOptions(data = {}, params = {}) {
-    const url = `/api/v3.0/clientoptions`;
+    const url = `/v3.0/clientoptions`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -90,7 +90,7 @@ export class ClientOptions {
    * @param {Object} params - additional query params
    */
   getClientOptionsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/clientoptions/${id}`;
+    const url = `/v3.0/clientoptions/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -100,7 +100,7 @@ export class ClientOptions {
    * @param {Object} params - additional query params
    */
   deleteClientOptionsById(id, params = {}) {
-    const url = `/api/v3.0/clientoptions/${id}`;
+    const url = `/v3.0/clientoptions/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -110,7 +110,7 @@ export class ClientOptions {
    * @param {Object} params - additional query params
    */
   putClientOptionsByIdSetasdefault(id, params = {}) {
-    const url = `/api/v3.0/clientoptions/${id}/setasdefault`;
+    const url = `/v3.0/clientoptions/${id}/setasdefault`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -126,7 +126,7 @@ export class ClientOptions {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/clientoptions/${id}/image/${skinImageType}`;
+    const url = `/v3.0/clientoptions/${id}/image/${skinImageType}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -139,7 +139,7 @@ export class ClientOptions {
    * @param {Object} params - additional query params
    */
   putClientOptionsByIdImage(id, data = {}, params = {}) {
-    const url = `/api/v3.0/clientoptions/${id}/image`;
+    const url = `/v3.0/clientoptions/${id}/image`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

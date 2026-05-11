@@ -23,7 +23,7 @@ export class Branches {
          * @param {Object} params - additional query params
          */
   getBranches(options = {}, params = {}) {
-    const url = `/api/v3.0/branches`;
+    const url = `/v3.0/branches`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -99,7 +99,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   postBranches(data = {}, params = {}) {
-    const url = `/api/v3.0/branches`;
+    const url = `/v3.0/branches`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -141,7 +141,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   putBranches(data = {}, params = {}) {
-    const url = `/api/v3.0/branches`;
+    const url = `/v3.0/branches`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -152,7 +152,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   getBranchesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/branches/${id}`;
+    const url = `/v3.0/branches/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -162,7 +162,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   deleteBranchesById(id, params = {}) {
-    const url = `/api/v3.0/branches/${id}`;
+    const url = `/v3.0/branches/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -172,7 +172,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   putBranchesByIdUndelete(id, params = {}) {
-    const url = `/api/v3.0/branches/${id}/undelete`;
+    const url = `/v3.0/branches/${id}/undelete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -182,7 +182,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   getBranchesNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/branches/name/${name}/exist`;
+    const url = `/v3.0/branches/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -192,7 +192,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   getBranchesByBranchIdTimezone(branchId, options = {}, params = {}) {
-    const url = `/api/v3.0/branches/${branchId}/timezone`;
+    const url = `/v3.0/branches/${branchId}/timezone`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -202,7 +202,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   putBranchesByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/branches/${id}/enable`;
+    const url = `/v3.0/branches/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -212,7 +212,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   putBranchesByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/branches/${id}/disable`;
+    const url = `/v3.0/branches/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -222,7 +222,7 @@ export class Branches {
    * @param {Object} params - additional query params
    */
   getBranchesByIdCounters(id, options = {}, params = {}) {
-    const url = `/api/v3.0/branches/${id}/counters`;
+    const url = `/v3.0/branches/${id}/counters`;
     return this.client.request("get", url, {}, params);
   }
 }

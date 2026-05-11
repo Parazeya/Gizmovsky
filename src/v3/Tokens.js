@@ -19,7 +19,7 @@ export class Tokens {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/tokens/${token}/${confirmationCode}/${tokenType}/valid`;
+    const url = `/v3.0/tokens/${token}/${confirmationCode}/${tokenType}/valid`;
     return this.client.request("get", url, {}, params);
   }
 }

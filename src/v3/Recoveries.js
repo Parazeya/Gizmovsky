@@ -11,7 +11,7 @@ export class Recoveries {
    * @param {Object} params - additional query params
    */
   postRecoveriesPasswordByUsernamePhone(username, params = {}) {
-    const url = `/api/v3.0/recoveries/password/${username}/phone`;
+    const url = `/v3.0/recoveries/password/${username}/phone`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -21,7 +21,7 @@ export class Recoveries {
    * @param {Object} params - additional query params
    */
   postRecoveriesPasswordByUsernameEmail(username, params = {}) {
-    const url = `/api/v3.0/recoveries/password/${username}/email`;
+    const url = `/v3.0/recoveries/password/${username}/email`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -36,7 +36,7 @@ export class Recoveries {
     confirmationCode,
     params = {},
   ) {
-    const url = `/api/v3.0/recoveries/password/${token}/${confirmationCode}/complete`;
+    const url = `/v3.0/recoveries/password/${token}/${confirmationCode}/complete`;
     return this.client.request("post", url, {}, params);
   }
 }

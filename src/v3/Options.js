@@ -12,7 +12,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptions(options = {}, params = {}) {
-    const url = `/api/v3.0/options`;
+    const url = `/v3.0/options`;
     const optionsType = options.hasOwnProperty("optionsType")
       ? options["optionsType"]
       : undefined;
@@ -28,7 +28,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   putOptions(data = {}, params = {}) {
-    const url = `/api/v3.0/options`;
+    const url = `/v3.0/options`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -38,7 +38,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsSkin(options = {}, params = {}) {
-    const url = `/api/v3.0/options/skin`;
+    const url = `/v3.0/options/skin`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -47,7 +47,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsSkinPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/skin/pack`;
+    const url = `/v3.0/options/skin/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -56,7 +56,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsCurrency(options = {}, params = {}) {
-    const url = `/api/v3.0/options/currency`;
+    const url = `/v3.0/options/currency`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -70,7 +70,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsCurrency(data = {}, params = {}) {
-    const url = `/api/v3.0/options/currency`;
+    const url = `/v3.0/options/currency`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -80,7 +80,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsCurrencyPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/currency/pack`;
+    const url = `/v3.0/options/currency/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -89,7 +89,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsBusiness(options = {}, params = {}) {
-    const url = `/api/v3.0/options/business`;
+    const url = `/v3.0/options/business`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -106,7 +106,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsBusiness(data = {}, params = {}) {
-    const url = `/api/v3.0/options/business`;
+    const url = `/v3.0/options/business`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -116,7 +116,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsBusinessPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/business/pack`;
+    const url = `/v3.0/options/business/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -125,7 +125,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsGeneral(options = {}, params = {}) {
-    const url = `/api/v3.0/options/general`;
+    const url = `/v3.0/options/general`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -135,7 +135,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsGeneral(data = {}, params = {}) {
-    const url = `/api/v3.0/options/general`;
+    const url = `/v3.0/options/general`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -145,7 +145,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsGeneralPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/general/pack`;
+    const url = `/v3.0/options/general/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -154,7 +154,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsManagerfeatures(options = {}, params = {}) {
-    const url = `/api/v3.0/options/managerfeatures`;
+    const url = `/v3.0/options/managerfeatures`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -166,7 +166,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsManagerfeatures(data = {}, params = {}) {
-    const url = `/api/v3.0/options/managerfeatures`;
+    const url = `/v3.0/options/managerfeatures`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -176,7 +176,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsManagerfeaturesPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/managerfeatures/pack`;
+    const url = `/v3.0/options/managerfeatures/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -185,7 +185,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsRegional(options = {}, params = {}) {
-    const url = `/api/v3.0/options/regional`;
+    const url = `/v3.0/options/regional`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -196,7 +196,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsRegional(data = {}, params = {}) {
-    const url = `/api/v3.0/options/regional`;
+    const url = `/v3.0/options/regional`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -206,7 +206,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsRegionalPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/regional/pack`;
+    const url = `/v3.0/options/regional/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -215,7 +215,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsFiscalization(options = {}, params = {}) {
-    const url = `/api/v3.0/options/fiscalization`;
+    const url = `/v3.0/options/fiscalization`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -225,7 +225,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsFiscalization(data = {}, params = {}) {
-    const url = `/api/v3.0/options/fiscalization`;
+    const url = `/v3.0/options/fiscalization`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -235,7 +235,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsFiscalizationPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/fiscalization/pack`;
+    const url = `/v3.0/options/fiscalization/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -244,7 +244,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsTax(options = {}, params = {}) {
-    const url = `/api/v3.0/options/tax`;
+    const url = `/v3.0/options/tax`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -265,7 +265,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsTax(data = {}, params = {}) {
-    const url = `/api/v3.0/options/tax`;
+    const url = `/v3.0/options/tax`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -275,7 +275,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsTaxPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/tax/pack`;
+    const url = `/v3.0/options/tax/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -284,7 +284,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsReservations(options = {}, params = {}) {
-    const url = `/api/v3.0/options/reservations`;
+    const url = `/v3.0/options/reservations`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -314,7 +314,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsReservations(data = {}, params = {}) {
-    const url = `/api/v3.0/options/reservations`;
+    const url = `/v3.0/options/reservations`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -324,7 +324,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsReservationsPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/reservations/pack`;
+    const url = `/v3.0/options/reservations/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -333,7 +333,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsAgerestrictions(options = {}, params = {}) {
-    const url = `/api/v3.0/options/agerestrictions`;
+    const url = `/v3.0/options/agerestrictions`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -346,7 +346,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsAgerestrictions(data = {}, params = {}) {
-    const url = `/api/v3.0/options/agerestrictions`;
+    const url = `/v3.0/options/agerestrictions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -356,7 +356,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsAgerestrictionsPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/agerestrictions/pack`;
+    const url = `/v3.0/options/agerestrictions/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -365,7 +365,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsWaitinglines(options = {}, params = {}) {
-    const url = `/api/v3.0/options/waitinglines`;
+    const url = `/v3.0/options/waitinglines`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -379,7 +379,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsWaitinglines(data = {}, params = {}) {
-    const url = `/api/v3.0/options/waitinglines`;
+    const url = `/v3.0/options/waitinglines`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -389,7 +389,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsWaitinglinesPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/waitinglines/pack`;
+    const url = `/v3.0/options/waitinglines/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -398,7 +398,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsTopup(options = {}, params = {}) {
-    const url = `/api/v3.0/options/topup`;
+    const url = `/v3.0/options/topup`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -410,7 +410,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsTopup(data = {}, params = {}) {
-    const url = `/api/v3.0/options/topup`;
+    const url = `/v3.0/options/topup`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -420,7 +420,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsTopupPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/topup/pack`;
+    const url = `/v3.0/options/topup/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -429,7 +429,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsPaymentprocessing(options = {}, params = {}) {
-    const url = `/api/v3.0/options/paymentprocessing`;
+    const url = `/v3.0/options/paymentprocessing`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -441,7 +441,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsPaymentprocessing(data = {}, params = {}) {
-    const url = `/api/v3.0/options/paymentprocessing`;
+    const url = `/v3.0/options/paymentprocessing`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -451,7 +451,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsPaymentprocessingPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/paymentprocessing/pack`;
+    const url = `/v3.0/options/paymentprocessing/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -460,7 +460,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsSmtp(options = {}, params = {}) {
-    const url = `/api/v3.0/options/smtp`;
+    const url = `/v3.0/options/smtp`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -478,7 +478,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsSmtp(data = {}, params = {}) {
-    const url = `/api/v3.0/options/smtp`;
+    const url = `/v3.0/options/smtp`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -488,7 +488,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsSmtpPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/smtp/pack`;
+    const url = `/v3.0/options/smtp/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -497,7 +497,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsSmsgateway(options = {}, params = {}) {
-    const url = `/api/v3.0/options/smsgateway`;
+    const url = `/v3.0/options/smsgateway`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -508,7 +508,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsSmsgateway(data = {}, params = {}) {
-    const url = `/api/v3.0/options/smsgateway`;
+    const url = `/v3.0/options/smsgateway`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -518,7 +518,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsSmsgatewayPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/smsgateway/pack`;
+    const url = `/v3.0/options/smsgateway/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -527,7 +527,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsNetwork(options = {}, params = {}) {
-    const url = `/api/v3.0/options/network`;
+    const url = `/v3.0/options/network`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -540,7 +540,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsNetwork(data = {}, params = {}) {
-    const url = `/api/v3.0/options/network`;
+    const url = `/v3.0/options/network`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -550,7 +550,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsNetworkPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/network/pack`;
+    const url = `/v3.0/options/network/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -559,7 +559,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientNetworkConnection(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/network/connection`;
+    const url = `/v3.0/options/client/network/connection`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -571,7 +571,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsClientNetworkConnection(data = {}, params = {}) {
-    const url = `/api/v3.0/options/client/network/connection`;
+    const url = `/v3.0/options/client/network/connection`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -581,7 +581,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientNetworkConnectionPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/network/connection/pack`;
+    const url = `/v3.0/options/client/network/connection/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -590,7 +590,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsHttpsCertificate(options = {}, params = {}) {
-    const url = `/api/v3.0/options/https/certificate`;
+    const url = `/v3.0/options/https/certificate`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -602,7 +602,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsHttpsCertificate(data = {}, params = {}) {
-    const url = `/api/v3.0/options/https/certificate`;
+    const url = `/v3.0/options/https/certificate`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -612,7 +612,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsHttpsCertificatePack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/https/certificate/pack`;
+    const url = `/v3.0/options/https/certificate/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -621,7 +621,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserSessions(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/sessions`;
+    const url = `/v3.0/options/user/sessions`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -633,7 +633,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserSessions(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/sessions`;
+    const url = `/v3.0/options/user/sessions`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -643,7 +643,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserSessionsPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/sessions/pack`;
+    const url = `/v3.0/options/user/sessions/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -652,7 +652,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserLogin(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/login`;
+    const url = `/v3.0/options/user/login`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -663,7 +663,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserLogin(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/login`;
+    const url = `/v3.0/options/user/login`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -673,7 +673,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserLoginPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/login/pack`;
+    const url = `/v3.0/options/user/login/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -682,7 +682,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsMisc(options = {}, params = {}) {
-    const url = `/api/v3.0/options/misc`;
+    const url = `/v3.0/options/misc`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -692,7 +692,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsMisc(data = {}, params = {}) {
-    const url = `/api/v3.0/options/misc`;
+    const url = `/v3.0/options/misc`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -702,7 +702,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsMiscPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/misc/pack`;
+    const url = `/v3.0/options/misc/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -711,7 +711,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientUpdate(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/update`;
+    const url = `/v3.0/options/client/update`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -722,7 +722,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsClientUpdate(data = {}, params = {}) {
-    const url = `/api/v3.0/options/client/update`;
+    const url = `/v3.0/options/client/update`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -732,7 +732,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientUpdatePack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/update/pack`;
+    const url = `/v3.0/options/client/update/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -741,7 +741,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClient(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client`;
+    const url = `/v3.0/options/client`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -757,7 +757,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsClient(data = {}, params = {}) {
-    const url = `/api/v3.0/options/client`;
+    const url = `/v3.0/options/client`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -767,7 +767,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/pack`;
+    const url = `/v3.0/options/client/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -776,7 +776,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsConfirmationCode(options = {}, params = {}) {
-    const url = `/api/v3.0/options/confirmation/code`;
+    const url = `/v3.0/options/confirmation/code`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -787,7 +787,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsConfirmationCode(data = {}, params = {}) {
-    const url = `/api/v3.0/options/confirmation/code`;
+    const url = `/v3.0/options/confirmation/code`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -797,7 +797,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsConfirmationCodePack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/confirmation/code/pack`;
+    const url = `/v3.0/options/confirmation/code/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -806,7 +806,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserPasswordPolicy(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/password/policy`;
+    const url = `/v3.0/options/user/password/policy`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -820,7 +820,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserPasswordPolicy(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/password/policy`;
+    const url = `/v3.0/options/user/password/policy`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -830,7 +830,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserPasswordPolicyPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/password/policy/pack`;
+    const url = `/v3.0/options/user/password/policy/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -839,7 +839,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserPasswordRecovery(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/password/recovery`;
+    const url = `/v3.0/options/user/password/recovery`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -849,7 +849,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserPasswordRecovery(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/password/recovery`;
+    const url = `/v3.0/options/user/password/recovery`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -859,7 +859,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserPasswordRecoveryPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/password/recovery/pack`;
+    const url = `/v3.0/options/user/password/recovery/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -868,7 +868,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserRegistration(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/registration`;
+    const url = `/v3.0/options/user/registration`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -880,7 +880,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserRegistration(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/registration`;
+    const url = `/v3.0/options/user/registration`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -890,7 +890,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserRegistrationPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/registration/pack`;
+    const url = `/v3.0/options/user/registration/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -899,7 +899,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserLogoutGrace(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/logout/grace`;
+    const url = `/v3.0/options/user/logout/grace`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -910,7 +910,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserLogoutGrace(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/logout/grace`;
+    const url = `/v3.0/options/user/logout/grace`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -920,7 +920,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserLogoutGracePack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/logout/grace/pack`;
+    const url = `/v3.0/options/user/logout/grace/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -929,7 +929,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserFiles(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/files`;
+    const url = `/v3.0/options/user/files`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -940,7 +940,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserFiles(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/files`;
+    const url = `/v3.0/options/user/files`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -950,7 +950,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserFilesPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/files/pack`;
+    const url = `/v3.0/options/user/files/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -959,7 +959,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserStorage(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/storage`;
+    const url = `/v3.0/options/user/storage`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -972,7 +972,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserStorage(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/storage`;
+    const url = `/v3.0/options/user/storage`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -982,7 +982,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserStoragePack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/storage/pack`;
+    const url = `/v3.0/options/user/storage/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -991,7 +991,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserBalance(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/balance`;
+    const url = `/v3.0/options/user/balance`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1001,7 +1001,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsUserBalance(data = {}, params = {}) {
-    const url = `/api/v3.0/options/user/balance`;
+    const url = `/v3.0/options/user/balance`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -1011,7 +1011,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsUserBalancePack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/user/balance/pack`;
+    const url = `/v3.0/options/user/balance/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1020,7 +1020,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsDeployment(options = {}, params = {}) {
-    const url = `/api/v3.0/options/deployment`;
+    const url = `/v3.0/options/deployment`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1030,7 +1030,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsDeployment(data = {}, params = {}) {
-    const url = `/api/v3.0/options/deployment`;
+    const url = `/v3.0/options/deployment`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -1040,7 +1040,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsDeploymentPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/deployment/pack`;
+    const url = `/v3.0/options/deployment/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1049,7 +1049,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientNotifications(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/notifications`;
+    const url = `/v3.0/options/client/notifications`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1060,7 +1060,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsClientNotifications(data = {}, params = {}) {
-    const url = `/api/v3.0/options/client/notifications`;
+    const url = `/v3.0/options/client/notifications`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -1070,7 +1070,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsClientNotificationsPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/client/notifications/pack`;
+    const url = `/v3.0/options/client/notifications/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1079,7 +1079,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsInvoicing(options = {}, params = {}) {
-    const url = `/api/v3.0/options/invoicing`;
+    const url = `/v3.0/options/invoicing`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1094,7 +1094,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsInvoicing(data = {}, params = {}) {
-    const url = `/api/v3.0/options/invoicing`;
+    const url = `/v3.0/options/invoicing`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -1104,7 +1104,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsInvoicingPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/invoicing/pack`;
+    const url = `/v3.0/options/invoicing/pack`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1113,7 +1113,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsPosAutomation(options = {}, params = {}) {
-    const url = `/api/v3.0/options/pos/automation`;
+    const url = `/v3.0/options/pos/automation`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -1126,7 +1126,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   postOptionsPosAutomation(data = {}, params = {}) {
-    const url = `/api/v3.0/options/pos/automation`;
+    const url = `/v3.0/options/pos/automation`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -1136,7 +1136,7 @@ export class Options {
    * @param {Object} params - additional query params
    */
   getOptionsPosAutomationPack(options = {}, params = {}) {
-    const url = `/api/v3.0/options/pos/automation/pack`;
+    const url = `/v3.0/options/pos/automation/pack`;
     return this.client.request("get", url, {}, params);
   }
 }

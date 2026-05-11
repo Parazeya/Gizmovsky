@@ -22,7 +22,7 @@ export class PluginLibrary {
          * @param {Object} params - additional query params
          */
   getPluginLibrary(options = {}, params = {}) {
-    const url = `/api/v3.0/pluginlibrary`;
+    const url = `/v3.0/pluginlibrary`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -70,7 +70,7 @@ export class PluginLibrary {
    * @param {Object} params - additional query params
    */
   putPluginLibrary(data = {}, params = {}) {
-    const url = `/api/v3.0/pluginlibrary`;
+    const url = `/v3.0/pluginlibrary`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

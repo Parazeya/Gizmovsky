@@ -33,7 +33,7 @@ export class Payments {
          * @param {Object} params - additional query params
          */
   getPaymentsTransactions(options = {}, params = {}) {
-    const url = `/api/v3.0/payments/transactions`;
+    const url = `/v3.0/payments/transactions`;
     const paginationPageNumber = options.hasOwnProperty("paginationPageNumber")
       ? options["paginationPageNumber"]
       : undefined;
@@ -133,7 +133,7 @@ export class Payments {
    * @param {Object} params - additional query params
    */
   getPaymentsTransactionsStats(options = {}, params = {}) {
-    const url = `/api/v3.0/payments/transactions/stats`;
+    const url = `/v3.0/payments/transactions/stats`;
     const dateFrom = options.hasOwnProperty("dateFrom")
       ? options["dateFrom"]
       : undefined;
@@ -198,7 +198,7 @@ export class Payments {
    * @param {Object} params - additional query params
    */
   postPaymentsByIdReverse(id, data = {}, params = {}) {
-    const url = `/api/v3.0/payments/${id}/reverse`;
+    const url = `/v3.0/payments/${id}/reverse`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

@@ -21,7 +21,7 @@ export class UserPermissionSets {
          * @param {Object} params - additional query params
          */
   getUserPermissionSets(options = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets`;
+    const url = `/v3.0/userpermissionsets`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -62,7 +62,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   postUserPermissionSets(data = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets`;
+    const url = `/v3.0/userpermissionsets`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -75,7 +75,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   putUserPermissionSets(data = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets`;
+    const url = `/v3.0/userpermissionsets`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -86,7 +86,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   getUserPermissionSetsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/${id}`;
+    const url = `/v3.0/userpermissionsets/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -96,18 +96,18 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   deleteUserPermissionSetsById(id, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/${id}`;
+    const url = `/v3.0/userpermissionsets/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
   /**
    * Sets entry name.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/userpermissionsets/{id}/name"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/userpermissionsets/{id}/name"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putUserPermissionSetsByIdName(id, data = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/${id}/name`;
+    const url = `/v3.0/userpermissionsets/${id}/name`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -118,7 +118,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   getUserPermissionSetsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/name/${name}/exist`;
+    const url = `/v3.0/userpermissionsets/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -128,7 +128,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   getUserPermissionSetsByIdPermissions(id, options = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/${id}/permissions`;
+    const url = `/v3.0/userpermissionsets/${id}/permissions`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -140,7 +140,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   putUserPermissionSetsByIdPermissions(id, data = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/${id}/permissions`;
+    const url = `/v3.0/userpermissionsets/${id}/permissions`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -150,7 +150,7 @@ export class UserPermissionSets {
    * @param {Object} params - additional query params
    */
   getUserPermissionSetsPolicies(options = {}, params = {}) {
-    const url = `/api/v3.0/userpermissionsets/policies`;
+    const url = `/v3.0/userpermissionsets/policies`;
     return this.client.request("get", url, {}, params);
   }
 }

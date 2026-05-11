@@ -11,7 +11,7 @@ export class RemoteControl {
    * @param {Object} params - additional query params
    */
   getRemoteControlHostsByHostIdSession(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/remotecontrol/hosts/${hostId}/session`;
+    const url = `/v3.0/remotecontrol/hosts/${hostId}/session`;
     return this.client.request("get", url, {}, params);
   }
 }

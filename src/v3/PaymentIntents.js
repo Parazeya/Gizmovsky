@@ -28,7 +28,7 @@ export class PaymentIntents {
          * @param {Object} params - additional query params
          */
   getPaymentIntents(options = {}, params = {}) {
-    const url = `/api/v3.0/paymentintents`;
+    const url = `/v3.0/paymentintents`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -97,7 +97,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   getPaymentIntentsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentintents/${id}`;
+    const url = `/v3.0/paymentintents/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -107,7 +107,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   getPaymentIntentsByIdentifier(identifier, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentintents/${identifier}`;
+    const url = `/v3.0/paymentintents/${identifier}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -119,7 +119,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   postPaymentIntentsDeposit(data = {}, params = {}) {
-    const url = `/api/v3.0/paymentintents/deposit`;
+    const url = `/v3.0/paymentintents/deposit`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -130,7 +130,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   postPaymentIntentsByIdentifierCancel(identifier, params = {}) {
-    const url = `/api/v3.0/paymentintents/${identifier}/cancel`;
+    const url = `/v3.0/paymentintents/${identifier}/cancel`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -140,7 +140,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   getPaymentIntentsByIdentifierWait(identifier, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentintents/${identifier}/wait`;
+    const url = `/v3.0/paymentintents/${identifier}/wait`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -150,7 +150,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   getPaymentIntentsByIdentifierOrder(identifier, options = {}, params = {}) {
-    const url = `/api/v3.0/paymentintents/${identifier}/order`;
+    const url = `/v3.0/paymentintents/${identifier}/order`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -160,7 +160,7 @@ export class PaymentIntents {
    * @param {Object} params - additional query params
    */
   postPaymentIntentsByIdentifierDiscard(identifier, params = {}) {
-    const url = `/api/v3.0/paymentintents/${identifier}/discard`;
+    const url = `/v3.0/paymentintents/${identifier}/discard`;
     return this.client.request("post", url, {}, params);
   }
 }

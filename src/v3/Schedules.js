@@ -23,7 +23,7 @@ export class Schedules {
          * @param {Object} params - additional query params
          */
   getSchedules(options = {}, params = {}) {
-    const url = `/api/v3.0/schedules`;
+    const url = `/v3.0/schedules`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -69,7 +69,7 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   getSchedulesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/schedules/${id}`;
+    const url = `/v3.0/schedules/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -79,7 +79,7 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   deleteSchedulesById(id, params = {}) {
-    const url = `/api/v3.0/schedules/${id}`;
+    const url = `/v3.0/schedules/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -89,7 +89,7 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   putSchedulesByIdEnable(id, params = {}) {
-    const url = `/api/v3.0/schedules/${id}/enable`;
+    const url = `/v3.0/schedules/${id}/enable`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -99,18 +99,18 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   putSchedulesByIdDisable(id, params = {}) {
-    const url = `/api/v3.0/schedules/${id}/disable`;
+    const url = `/v3.0/schedules/${id}/disable`;
     return this.client.request("put", url, {}, params);
   }
 
   /**
    * Sets entry name.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/schedules/{id}/name"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/schedules/{id}/name"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putSchedulesByIdName(id, data = {}, params = {}) {
-    const url = `/api/v3.0/schedules/${id}/name`;
+    const url = `/v3.0/schedules/${id}/name`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -121,18 +121,18 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   getSchedulesNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/schedules/name/${name}/exist`;
+    const url = `/v3.0/schedules/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 
   /**
    * Sets entry description.
    * @param {integer} id - Entry id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/schedules/{id}/description"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/schedules/{id}/description"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putSchedulesByIdDescription(id, data = {}, params = {}) {
-    const url = `/api/v3.0/schedules/${id}/description`;
+    const url = `/v3.0/schedules/${id}/description`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -149,7 +149,7 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   postSchedulesReport(data = {}, params = {}) {
-    const url = `/api/v3.0/schedules/report`;
+    const url = `/v3.0/schedules/report`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -167,7 +167,7 @@ export class Schedules {
    * @param {Object} params - additional query params
    */
   putSchedulesReportById(id, data = {}, params = {}) {
-    const url = `/api/v3.0/schedules/report/${id}`;
+    const url = `/v3.0/schedules/report/${id}`;
     const body = data;
     return this.client.request("put", url, body, params);
   }

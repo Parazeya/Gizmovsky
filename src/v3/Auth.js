@@ -57,7 +57,7 @@ export class Auth {
    * @param {Object} params - additional query params
    */
   getAuthAccesstoken(options = {}, params = {}) {
-    const url = `/api/v3.0/auth/accesstoken`;
+    const url = `/v3.0/auth/accesstoken`;
     const username = options.hasOwnProperty("username")
       ? options["username"]
       : undefined;
@@ -88,7 +88,7 @@ export class Auth {
    * @param {Object} params - additional query params
    */
   getAuthAccesstokenRefresh(options = {}, params = {}) {
-    const url = `/api/v3.0/auth/accesstoken/refresh`;
+    const url = `/v3.0/auth/accesstoken/refresh`;
     const token = options.hasOwnProperty("token")
       ? options["token"]
       : undefined;

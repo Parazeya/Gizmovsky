@@ -28,7 +28,7 @@ export class Logs {
          * @param {Object} params - additional query params
          */
   getLogs(options = {}, params = {}) {
-    const url = `/api/v3.0/logs`;
+    const url = `/v3.0/logs`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -98,7 +98,7 @@ export class Logs {
    * @param {Object} params - additional query params
    */
   getLogsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/logs/${id}`;
+    const url = `/v3.0/logs/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -108,7 +108,7 @@ export class Logs {
    * @param {Object} params - additional query params
    */
   getLogsByIdException(id, options = {}, params = {}) {
-    const url = `/api/v3.0/logs/${id}/exception`;
+    const url = `/v3.0/logs/${id}/exception`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -117,7 +117,7 @@ export class Logs {
    * @param {Object} params - additional query params
    */
   postLogsClear(params = {}) {
-    const url = `/api/v3.0/logs/clear`;
+    const url = `/v3.0/logs/clear`;
     return this.client.request("post", url, {}, params);
   }
 }

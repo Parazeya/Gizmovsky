@@ -14,7 +14,7 @@ export class DepositPayments {
    * @param {Object} params - additional query params
    */
   postDepositPaymentsUserByUserId(userId, data = {}, params = {}) {
-    const url = `/api/v3.0/depositpayments/user/${userId}`;
+    const url = `/v3.0/depositpayments/user/${userId}`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -28,7 +28,7 @@ export class DepositPayments {
    * @param {Object} params - additional query params
    */
   putDepositPaymentsByIdVoid(id, data = {}, params = {}) {
-    const url = `/api/v3.0/depositpayments/${id}/void`;
+    const url = `/v3.0/depositpayments/${id}/void`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -39,7 +39,7 @@ export class DepositPayments {
    * @param {Object} params - additional query params
    */
   getDepositPaymentsByIdRefundState(id, options = {}, params = {}) {
-    const url = `/api/v3.0/depositpayments/${id}/refund/state`;
+    const url = `/v3.0/depositpayments/${id}/refund/state`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -49,7 +49,7 @@ export class DepositPayments {
    * @param {Object} params - additional query params
    */
   getDepositPaymentsByIdReceiptWait(id, options = {}, params = {}) {
-    const url = `/api/v3.0/depositpayments/${id}/receipt/wait`;
+    const url = `/v3.0/depositpayments/${id}/receipt/wait`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -59,7 +59,7 @@ export class DepositPayments {
    * @param {Object} params - additional query params
    */
   getDepositPaymentsByIdRefundReceiptWait(id, options = {}, params = {}) {
-    const url = `/api/v3.0/depositpayments/${id}/refund/receipt/wait`;
+    const url = `/v3.0/depositpayments/${id}/refund/receipt/wait`;
     return this.client.request("get", url, {}, params);
   }
 }

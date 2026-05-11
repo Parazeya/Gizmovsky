@@ -21,7 +21,7 @@ export class HostIcons {
          * @param {Object} params - additional query params
          */
   getHostIcons(options = {}, params = {}) {
-    const url = `/api/v3.0/hosticons`;
+    const url = `/v3.0/hosticons`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -61,7 +61,7 @@ export class HostIcons {
    * @param {Object} params - additional query params
    */
   postHostIcons(data = {}, params = {}) {
-    const url = `/api/v3.0/hosticons`;
+    const url = `/v3.0/hosticons`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -73,7 +73,7 @@ export class HostIcons {
    * @param {Object} params - additional query params
    */
   putHostIcons(data = {}, params = {}) {
-    const url = `/api/v3.0/hosticons`;
+    const url = `/v3.0/hosticons`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -84,7 +84,7 @@ export class HostIcons {
    * @param {Object} params - additional query params
    */
   getHostIconsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hosticons/${id}`;
+    const url = `/v3.0/hosticons/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -94,7 +94,7 @@ export class HostIcons {
    * @param {Object} params - additional query params
    */
   deleteHostIconsById(id, params = {}) {
-    const url = `/api/v3.0/hosticons/${id}`;
+    const url = `/v3.0/hosticons/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

@@ -21,7 +21,7 @@ export class Variables {
          * @param {Object} params - additional query params
          */
   getVariables(options = {}, params = {}) {
-    const url = `/api/v3.0/variables`;
+    const url = `/v3.0/variables`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -66,7 +66,7 @@ export class Variables {
    * @param {Object} params - additional query params
    */
   postVariables(data = {}, params = {}) {
-    const url = `/api/v3.0/variables`;
+    const url = `/v3.0/variables`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -83,7 +83,7 @@ export class Variables {
    * @param {Object} params - additional query params
    */
   putVariables(data = {}, params = {}) {
-    const url = `/api/v3.0/variables`;
+    const url = `/v3.0/variables`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -94,7 +94,7 @@ export class Variables {
    * @param {Object} params - additional query params
    */
   getVariablesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/variables/${id}`;
+    const url = `/v3.0/variables/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -104,7 +104,7 @@ export class Variables {
    * @param {Object} params - additional query params
    */
   deleteVariablesById(id, params = {}) {
-    const url = `/api/v3.0/variables/${id}`;
+    const url = `/v3.0/variables/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

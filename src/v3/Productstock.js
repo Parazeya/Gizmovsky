@@ -28,7 +28,7 @@ export class ProductStock {
          * @param {Object} params - additional query params
          */
   getProductStock(options = {}, params = {}) {
-    const url = `/api/v3.0/productstock`;
+    const url = `/v3.0/productstock`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -96,7 +96,7 @@ export class ProductStock {
    * @param {Object} params - additional query params
    */
   getProductStockByProductId(productId, options = {}, params = {}) {
-    const url = `/api/v3.0/productstock/${productId}`;
+    const url = `/v3.0/productstock/${productId}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -112,7 +112,7 @@ export class ProductStock {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/productstock/${productId}/stock/${stockId}`;
+    const url = `/v3.0/productstock/${productId}/stock/${stockId}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -125,7 +125,7 @@ export class ProductStock {
    * @param {Object} params - additional query params
    */
   postProductStockByProductIdTransaction(productId, data = {}, params = {}) {
-    const url = `/api/v3.0/productstock/${productId}/transaction`;
+    const url = `/v3.0/productstock/${productId}/transaction`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -143,7 +143,7 @@ export class ProductStock {
     amount,
     params = {},
   ) {
-    const url = `/api/v3.0/productstock/${productId}/stock/${stockId}/add/${amount}`;
+    const url = `/v3.0/productstock/${productId}/stock/${stockId}/add/${amount}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -160,7 +160,7 @@ export class ProductStock {
     amount,
     params = {},
   ) {
-    const url = `/api/v3.0/productstock/${productId}/stock/${stockId}/set/${amount}`;
+    const url = `/v3.0/productstock/${productId}/stock/${stockId}/set/${amount}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -177,7 +177,7 @@ export class ProductStock {
     amount,
     params = {},
   ) {
-    const url = `/api/v3.0/productstock/${productId}/stock/${stockId}/remove/${amount}`;
+    const url = `/v3.0/productstock/${productId}/stock/${stockId}/remove/${amount}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -188,7 +188,7 @@ export class ProductStock {
    * @param {Object} params - additional query params
    */
   postProductStockByProductIdAddByAmount(productId, amount, params = {}) {
-    const url = `/api/v3.0/productstock/${productId}/add/${amount}`;
+    const url = `/v3.0/productstock/${productId}/add/${amount}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -199,7 +199,7 @@ export class ProductStock {
    * @param {Object} params - additional query params
    */
   postProductStockByProductIdSetByAmount(productId, amount, params = {}) {
-    const url = `/api/v3.0/productstock/${productId}/set/${amount}`;
+    const url = `/v3.0/productstock/${productId}/set/${amount}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -210,7 +210,7 @@ export class ProductStock {
    * @param {Object} params - additional query params
    */
   postProductStockByProductIdRemoveByAmount(productId, amount, params = {}) {
-    const url = `/api/v3.0/productstock/${productId}/remove/${amount}`;
+    const url = `/v3.0/productstock/${productId}/remove/${amount}`;
     return this.client.request("post", url, {}, params);
   }
 }

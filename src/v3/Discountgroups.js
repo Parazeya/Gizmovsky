@@ -21,7 +21,7 @@ export class DiscountGroups {
          * @param {Object} params - additional query params
          */
   getDiscountGroups(options = {}, params = {}) {
-    const url = `/api/v3.0/discountgroups`;
+    const url = `/v3.0/discountgroups`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -62,7 +62,7 @@ export class DiscountGroups {
    * @param {Object} params - additional query params
    */
   postDiscountGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/discountgroups`;
+    const url = `/v3.0/discountgroups`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -75,7 +75,7 @@ export class DiscountGroups {
    * @param {Object} params - additional query params
    */
   putDiscountGroups(data = {}, params = {}) {
-    const url = `/api/v3.0/discountgroups`;
+    const url = `/v3.0/discountgroups`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -86,7 +86,7 @@ export class DiscountGroups {
    * @param {Object} params - additional query params
    */
   getDiscountGroupsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/discountgroups/${id}`;
+    const url = `/v3.0/discountgroups/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -96,7 +96,7 @@ export class DiscountGroups {
    * @param {Object} params - additional query params
    */
   deleteDiscountGroupsById(id, params = {}) {
-    const url = `/api/v3.0/discountgroups/${id}`;
+    const url = `/v3.0/discountgroups/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -106,7 +106,7 @@ export class DiscountGroups {
    * @param {Object} params - additional query params
    */
   getDiscountGroupsNameByNameExist(name, options = {}, params = {}) {
-    const url = `/api/v3.0/discountgroups/name/${name}/exist`;
+    const url = `/v3.0/discountgroups/name/${name}/exist`;
     return this.client.request("get", url, {}, params);
   }
 }

@@ -26,7 +26,7 @@ export class Hosts {
          * @param {Object} params - additional query params
          */
   getHosts(options = {}, params = {}) {
-    const url = `/api/v3.0/hosts`;
+    const url = `/v3.0/hosts`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -95,7 +95,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   postHosts(data = {}, params = {}) {
-    const url = `/api/v3.0/hosts`;
+    const url = `/v3.0/hosts`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -115,7 +115,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   putHosts(data = {}, params = {}) {
-    const url = `/api/v3.0/hosts`;
+    const url = `/v3.0/hosts`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -126,7 +126,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   getHostsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hosts/${id}`;
+    const url = `/v3.0/hosts/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -136,7 +136,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   deleteHostsById(id, params = {}) {
-    const url = `/api/v3.0/hosts/${id}`;
+    const url = `/v3.0/hosts/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -146,7 +146,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   putHostsById(id, params = {}) {
-    const url = `/api/v3.0/hosts/${id}`;
+    const url = `/v3.0/hosts/${id}`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -168,7 +168,7 @@ export class Hosts {
          * @param {Object} params - additional query params
          */
   getHostsByIdDevicesAssignments(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/devices/assignments`;
+    const url = `/v3.0/hosts/${id}/devices/assignments`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -224,7 +224,7 @@ export class Hosts {
          * @param {Object} params - additional query params
          */
   getHostsByIdDevices(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/devices`;
+    const url = `/v3.0/hosts/${id}/devices`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -269,7 +269,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   postHostsByIdDevicesByDeviceId(id, deviceId, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/devices/${deviceId}`;
+    const url = `/v3.0/hosts/${id}/devices/${deviceId}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -280,7 +280,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   deleteHostsByIdDevicesByDeviceId(id, deviceId, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/devices/${deviceId}`;
+    const url = `/v3.0/hosts/${id}/devices/${deviceId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -291,7 +291,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   postHostsByIdLockByValue(id, value, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/lock/${value}`;
+    const url = `/v3.0/hosts/${id}/lock/${value}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -302,7 +302,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   postHostsByIdOutoforderByValue(id, value, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/outoforder/${value}`;
+    const url = `/v3.0/hosts/${id}/outoforder/${value}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -312,7 +312,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   postHostsByIdOn(id, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/on`;
+    const url = `/v3.0/hosts/${id}/on`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -322,7 +322,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   postHostsByIdOff(id, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/off`;
+    const url = `/v3.0/hosts/${id}/off`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -332,7 +332,7 @@ export class Hosts {
    * @param {Object} params - additional query params
    */
   getHostsByIdLayoutgroups(id, options = {}, params = {}) {
-    const url = `/api/v3.0/hosts/${id}/layoutgroups`;
+    const url = `/v3.0/hosts/${id}/layoutgroups`;
     return this.client.request("get", url, {}, params);
   }
 }

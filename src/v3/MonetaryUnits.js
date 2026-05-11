@@ -22,7 +22,7 @@ export class MonetaryUnits {
          * @param {Object} params - additional query params
          */
   getMonetaryUnits(options = {}, params = {}) {
-    const url = `/api/v3.0/monetaryunits`;
+    const url = `/v3.0/monetaryunits`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -69,7 +69,7 @@ export class MonetaryUnits {
    * @param {Object} params - additional query params
    */
   postMonetaryUnits(data = {}, params = {}) {
-    const url = `/api/v3.0/monetaryunits`;
+    const url = `/v3.0/monetaryunits`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -84,7 +84,7 @@ export class MonetaryUnits {
    * @param {Object} params - additional query params
    */
   putMonetaryUnits(data = {}, params = {}) {
-    const url = `/api/v3.0/monetaryunits`;
+    const url = `/v3.0/monetaryunits`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -95,7 +95,7 @@ export class MonetaryUnits {
    * @param {Object} params - additional query params
    */
   getMonetaryUnitsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/monetaryunits/${id}`;
+    const url = `/v3.0/monetaryunits/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -105,7 +105,7 @@ export class MonetaryUnits {
    * @param {Object} params - additional query params
    */
   deleteMonetaryUnitsById(id, params = {}) {
-    const url = `/api/v3.0/monetaryunits/${id}`;
+    const url = `/v3.0/monetaryunits/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 }

@@ -72,7 +72,7 @@ export class Verifications {
     emailAddress,
     params = {},
   ) {
-    const url = `/api/v3.0/verifications/email/${userId}/${emailAddress}`;
+    const url = `/v3.0/verifications/email/${userId}/${emailAddress}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -82,7 +82,7 @@ export class Verifications {
    * @param {Object} params - additional query params
    */
   postVerificationsEmailByEmailAddress(emailAddress, params = {}) {
-    const url = `/api/v3.0/verifications/email/${emailAddress}`;
+    const url = `/v3.0/verifications/email/${emailAddress}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -97,7 +97,7 @@ export class Verifications {
     confirmationCode,
     params = {},
   ) {
-    const url = `/api/v3.0/verifications/email/${token}/${confirmationCode}/complete`;
+    const url = `/v3.0/verifications/email/${token}/${confirmationCode}/complete`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -112,7 +112,7 @@ export class Verifications {
     mobilePhoneNumber,
     params = {},
   ) {
-    const url = `/api/v3.0/verifications/mobilephone/${userId}/${mobilePhoneNumber}`;
+    const url = `/v3.0/verifications/mobilephone/${userId}/${mobilePhoneNumber}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -125,7 +125,7 @@ export class Verifications {
     mobilePhoneNumber,
     params = {},
   ) {
-    const url = `/api/v3.0/verifications/mobilephone/${mobilePhoneNumber}`;
+    const url = `/v3.0/verifications/mobilephone/${mobilePhoneNumber}`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -140,7 +140,7 @@ export class Verifications {
     confirmationCode,
     params = {},
   ) {
-    const url = `/api/v3.0/verifications/mobilephone/${token}/${confirmationCode}/complete`;
+    const url = `/v3.0/verifications/mobilephone/${token}/${confirmationCode}/complete`;
     return this.client.request("post", url, {}, params);
   }
 }

@@ -23,7 +23,7 @@ export class Applications {
          * @param {Object} params - additional query params
          */
   getApplications(options = {}, params = {}) {
-    const url = `/api/v3.0/applications`;
+    const url = `/v3.0/applications`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -80,7 +80,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   postApplications(data = {}, params = {}) {
-    const url = `/api/v3.0/applications`;
+    const url = `/v3.0/applications`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -100,7 +100,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   putApplications(data = {}, params = {}) {
-    const url = `/api/v3.0/applications`;
+    const url = `/v3.0/applications`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -111,7 +111,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   getApplicationsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applications/${id}`;
+    const url = `/v3.0/applications/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -121,7 +121,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   deleteApplicationsById(id, params = {}) {
-    const url = `/api/v3.0/applications/${id}`;
+    const url = `/v3.0/applications/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -131,7 +131,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   getApplicationsByIdImage(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applications/${id}/image`;
+    const url = `/v3.0/applications/${id}/image`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -142,7 +142,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   putApplicationsByIdImage(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applications/${id}/image`;
+    const url = `/v3.0/applications/${id}/image`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -154,7 +154,7 @@ export class Applications {
    * @param {Object} params - additional query params
    */
   postApplicationsByIdDuplicate(id, data = {}, params = {}) {
-    const url = `/api/v3.0/applications/${id}/duplicate`;
+    const url = `/v3.0/applications/${id}/duplicate`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

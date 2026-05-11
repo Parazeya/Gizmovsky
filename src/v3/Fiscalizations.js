@@ -12,7 +12,7 @@ export class Fiscalizations {
    * @param {Object} params - additional query params
    */
   postFiscalizations(data = {}, params = {}) {
-    const url = `/api/v3.0/fiscalizations`;
+    const url = `/v3.0/fiscalizations`;
     const body = data;
     return this.client.request("post", url, body, params);
   }

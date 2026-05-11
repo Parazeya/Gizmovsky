@@ -29,7 +29,7 @@ export class Invoices {
          * @param {Object} params - additional query params
          */
   getInvoices(options = {}, params = {}) {
-    const url = `/api/v3.0/invoices`;
+    const url = `/v3.0/invoices`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -103,7 +103,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   getInvoicesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}`;
+    const url = `/v3.0/invoices/${id}`;
     const expand = options.hasOwnProperty("expand")
       ? options["expand"]
       : undefined;
@@ -121,7 +121,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   putInvoicesByIdVoid(id, data = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}/void`;
+    const url = `/v3.0/invoices/${id}/void`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -136,7 +136,7 @@ export class Invoices {
     options = {},
     params = {},
   ) {
-    const url = `/api/v3.0/invoices/lines/${invoiceLineId}/quantity`;
+    const url = `/v3.0/invoices/lines/${invoiceLineId}/quantity`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -146,7 +146,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   postInvoicesUserByUserIdUsagesessionActiveInvoice(userId, params = {}) {
-    const url = `/api/v3.0/invoices/user/${userId}/usagesession/active/invoice`;
+    const url = `/v3.0/invoices/user/${userId}/usagesession/active/invoice`;
     return this.client.request("post", url, {}, params);
   }
 
@@ -158,7 +158,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   postInvoicesUserByUserIdBalanceClose(userId, data = {}, params = {}) {
-    const url = `/api/v3.0/invoices/user/${userId}/balance/close`;
+    const url = `/v3.0/invoices/user/${userId}/balance/close`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -172,7 +172,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   postInvoicesByIdPayments(id, data = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}/payments`;
+    const url = `/v3.0/invoices/${id}/payments`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -183,7 +183,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   getInvoicesByIdPayments(id, options = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}/payments`;
+    const url = `/v3.0/invoices/${id}/payments`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -193,7 +193,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   getInvoicesByIdRefundState(id, options = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}/refund/state`;
+    const url = `/v3.0/invoices/${id}/refund/state`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -203,7 +203,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   getInvoicesByIdSaleReceiptWait(id, options = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}/sale/receipt/wait`;
+    const url = `/v3.0/invoices/${id}/sale/receipt/wait`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -213,7 +213,7 @@ export class Invoices {
    * @param {Object} params - additional query params
    */
   getInvoicesByIdRefundReceiptWait(id, options = {}, params = {}) {
-    const url = `/api/v3.0/invoices/${id}/refund/receipt/wait`;
+    const url = `/v3.0/invoices/${id}/refund/receipt/wait`;
     return this.client.request("get", url, {}, params);
   }
 }

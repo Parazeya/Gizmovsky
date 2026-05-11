@@ -23,7 +23,7 @@ export class ApplicationPersonalFiles {
          * @param {Object} params - additional query params
          */
   getApplicationPersonalFiles(options = {}, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles`;
+    const url = `/v3.0/applicationpersonalfiles`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -84,7 +84,7 @@ export class ApplicationPersonalFiles {
    * @param {Object} params - additional query params
    */
   postApplicationPersonalFiles(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles`;
+    const url = `/v3.0/applicationpersonalfiles`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -107,7 +107,7 @@ export class ApplicationPersonalFiles {
    * @param {Object} params - additional query params
    */
   putApplicationPersonalFiles(data = {}, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles`;
+    const url = `/v3.0/applicationpersonalfiles`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -118,7 +118,7 @@ export class ApplicationPersonalFiles {
    * @param {Object} params - additional query params
    */
   getApplicationPersonalFilesById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles/${id}`;
+    const url = `/v3.0/applicationpersonalfiles/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -128,7 +128,7 @@ export class ApplicationPersonalFiles {
    * @param {Object} params - additional query params
    */
   deleteApplicationPersonalFilesById(id, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles/${id}`;
+    const url = `/v3.0/applicationpersonalfiles/${id}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -138,7 +138,7 @@ export class ApplicationPersonalFiles {
    * @param {Object} params - additional query params
    */
   getApplicationPersonalFilesByIdUsages(id, options = {}, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles/${id}/usages`;
+    const url = `/v3.0/applicationpersonalfiles/${id}/usages`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -148,7 +148,7 @@ export class ApplicationPersonalFiles {
    * @param {Object} params - additional query params
    */
   putApplicationPersonalFilesByIdUnassign(id, params = {}) {
-    const url = `/api/v3.0/applicationpersonalfiles/${id}/unassign`;
+    const url = `/v3.0/applicationpersonalfiles/${id}/unassign`;
     return this.client.request("put", url, {}, params);
   }
 }

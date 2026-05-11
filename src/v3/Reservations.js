@@ -30,7 +30,7 @@ export class Reservations {
          * @param {Object} params - additional query params
          */
   getReservations(options = {}, params = {}) {
-    const url = `/api/v3.0/reservations`;
+    const url = `/v3.0/reservations`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -114,7 +114,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   postReservations(data = {}, params = {}) {
-    const url = `/api/v3.0/reservations`;
+    const url = `/v3.0/reservations`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -136,7 +136,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   putReservations(data = {}, params = {}) {
-    const url = `/api/v3.0/reservations`;
+    const url = `/v3.0/reservations`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -147,7 +147,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   getReservationsById(id, options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}`;
+    const url = `/v3.0/reservations/${id}`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -171,7 +171,7 @@ export class Reservations {
          * @param {Object} params - additional query params
          */
   getReservationsAvailability(options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/availability`;
+    const url = `/v3.0/reservations/availability`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -236,7 +236,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   getReservationsOffer(options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/offer`;
+    const url = `/v3.0/reservations/offer`;
     const date = options.hasOwnProperty("date") ? options["date"] : undefined;
     const duration = options.hasOwnProperty("duration")
       ? options["duration"]
@@ -292,7 +292,7 @@ export class Reservations {
          * @param {Object} params - additional query params
          */
   getReservationsHostsNext(options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/hosts/next`;
+    const url = `/v3.0/reservations/hosts/next`;
     const paginationLimit = options.hasOwnProperty("paginationLimit")
       ? options["paginationLimit"]
       : undefined;
@@ -344,7 +344,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   getReservationsHostsByHostIdNext(hostId, options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/hosts/${hostId}/next`;
+    const url = `/v3.0/reservations/hosts/${hostId}/next`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -354,7 +354,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   putReservationsByIdCancel(id, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/cancel`;
+    const url = `/v3.0/reservations/${id}/cancel`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -366,7 +366,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   postReservationsByIdHost(id, data = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/host`;
+    const url = `/v3.0/reservations/${id}/host`;
     const body = data;
     return this.client.request("post", url, body, params);
   }
@@ -377,7 +377,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   putReservationsByIdComplete(id, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/complete`;
+    const url = `/v3.0/reservations/${id}/complete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -389,7 +389,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   putReservationsByIdHostMove(id, data = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/host/move`;
+    const url = `/v3.0/reservations/${id}/host/move`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -401,7 +401,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   putReservationsByIdHostByHostIdComplete(id, hostId, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/host/${hostId}/complete`;
+    const url = `/v3.0/reservations/${id}/host/${hostId}/complete`;
     return this.client.request("put", url, {}, params);
   }
 
@@ -412,7 +412,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   putReservationsByIdUser(id, data = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/user`;
+    const url = `/v3.0/reservations/${id}/user`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -424,7 +424,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   deleteReservationsByIdUserByUserId(id, userId, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/user/${userId}`;
+    const url = `/v3.0/reservations/${id}/user/${userId}`;
     return this.client.request("delete", url, {}, params);
   }
 
@@ -434,18 +434,18 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   getReservationsByIdNote(id, options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/note`;
+    const url = `/v3.0/reservations/${id}/note`;
     return this.client.request("get", url, {}, params);
   }
 
   /**
    * Adds or updates reservation note.
    * @param {integer} id - Reservation id.
-   * @param {Object} data - request body (see openapi.paths["/api/v3.0/reservations/{id}/note"].put.requestBody)
+   * @param {Object} data - request body (see openapi.paths["/v3.0/reservations/{id}/note"].put.requestBody)
    * @param {Object} params - additional query params
    */
   putReservationsByIdNote(id, data = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/note`;
+    const url = `/v3.0/reservations/${id}/note`;
     const body = data;
     return this.client.request("put", url, body, params);
   }
@@ -456,7 +456,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   getReservationsByIdOrder(id, options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/order`;
+    const url = `/v3.0/reservations/${id}/order`;
     return this.client.request("get", url, {}, params);
   }
 
@@ -466,7 +466,7 @@ export class Reservations {
    * @param {Object} params - additional query params
    */
   getReservationsByIdPayments(id, options = {}, params = {}) {
-    const url = `/api/v3.0/reservations/${id}/payments`;
+    const url = `/v3.0/reservations/${id}/payments`;
     return this.client.request("get", url, {}, params);
   }
 }
