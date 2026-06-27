@@ -1,0 +1,66 @@
+import type { GizmoClient } from '../GizmoClient.js';
+import type { GizmoResponse } from '../GizmoClient.js';
+
+export class DocumentTypes {
+  client: GizmoClient;
+
+  constructor(client: GizmoClient) {
+    this.client = client;
+  }
+
+  /**
+   * getDocumentTypes
+   */
+  getDocumentTypes(options: { paginationLimit?: any; paginationSortBy?: string; paginationIsAsc?: boolean; paginationIsScroll?: boolean; paginationCursor?: string; expand?: string[]; isDeleted?: boolean } = {}, params: Record<string, any> = {}): Promise<GizmoResponse<{ data?: any[]; nextCursor?: any; prevCursor?: any }>> {
+    const url = `/api/v3/documenttypes`;
+    const query: Record<string, any> = { ...params };
+    if (options.paginationLimit !== undefined) query['Pagination.Limit'] = options.paginationLimit;
+    if (options.paginationSortBy !== undefined) query['Pagination.SortBy'] = options.paginationSortBy;
+    if (options.paginationIsAsc !== undefined) query['Pagination.IsAsc'] = options.paginationIsAsc;
+    if (options.paginationIsScroll !== undefined) query['Pagination.IsScroll'] = options.paginationIsScroll;
+    if (options.paginationCursor !== undefined) query['Pagination.Cursor'] = options.paginationCursor;
+    if (options.expand !== undefined) query['Expand'] = options.expand;
+    if (options.isDeleted !== undefined) query['IsDeleted'] = options.isDeleted;
+    return this.client.request('get', url, {}, query);
+  }
+
+  /**
+   * postDocumentTypes
+   */
+  postDocumentTypes(data: { name?: string } = {}, params: Record<string, any> = {}): Promise<GizmoResponse<{ id?: any }>> {
+    const url = `/api/v3/documenttypes`;
+    return this.client.request('post', url, data, params);
+  }
+
+  /**
+   * putDocumentTypes
+   */
+  putDocumentTypes(data: { id?: any; name?: string } = {}, params: Record<string, any> = {}): Promise<GizmoResponse<Record<string, any>>> {
+    const url = `/api/v3/documenttypes`;
+    return this.client.request('put', url, data, params);
+  }
+
+  /**
+   * getDocumentTypesById
+   */
+  getDocumentTypesById(id: string | number, options: Record<string, any> = {}, params: Record<string, any> = {}): Promise<GizmoResponse<{ id?: any; name?: string }>> {
+    const url = `/api/v3/documenttypes/${id}`;
+    return this.client.request('get', url, {}, params);
+  }
+
+  /**
+   * deleteDocumentTypesById
+   */
+  deleteDocumentTypesById(id: string | number, params: Record<string, any> = {}): Promise<GizmoResponse<Record<string, any>>> {
+    const url = `/api/v3/documenttypes/${id}`;
+    return this.client.request('delete', url, {}, params);
+  }
+
+  /**
+   * putDocumentTypesByIdUndelete
+   */
+  putDocumentTypesByIdUndelete(id: string | number, params: Record<string, any> = {}): Promise<GizmoResponse<Record<string, any>>> {
+    const url = `/api/v3/documenttypes/${id}/undelete`;
+    return this.client.request('put', url, {}, params);
+  }
+}

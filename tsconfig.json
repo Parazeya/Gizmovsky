@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "checkJs": false,
+    "rootDir": "./src",
     "declaration": true,
     "declarationDir": "./dist",
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "module": "esnext",
     "target": "es2020",
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": false,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.js"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "tools"]
 }

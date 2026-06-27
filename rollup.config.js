@@ -1,14 +1,19 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
+import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
 
 const name = 'gizmoSdk';
 
+// Declarations are emitted separately by `tsc` (see package.json "types" script);
+// this plugin only transpiles .ts -> .js for bundling, so disable its own declaration output.
+const ts = () => typescript({ tsconfig: './tsconfig.json', declaration: false, declarationMap: false, declarationDir: undefined });
+
 export default [
   // Development build (with JSDoc comments, not minified)
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     external: ['axios', 'event-source-plus', 'eventsource'],
     output: [
       {
@@ -22,6 +27,7 @@ export default [
       }
     ],
     plugins: [
+      ts(),
       resolve(),
       commonjs(),
       json()
@@ -29,7 +35,7 @@ export default [
   },
   // Production build (minified)
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     external: ['axios', 'event-source-plus', 'eventsource'],
     output: [
       {
@@ -43,6 +49,7 @@ export default [
       }
     ],
     plugins: [
+      ts(),
       resolve(),
       commonjs(),
       json(),

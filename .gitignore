@@ -12,7 +12,7 @@ node_modules/
 *.log
 openapi.json
 test-events.js
-
+api_v*.json
 
 # VSCode
 .vscode/
